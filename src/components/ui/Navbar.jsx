@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50 py-2">
-      <div className="max-w-[1440px] mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="max-w-[1240px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Left - Logo */}
         <Link
           href="/"
@@ -30,8 +30,8 @@ const Navbar = () => {
           <Image src={taskalleyLogo} alt="TaskAlley Logo" priority />
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Desktop Menu (lg+) */}
+        <div className="hidden lg:flex items-center gap-6">
           {!isLoggedIn ? (
             <>
               <Link
@@ -42,19 +42,19 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/categories"
-                className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md "
+                className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Categories
               </Link>
               <Link
                 href="/browse-tasks"
-                className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md "
+                className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Browse tasks
               </Link>
               <Link
                 href="/how-it-works"
-                className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md "
+                className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 How it works
               </Link>
@@ -80,13 +80,13 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Desktop Right Side */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Desktop Right Side (lg+) */}
+        <div className="hidden lg:flex items-center gap-4">
           {!isLoggedIn ? (
             <>
               <Link
                 href="/login"
-                className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300  "
+                className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300"
               >
                 Log In
               </Link>
@@ -104,9 +104,9 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile / Tablet Menu Button */}
         <button
-          className="md:hidden text-3xl text-teal-700 transition-transform duration-300 ease-in-out"
+          className="lg:hidden text-3xl text-teal-700 transition-transform duration-300 ease-in-out"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
@@ -117,48 +117,48 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile / Tablet Dropdown */}
       <div
-        className={`md:hidden bg-white shadow-md px-6 overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[500px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
+        className={`lg:hidden bg-white shadow-md px-6 overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-[600px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
         }`}
       >
         {!isLoggedIn ? (
           <>
             <Link
               href="/request-service"
-              className="block px-4 py-2 mx-6 hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
+              className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Request a Service
             </Link>
             <Link
               href="/categories"
-              className="block px-4 py-2 mx-6 hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
+              className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Categories
             </Link>
             <Link
               href="/browse-tasks"
-              className="block px-4 py-2 mx-6 hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
+              className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Browse tasks
             </Link>
             <Link
               href="/how-it-works"
-              className="block px-4 py-2 mx-6 hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
+              className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               How it works
             </Link>
             <div className="flex gap-3 pt-4">
               <Link
                 href="/login"
-                className="flex-1 text-center px-4 py-2 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50"
+                className="flex-1 text-center px-4 py-3 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50"
               >
                 Log In
               </Link>
               <Link
                 href="/register"
-                className="flex-1 text-center px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800"
+                className="flex-1 text-center px-4 py-3 bg-teal-700 text-white rounded-md hover:bg-teal-800"
               >
                 Register
               </Link>
@@ -168,19 +168,19 @@ const Navbar = () => {
           <>
             <Link
               href="/post-task"
-              className="block px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800"
+              className="block px-4 py-3 bg-teal-700 text-white rounded-md hover:bg-teal-800"
             >
               Post a Task
             </Link>
             <Link
               href="/browse-tasks"
-              className={`block ${linkClass("/browse-tasks")}`}
+              className={`block px-4 py-3 ${linkClass("/browse-tasks")}`}
             >
               Browse tasks
             </Link>
             <Link
               href="/list-services"
-              className={`block ${linkClass("/list-services")}`}
+              className={`block px-4 py-3 ${linkClass("/list-services")}`}
             >
               List my services
             </Link>
