@@ -121,6 +121,9 @@
 .brand_color{
   background-color: #115e59;
 }
+.text-color{
+  color: #115e59;
+}
 
 @layer base {
   * {
