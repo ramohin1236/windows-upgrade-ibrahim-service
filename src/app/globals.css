@@ -125,6 +125,24 @@
   color: #115e59;
 }
 
+.gradiant-bg{
+background: #85ACAA;
+background: linear-gradient(90deg, rgba(133, 172, 170, 1) 0%, rgba(155, 188, 186, 1) 50%, rgba(253, 253, 253, 1) 100%);
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: #DCFCE7 !important; /* inactive */
+  opacity: 1 !important;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #115E59 !important; /* active */
+}
+.mySwiper .swiper-pagination {
+  position: relative !important;
+  margin-top: 1rem;
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
