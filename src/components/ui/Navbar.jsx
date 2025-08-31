@@ -3,15 +3,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { MdMenu, MdClose } from "react-icons/md";
 import taskalleyLogo from "../../../public/taskalley.svg";
+
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isLoggedIn, setIsLoggedIn] = useState(false); // hardcoded login state
   const [isOpen, setIsOpen] = useState(false); // mobile menu toggle
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling Down → Hide navbar
+        setIsVisible(false);
+      } else {
+        // Scrolling Up → Show navbar
+        setIsVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   // helper for active links
   const linkClass = (path) =>
@@ -20,7 +41,9 @@ const Navbar = () => {
       : "text-gray-800 hover:text-teal-700";
 
   return (
-    <nav className="w-full bg-white shadow-sm sticky top-0 z-50 py-2">
+    <nav className={`w-full bg-white shadow-sm sticky top-0 z-50 py-2 transform transition-transform duration-500 ${
+    isVisible ? "translate-y-0" : "-translate-y-full"
+  }`}>
       <div className="max-w-[1240px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Left - Logo */}
         <Link
