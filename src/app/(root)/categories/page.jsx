@@ -46,6 +46,42 @@ const data = [
     providers: "2,754 Providers",
     icon: service6,
   },
+  {
+    id: 7,
+    cateName: "House Cleaning",
+    providers: "4982 Providers",
+    icon: cateimg1,
+  },
+  {
+    id: 8,
+    cateName: "Electricity Services",
+    providers: "3,866 Providers",
+    icon: cateimg2,
+  },
+  {
+    id: 9,
+    cateName: "Furniture Replacement",
+    providers: "1,894 Providers",
+    icon: service3,
+  },
+  {
+    id: 10,
+    cateName: "Mechanic Zone",
+    providers: "2,894 Providers",
+    icon: service4,
+  },
+  {
+    id: 11,
+    cateName: "Plumber Service",
+    providers: "3,894 Providers",
+    icon: service5,
+  },
+  {
+    id: 12,
+    cateName: "Painter Chaise",
+    providers: "2,754 Providers",
+    icon: service6,
+  },
 ];
 
 const Categories = () => {

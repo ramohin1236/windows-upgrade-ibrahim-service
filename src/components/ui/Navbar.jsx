@@ -76,10 +76,10 @@ const Navbar = () => {
                 Browse tasks
               </Link>
               <Link
-                href="/"
+                href="/contact"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
-                How it works
+               Contact / Help	
               </Link>
             </>
           ) : (
@@ -170,7 +170,7 @@ const Navbar = () => {
               href="/how-it-works"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
-              How it works
+              Contact / Help	
             </Link>
             <div className="flex gap-3 pt-4">
               <Link

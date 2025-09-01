@@ -10,10 +10,10 @@ const Heading = ({
   return (
     <div >
       {/* Heading */}
-      <h2 className={`text-4xl font-semibold mb-5 ${headingStyle}`}>{heading}</h2>
+      <h2 className={`text-3xl md:text-4xl font-semibold mb-5 ${headingStyle}`}>{heading}</h2>
 
       {/* Text */}
-      <p className={`text-xl text-[#6B7280] ${textStyle}`}>{text}</p>
+      <p className={ `text-base md:text-xl text-[#6B7280] ${textStyle}`}>{text}</p>
     </div>
   );
 };
