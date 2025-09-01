@@ -11,8 +11,8 @@ import taskalleyLogo from "../../../public/taskalley.svg";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // hardcoded login state
-  const [isOpen, setIsOpen] = useState(false); // mobile menu toggle
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false); 
 
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -58,7 +58,7 @@ const Navbar = () => {
           {!isLoggedIn ? (
             <>
               <Link
-                href="/request-service"
+                href="/"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Request a Service
@@ -70,13 +70,13 @@ const Navbar = () => {
                 Categories
               </Link>
               <Link
-                href="/browse-tasks"
+                href="/about"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Browse tasks
               </Link>
               <Link
-                href="/how-it-works"
+                href="/"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 How it works
@@ -85,16 +85,16 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                href="/post-task"
+                href="/"
                 className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800"
               >
                 Post a Task
               </Link>
-              <Link href="/browse-tasks" className={linkClass("/browse-tasks")}>
+              <Link href="/" className={linkClass("/browse-tasks")}>
                 Browse tasks
               </Link>
               <Link
-                href="/list-services"
+                href="/"
                 className={linkClass("/list-services")}
               >
                 List my services
