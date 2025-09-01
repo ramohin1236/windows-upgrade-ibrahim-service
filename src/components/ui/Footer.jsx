@@ -31,10 +31,10 @@ const Footer = () => {
                 <Link href="/" className="hover:text-slate-400 text-white text-sm">About Us</Link>
               </li>
               <li>
-                <Link href="/" className="hover:text-slate-400 text-white text-sm">Contact Us</Link>
+                <Link href="/contact" className="hover:text-slate-400 text-white text-sm">Contact Us</Link>
               </li>
               <li>
-                <Link href="/" className="hover:text-slate-400 text-white text-sm">FAQ</Link>
+                <Link href="/faq" className="hover:text-slate-400 text-white text-sm">FAQ</Link>
               </li>
             </ul>
           </div>

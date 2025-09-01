@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <section className="">
       {/* Hero Section */}
-      <div className="bg-[#e6f4f1] mb-20">
+      <div className="bg-[#e6f4f1] mb-8 lg:mb-20">
         <div>
           <div className=" project_container flex flex-col gap-8 lg:flex-row justify-between items-center ">
             {/* left side */}
@@ -106,11 +106,11 @@ const Contact = () => {
                 {/* name */}
 
                 <label className="block text-base mb-2 mt-2">Email Address</label>
-                <input type="text" name="email" placeholder="Email Address"  className="bg-white border-none w-full py-2 px-2 rounded-md"/>
+                <input type="email" name="email" placeholder="Email Address"  className="bg-white border-none w-full py-2 px-2 rounded-md"/>
                 {/* name */}
 
                 <label className="block text-base mb-2 mt-2">Phone Number</label>
-                <input type="text" name="phone" placeholder="Phone Number"  className="bg-white border-none w-full py-2 px-2 rounded-md"/>
+                <input type="number" name="phone" placeholder="Phone Number"  className="bg-white border-none w-full py-2 px-2 rounded-md"/>
                 {/* name */}
 
                 <label className="block text-base mb-2 mt-2">Description </label>
@@ -126,7 +126,7 @@ const Contact = () => {
            </form>
         </div>
       </div>
-      <div className="py-20"></div>
+      <div className="py-8 lg:py-20"></div>
     </section>
   );
 };
