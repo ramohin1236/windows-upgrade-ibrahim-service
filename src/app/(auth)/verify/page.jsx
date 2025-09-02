@@ -1,6 +1,7 @@
 import registration_img from "../../../../public/login.svg";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -89,10 +90,10 @@ const VerifyReg = () => {
                         </p>
                       </label>
 
-                      <div className="mt-4 rounded-sm overflow-clip transition transform duration-300 hover:scale-101">
-                        <button className="bg-[#115E59] w-full py-2 text-white cursor-pointer ">
+                      <div className="mt-4 flex rounded-sm overflow-clip transition transform duration-300 hover:scale-101">
+                        <Link href="referalcode" className="bg-[#115E59] text-center w-full py-2 text-white cursor-pointer ">
                           Verify
-                        </button>
+                        </Link>
                       </div>
                     </form>
                    

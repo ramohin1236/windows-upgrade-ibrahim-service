@@ -90,12 +90,12 @@ const Login = () => {
                           </label>
                         </div>
                         <div className="text-sm">
-                          <a
-                            href="jajvascript:void(0);"
+                          <Link
+                            href="forgetpass"
                             className="text-[#115E59] hover:underline font-semibold"
                           >
                             Forgot your password?
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       {/* line or  */}

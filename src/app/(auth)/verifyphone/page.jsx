@@ -1,6 +1,7 @@
 import registration_img from "../../../../public/login.svg";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const VerifyPhone = () => {
   return (
@@ -48,10 +49,10 @@ const VerifyPhone = () => {
                          </div>
                    
    
-                         <div className="mt-4 rounded-sm overflow-clip transition transform duration-300 hover:scale-101">
-                           <button className="bg-[#115E59] w-full py-2 text-white cursor-pointer ">
+                         <div className="mt-4 rounded-sm flex overflow-clip transition transform duration-300 hover:scale-101">
+                           <Link href="verifyotp" className="bg-[#115E59] text-center w-full py-2 text-white cursor-pointer ">
                            Continue
-                           </button>
+                           </Link>
                          </div>
                        </form>
                       

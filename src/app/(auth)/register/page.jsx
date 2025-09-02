@@ -115,7 +115,7 @@ const Register = () => {
                       </div>
                {/* confirm  pass */}
                       <div>
-                        <label className="text-[#1F2937] text-sm font-medium mb-1 block">
+                        <label className="text-[#1F2937] text-sm font-medium block">
                           Confirm  Password
                         </label>
                         <div className="relative flex items-center">
@@ -140,37 +140,12 @@ const Register = () => {
                           </svg>
                         </div>
                       </div>
-                      <div className="flex flex-wrap items-center justify-between gap-4">
-                        <div className="flex items-center">
-                          <input
-                            id="remember-me"
-                            name="remember-me"
-                            type="checkbox"
-                            className="h-4 w-4 shrink-0 text-[#6B7280] focus:ring-blue-500 border-slate-300 rounded"
-                          />
-                          <label className="ml-3 block text-sm text-[#1F2937]">
-                            Remember me
-                          </label>
-                        </div>
-                        <div className="text-sm">
-                          <a
-                            href="jajvascript:void(0);"
-                            className="text-[#115E59] hover:underline font-semibold"
-                          >
-                            Forgot your password?
-                          </a>
-                        </div>
-                      </div>
-                      {/* line or  */}
-                      <div className="flex items-center my-6">
-                        <div className="flex-grow border-t border-[#6B7280]"></div>
-                        <span className="mx-4 text-gray-500">OR</span>
-                        <div className="flex-grow border-t border-[#6B7280]"></div>
-                      </div>
+                      
+                     
                       {/* dont have an account */}
 
-                      <p className="text-[#6B7280] text-base !mt-6">
-                        Don't have an account?{" "}
+                      <p className="text-[#6B7280] text-base !mt-1">
+                        Already have an account?{" "}
                         <Link
                           href="login"
                           className="text-[#115E59] hover:underline ml-1 whitespace-nowrap font-semibold"
@@ -179,10 +154,10 @@ const Register = () => {
                         </Link>
                       </p>
 
-                      <div className="mt-4 rounded-sm overflow-clip transition transform duration-300 hover:scale-101">
-                        <button className="bg-[#115E59] w-full py-2 text-white cursor-pointer ">
+                      <div className="mt-4 rounded-sm overflow-clip transition transform duration-300 hover:scale-101 flex">
+                        <Link href="verify" className="bg-[#115E59] py-2 text-white cursor-pointer w-full text-center">
                          Next
-                        </button>
+                        </Link>
                       </div>
                     </form>
                     {/* social login */}

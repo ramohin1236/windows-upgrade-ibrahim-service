@@ -57,7 +57,7 @@ const ReferalCode = () => {
                       </div>
                     <div className="flex">
                           <Link
-                          href=""
+                          href="verifyphone"
                           className="text-center px-6 py-2 text-[#115e59] border-1 border-[#115e59] w-full rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300"
                         >
                           Skip & Continue Without Code
