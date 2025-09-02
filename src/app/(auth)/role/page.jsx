@@ -1,6 +1,4 @@
 "use client";
-import { useState } from "react";
-import { FaUser, FaTools } from "react-icons/fa";
 import registration_img from "../../../../public/login.svg";
 import main_logo from "../../../../public/main_logo.svg";
 import customer from "../../../../public/customer.svg"
@@ -13,7 +11,7 @@ const page = () => {
 
   return (
     <section className="">
-      <div className="max-w-[1200px] mx-auto h-[1200px] flex items-center justify-center max-h-screen  ">
+      <div className="max-w-[1000px] mx-auto h-[1200px] flex items-center justify-center max-h-screen  ">
         <div className="flex items-center justify-center bg-[#F8FAFC] rounded-sm overflow-clip shadow-2xl">
           {/* Left Side - Images */}
           <div className="hidden md:block overflow-hidden w-full h-full">
@@ -62,6 +60,10 @@ const page = () => {
                   Service Provider
                 </Link>
               </div>
+
+             <div className="mt-4 rounded-sm overflow-clip transition transform duration-300 hover:scale-101" >
+                 <button className="bg-[#115E59] w-full py-2 text-white cursor-pointer ">Continue</button>
+            </div>
 
               
             </div>

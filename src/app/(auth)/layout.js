@@ -3,7 +3,7 @@ import "../globals.css";
 
 const AuthLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <html >
       <body>
         <div >{children}</div>
       </body>
