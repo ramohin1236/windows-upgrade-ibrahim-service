@@ -143,6 +143,57 @@ background: linear-gradient(90deg, rgba(133, 172, 170, 1) 0%, rgba(155, 188, 186
 }
 
 
+/* scroll start */
+
+:root {
+  --sb-thumb: #115E59;   
+  --sb-thumb-hover: #0e4c47; 
+  --sb-track: #E6F4F1;  
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;                         
+  /* scrollbar-color: var(--sb-thumb) var(--sb-track); / */
+}
+
+/* WebKit (Chrome, Edge, Safari, etc.) */
+*::-webkit-scrollbar {
+  width: 10px;         
+  height: 10px;      
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--sb-thumb);
+  border-radius: 9999px;               
+  border: 2px solid var(--sb-track); 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--sb-thumb-hover);
+}
+
+
+.dark {
+  --sb-thumb: #0EA5E9;     
+  --sb-thumb-hover: #0286c7;
+  --sb-track: #0b1413;     
+}
+
+
+
+.scroll-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-thin { scrollbar-width: thin; }
+
+/* scroll end */
+
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

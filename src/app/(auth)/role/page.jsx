@@ -1,0 +1,75 @@
+"use client";
+import { useState } from "react";
+import { FaUser, FaTools } from "react-icons/fa";
+import registration_img from "../../../../public/login.svg";
+import main_logo from "../../../../public/main_logo.svg";
+import customer from "../../../../public/customer.svg"
+import service_provider from "../../../../public/service_providers.svg"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+const page = () => {
+
+  return (
+    <section className="">
+      <div className="max-w-[1200px] mx-auto h-[1200px] flex items-center justify-center max-h-screen  ">
+        <div className="flex items-center justify-center bg-[#F8FAFC] rounded-sm overflow-clip shadow-2xl">
+          {/* Left Side - Images */}
+          <div className="hidden md:block overflow-hidden w-full h-full">
+            <div className="w-auto ">
+              <Image
+                src={registration_img}
+                alt="Worker"
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right Side - Role Selection */}
+          <div className="flex w-full items-center justify-center p-6">
+            <div className="max-w-xl rounded-2xl p-8">
+              {/* Logo */}
+              <div className="flex justify-center mb-6">
+                <span className="text-xl font-bold text-teal-600">
+                  <Image src={main_logo} alt="main logo"/>
+                </span>
+              </div>
+
+              {/* Title */}
+              <h2 className="text-3xl font-semibold text-center mb-2">
+                Choose Your Role to Get Started
+              </h2>
+              <p className="text-center text-gray-500 mb-6 text-sm">
+                Select how you'd like to use our platform — whether you're here
+                to book services or offer them professionally.
+              </p>
+
+              {/* Options */}
+              <div className="space-y-4 space-x-2">
+                <Link
+                  href='login'
+                  className="w-full flex items-center gap-4 border rounded-lg py-3 px-4 text-xl md:text-4xl transition border-[#878b92] bg-white font-semibold" 
+              
+                >
+                 <Image src={customer} alt="customer" className="w-20"/>
+                  Customer
+                </Link>
+                <Link
+                 href='register'
+                  className="w-full flex items-center gap-4 border rounded-lg py-3 px-4 transition border-[#878b92] bg-white text-xl md:text-4xl font-semibold">
+                 <Image src={service_provider} alt="customer"  className="w-20"/>
+                  Service Provider
+                </Link>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default page;

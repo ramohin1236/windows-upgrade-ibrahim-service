@@ -1,10 +1,11 @@
 import React from "react";
+import "../globals.css";
 
 const AuthLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <div className="pt-14">{children}</div>
+        <div >{children}</div>
       </body>
     </html>
   );
