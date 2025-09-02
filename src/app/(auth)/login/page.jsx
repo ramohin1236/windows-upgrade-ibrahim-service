@@ -2,7 +2,8 @@ import registration_img from "../../../../public/login.svg";
 import main_logo from "../../../../public/main_logo.svg";
 import React from "react";
 import Image from "next/image";
-
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookF } from "react-icons/fa6";
 
 const page = () => {
   return (
@@ -33,6 +34,7 @@ const page = () => {
                     <p className="text-[#1F2937]">
                       Please enter your email and password to continue
                     </p>
+                    {/* -------------------form------------------------------ */}
                     <form className="mt-12 space-y-6">
                       <div>
                         <label className="text-[#1F2937] text-sm font-medium mb-2 block">
@@ -119,6 +121,18 @@ const page = () => {
                         </button>
                       </div>
                     </form>
+                    {/* social login */}
+                    <p className="text-[#6B7280] font-semibold mt-2">
+                     Or continue with
+                    </p>
+                    <div className="mt-4 flex gap-6">
+                      <button className="border-1 border-[#115E59] p-3.5 rounded-sm transition transform duration-300 hover:scale-101 cursor-pointer">
+                        <FcGoogle className="text-2xl" />
+                      </button>
+                      <button className="border-1 border-[#115E59] p-3.5 rounded-sm transition transform duration-300 hover:scale-101 cursor-pointer">
+                        <FaFacebookF className="text-2xl text-blue-500" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
