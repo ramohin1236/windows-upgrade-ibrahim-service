@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const VerifyReg = () => {
   return (
-    <section className="">
+    <section >
       <div className="max-w-[1100px] mx-auto h-[1200px] flex items-center justify-center max-h-screen  ">
         <div className="flex items-center justify-center gap-8 bg-[#F8FAFC] rounded-sm overflow-clip shadow-2xl">
           {/* Left Side - Images */}
@@ -110,3 +110,4 @@ const VerifyReg = () => {
 };
 
 export default VerifyReg;
+  
