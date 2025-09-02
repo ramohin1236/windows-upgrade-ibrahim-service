@@ -1,3 +1,4 @@
+
 import React from "react";
 import contact_man from "../../../../public/contact_man.svg";
 import { ImFacebook2 } from "react-icons/im";
@@ -98,11 +99,11 @@ const Contact = () => {
            <p className="text-base font-semibold mt-2 text-[#111928] text-center lg:text-start">Reach out to our team anytime — whether it's a query about subscriptions, technical support, or partnership opportunities.</p>
 
 
-           <form className="mt-12">
+           <form className="mt-12" >
                 {/* name */}
 
                 <label className="block text-base mb-2 mt-2">Full Name</label>
-                <input type="text" name="name" placeholder="Full Name"  className="bg-white border-none w-full py-2 px-2 rounded-md"/>
+                <input type="text" name="name" placeholder="Full Name"  className="bg-white border-none w-full py-2 px-2 rounded-md" />
                 {/* name */}
 
                 <label className="block text-base mb-2 mt-2">Email Address</label>
