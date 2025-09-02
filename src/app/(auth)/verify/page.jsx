@@ -1,9 +1,8 @@
 import registration_img from "../../../../public/login.svg";
 import React from "react";
 import Image from "next/image";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebookF } from "react-icons/fa6";
-import Link from "next/link";
+
+
 
 const VerifyReg = () => {
   return (
