@@ -86,7 +86,7 @@ const data = [
 
 const Categories = () => {
   return (
-    <section className="project_container pb-28">
+    <section className="project_container pl-4 pt-4 pb-28">
       <div className="mb-14">
         <Heading
           heading="Explore Service Categories"

@@ -92,7 +92,7 @@ const taskData = [
 
 const BrowseService = () => {
   return (
-    <div className="project_container p-4 flex flex-col gap-8">
+    <div className="project_container p-4 flex flex-col gap-8 pb-28">
       {/* filter head */}
         <div>
            <Filter/>

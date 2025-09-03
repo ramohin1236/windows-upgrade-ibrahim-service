@@ -70,10 +70,10 @@ const Navbar = () => {
                 Categories
               </Link>
               <Link
-                href="/about"
+                href="/browseservice"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
-                Browse tasks
+                Browse Service
               </Link>
               <Link
                 href="/contact"
@@ -149,7 +149,7 @@ const Navbar = () => {
         {!isLoggedIn ? (
           <>
             <Link
-              href="/request-service"
+              href="/"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Request a Service
@@ -161,13 +161,13 @@ const Navbar = () => {
               Categories
             </Link>
             <Link
-              href="/browse-tasks"
+              href="browseservice"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
-              Browse tasks
+              Browse service
             </Link>
             <Link
-              href="/how-it-works"
+              href="contact"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Contact / Help	
