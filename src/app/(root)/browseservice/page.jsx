@@ -92,13 +92,13 @@ const taskData = [
 const BrowseService = () => {
   return (
     <div className="project_container p-4">
-      <div className="flex flex-col lg:flex-row gap-8">
-        <div className="md:w-[600px] flex flex-col gap-4 ">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="w-full md:w-[600px] flex flex-col gap-4 ">
           {taskData.slice(0, 3).map((data, index) => (
             <ServiceCard key={index} data={data} />
           ))}
         </div>
-        <div className="w-full md:h-[800px] ">
+        <div className="w-full h-96 md:h-[800px] ">
           <GoogleMap />
         </div>
       </div>
