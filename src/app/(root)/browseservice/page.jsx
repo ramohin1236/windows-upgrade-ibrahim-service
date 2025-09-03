@@ -5,6 +5,7 @@ import { IoTimerOutline } from "react-icons/io5";
 import ServiceCard from "@/components/browseservice/ServiceCard";
 import userImage from "../../../../public/task_img.png";
 import GoogleMap from "@/components/browseservice/GoogleMap";
+import Filter from "@/components/browseservice/Filter";
 
 const taskData = [
   {
@@ -91,7 +92,12 @@ const taskData = [
 
 const BrowseService = () => {
   return (
-    <div className="project_container p-4">
+    <div className="project_container p-4 flex flex-col gap-8">
+      {/* filter head */}
+        <div>
+           <Filter/>
+        </div>
+      {/* card and map */}
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-[600px] flex flex-col gap-4 ">
           {taskData.slice(0, 3).map((data, index) => (
