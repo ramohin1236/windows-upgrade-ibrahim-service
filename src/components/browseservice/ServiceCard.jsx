@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 const ServiceCard = ({ data }) => {
-  console.log(data);
+
   return (
     <div className="flex flex-col gap-4 shadow-xl rounded-md p-6">
       <div className="flex justify-between items-center">
