@@ -23,13 +23,13 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
-              href="/register"
+              href="/construction"
               className="px-5 py-3 bg-teal-800 text-white rounded-md hover:bg-teal-900 transition transform duration-300 hover:scale-105 text-base md:text-lg"
             >
               Browse Services
             </Link>
             <Link
-              href="/login"
+              href="/construction"
               className="px-5 py-3 border-2 border-teal-800 rounded-md hover:bg-teal-800 hover:text-white transition transform duration-300 text-base md:text-lg"
             >
               Post a task

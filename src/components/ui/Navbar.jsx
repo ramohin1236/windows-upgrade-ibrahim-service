@@ -58,25 +58,25 @@ const Navbar = () => {
           {!isLoggedIn ? (
             <>
               <Link
-                href="/"
+                href="/construction"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Request a Service
               </Link>
               <Link
-                href="/"
+                href="/construction"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Categories
               </Link>
               <Link
-                href="/"
+                href="/construction"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Browse Service
               </Link>
               <Link
-                href="/"
+                href="/construction"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                Contact / Help	
@@ -85,16 +85,16 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                href="/"
+                href="/construction"
                 className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800"
               >
                 Post a Task
               </Link>
-              <Link href="/" className={linkClass("/browse-tasks")}>
+              <Link href="/construction" className={linkClass("/browse-tasks")}>
                 Browse tasks
               </Link>
               <Link
-                href="/"
+                href="/construction"
                 className={linkClass("/list-services")}
               >
                 List my services
@@ -108,13 +108,13 @@ const Navbar = () => {
           {!isLoggedIn ? (
             <>
               <Link
-                href="/login"
+                href="/construction"
                 className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300"
               >
                 Log In
               </Link>
               <Link
-                href="/register"
+                href="/construction"
                 className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105"
               >
                 Register
@@ -149,38 +149,38 @@ const Navbar = () => {
         {!isLoggedIn ? (
           <>
             <Link
-              href="/"
+              href="/construction"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Request a Service
             </Link>
             <Link
-              href="/"
+              href="/construction"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Categories
             </Link>
             <Link
-              href="/"
+              href="/construction"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Browse service
             </Link>
             <Link
-              href="/"
+              href="/construction"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Contact / Help	
             </Link>
             <div className="flex gap-3 pt-4">
               <Link
-                href="/"
+                href="/construction"
                 className="flex-1 text-center px-4 py-3 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50"
               >
                 Log In
               </Link>
               <Link
-                href="/"
+                href="/construction"
                 className="flex-1 text-center px-4 py-3 bg-teal-700 text-white rounded-md hover:bg-teal-800"
               >
                 Register
@@ -190,19 +190,19 @@ const Navbar = () => {
         ) : (
           <>
             <Link
-              href="/"
+              href="/construction"
               className="block px-4 py-3 bg-teal-700 text-white rounded-md hover:bg-teal-800"
             >
               Post a Task
             </Link>
             <Link
-              href="/"
+              href="/construction"
               className={`block px-4 py-3 ${linkClass("/browse-tasks")}`}
             >
               Browse tasks
             </Link>
             <Link
-              href="/"
+              href="/construction"
               className={`block px-4 py-3 ${linkClass("/list-services")}`}
             >
               List my services

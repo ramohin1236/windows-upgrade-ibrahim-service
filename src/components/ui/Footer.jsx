@@ -28,13 +28,13 @@ const Footer = () => {
             <h4 className="text-xl mb-4 text-white">Resources</h4>
             <ul className="space-y-2 md:space-y-4">
               <li>
-                <Link href="/about" className="hover:text-slate-400 text-white text-sm">About Us</Link>
+                <Link href="/construction" className="hover:text-slate-400 text-white text-sm">About Us</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-slate-400 text-white text-sm">Contact Us</Link>
+                <Link href="/construction" className="hover:text-slate-400 text-white text-sm">Contact Us</Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-slate-400 text-white text-sm">FAQ</Link>
+                <Link href="/construction" className="hover:text-slate-400 text-white text-sm">FAQ</Link>
               </li>
             </ul>
           </div>
@@ -50,10 +50,10 @@ const Footer = () => {
                 <Link href="/" className="hover:text-slate-400 text-white text-sm">Browse Services</Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-slate-400 text-white text-sm">Privacy Policy</Link>
+                <Link href="/construction" className="hover:text-slate-400 text-white text-sm">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-slate-400 text-white text-sm">Terms of Condition</Link>
+                <Link href="/construction" className="hover:text-slate-400 text-white text-sm">Terms of Condition</Link>
               </li>
               
             </ul>
