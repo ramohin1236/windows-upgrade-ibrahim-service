@@ -1,4 +1,4 @@
-import registration_img from "../../../../public/login.svg";
+import registration_img from "../../../../public/login_page_image.png";
 import main_logo from "../../../../public/main_logo.svg";
 import React from "react";
 import Image from "next/image";
@@ -17,7 +17,7 @@ const Register = () => {
               <Image
                 src={registration_img}
                 alt="Worker"
-                className="w-full object-cover"
+                className="w-[600px] object-cover"
               />
             </div>
           </div>

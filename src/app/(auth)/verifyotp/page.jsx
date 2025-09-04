@@ -1,5 +1,5 @@
 "use client";
-import registration_img from "../../../../public/login.svg";
+import registration_img from "../../../../public/login_page_image.png";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";

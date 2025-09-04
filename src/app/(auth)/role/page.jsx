@@ -1,5 +1,5 @@
 "use client";
-import registration_img from "../../../../public/login.svg";
+import registration_img from "../../../../public/login_page_image.png";
 import main_logo from "../../../../public/main_logo.svg";
 import customer from "../../../../public/customer.svg"
 import service_provider from "../../../../public/service_providers.svg"

@@ -1,4 +1,4 @@
-import registration_img from "../../../../public/login.svg";
+import registration_img from "../../../../public/login_page_image.png";
 import main_logo from "../../../../public/main_logo.svg";
 import React from "react";
 import Image from "next/image";
