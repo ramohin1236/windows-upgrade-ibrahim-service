@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FileText, CheckCircle, Calendar, DollarSign, Image } from "lucide-react";
 import MultiStepForm from "@/components/task_post/MultiStepForm";
 import FormNavigation from "@/components/task_post/FormNavigation";
@@ -24,6 +24,7 @@ const TaskCreationApp = () => {
     agreedToTerms: false,
   });
 
+
   const steps = [
     { id: 0, title: "Task Overview" },
     { id: 1, title: "Task Details" },
@@ -40,24 +41,42 @@ const TaskCreationApp = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleNext = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(prev => prev + 1);
-    } else {
-      handleSubmit();
-    }
-  };
+const handleNext = () => {
+  setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1));
+};
 
-  const handlePrevious = () => {
-    if (currentStep > 0) {
-      setCurrentStep(prev => prev - 1);
-    }
-  };
+const handlePrevious = () => {
+  setCurrentStep((prev) => Math.max(prev - 1, 0));
+};
 
   const handleSubmit = () => {
     console.log("Form submitted:", formData);
     alert("Task created successfully!");
   };
+
+  
+  useEffect(() => {
+  const savedStep = localStorage.getItem("currentStep");
+  const savedForm = localStorage.getItem("formData");
+
+  if (savedStep) {
+    setCurrentStep(Number(savedStep));
+  }
+  if (savedForm) {
+    setFormData(JSON.parse(savedForm));
+  }
+}, []);
+
+
+  useEffect(() => {
+  localStorage.setItem("currentStep", currentStep);
+}, [currentStep]);
+
+// 🟢 Form data save
+useEffect(() => {
+  localStorage.setItem("formData", JSON.stringify(formData));
+}, [formData]);
+
 
   const renderStepContent = () => {
     switch (currentStep) {
@@ -185,7 +204,7 @@ const TaskCreationApp = () => {
                 />
               </div>
             </div>
-            <div className="flex items-start gap-2 p-4 bg-gray-50 rounded-lg">
+            <div className="flex items-center gap-2 p-4 bg-gray-50 rounded-lg">
               <input
                 type="checkbox"
                 checked={formData.agreedToTerms}

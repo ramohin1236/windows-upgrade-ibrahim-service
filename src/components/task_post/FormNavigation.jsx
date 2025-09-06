@@ -18,8 +18,8 @@ const FormNavigation = ({
       className={`
         px-6 py-2 rounded-lg font-medium transition-colors w-full sm:w-auto order-2 sm:order-1
         ${currentStep === 0 || disablePrevious
-          ? 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200' 
-          : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+          ? 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200  ' 
+          : 'bg-white cursor-pointer border border-gray-300 text-gray-700 hover:bg-gray-50'
         }
       `}
     >
