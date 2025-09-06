@@ -11,7 +11,7 @@ import taskalleyLogo from "../../../public/taskalley.svg";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(true); 
   const [isOpen, setIsOpen] = useState(false); 
 
   const [isVisible, setIsVisible] = useState(true);
@@ -85,7 +85,7 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                href="/construction"
+                href="/post_task"
                 className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800"
               >
                 Post a Task

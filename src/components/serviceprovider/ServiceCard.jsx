@@ -27,8 +27,8 @@ const ServiceCard = ({ service }) => {
         {/* Location and Rating */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1 text-gray-500 text-sm">
-            <MapPin className="w-4 h-4" />
-            <span>{service.location}</span>
+            <MapPin className="w-4 h-4 text-[#115E59]" />
+            <span className="text-black">{service.location}</span>
           </div>
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -47,7 +47,7 @@ const ServiceCard = ({ service }) => {
         )}
 
         {/* Book Now Button */}
-        <button className="w-full cursor-pointer bg-white border border-green-600 text-green-600 hover:bg-green-50 px-4 py-2 rounded-lg font-medium transition transform duration-300 hover:scale-105">
+        <button className="cursor-pointer bg-[#E6F4F1] text-[#115E59]  px-4 py-2 rounded-md font-medium transition transform duration-300 hover:scale-105 mt-3">
           Book Now
         </button>
       </div>
