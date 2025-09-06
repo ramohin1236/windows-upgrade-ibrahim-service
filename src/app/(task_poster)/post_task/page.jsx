@@ -49,10 +49,10 @@ const handlePrevious = () => {
   setCurrentStep((prev) => Math.max(prev - 1, 0));
 };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    alert("Task created successfully!");
-  };
+//   const handleSubmit = () => {
+//     console.log("Form submitted:", formData);
+//     alert("Task created successfully!");
+//   };
 
   
   useEffect(() => {
@@ -72,7 +72,7 @@ const handlePrevious = () => {
   localStorage.setItem("currentStep", currentStep);
 }, [currentStep]);
 
-// 🟢 Form data save
+
 useEffect(() => {
   localStorage.setItem("formData", JSON.stringify(formData));
 }, [formData]);
