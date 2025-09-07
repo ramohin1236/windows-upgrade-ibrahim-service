@@ -66,19 +66,18 @@ const faqs = [
 ];
 
 const TaskAlleyLaunch = () => {
-  const [counter, setCounter] = useState(15);
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounter((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCounter((prev) => (prev > 0 ? prev - 1 : 0));
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -88,10 +87,10 @@ const TaskAlleyLaunch = () => {
   });
 
   useEffect(() => {
-    // Run only on client
+    // Run only in browser
     if (typeof window === "undefined") return;
 
-    // Load or set target date (90 days from first load)
+    // Load or create target date (90 days from first visit)
     let savedTarget = localStorage.getItem("targetDate");
     let targetDate;
 
@@ -103,22 +102,26 @@ const TaskAlleyLaunch = () => {
       localStorage.setItem("targetDate", targetDate.toISOString());
     }
 
-    const interval = setInterval(() => {
+    const updateTime = () => {
       const now = new Date().getTime();
       const difference = targetDate.getTime() - now;
 
       if (difference <= 0) {
-        clearInterval(interval);
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / (1000 * 60)) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
+        return;
       }
-    }, 1000);
+
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      });
+    };
+
+    // Initial call + interval
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -126,26 +129,27 @@ const TaskAlleyLaunch = () => {
   return (
     <div className="bg-[#F9FAFB]">
       <div className="max-w-7xl mx-auto min-h-screen">
-  <div
-    className="min-h-screen w-full bg-cover bg-no-repeat bg-center flex items-center px-4 sm:px-8 md:px-12 lg:px-20"
-    style={{ backgroundImage: "url('/Hero.svg')" }}
-  >
-    <div className="flex flex-col items-center  md:items-start gap-4 md:text-left max-w-2xl">
-      <h6 className="text-lg sm:text-xl md:text-2xl text-[#115E59] font-semibold">
-        Welcome to TaskAlley
-      </h6>
+        <div
+          className="min-h-screen w-full bg-cover bg-no-repeat bg-center flex items-center px-4 sm:px-8 md:px-12 lg:px-20"
+          style={{ backgroundImage: "url('/Hero.svg')" }}
+        >
+          <div className="flex flex-col items-center  md:items-start gap-4 md:text-left max-w-2xl">
+            <h6 className="text-lg sm:text-xl md:text-2xl text-[#115E59] font-semibold">
+              Welcome to TaskAlley
+            </h6>
 
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-center md:text-start lg:text-start">
-        Your trusted ally <br className="hidden md:block" /> for smarter tasking in Nigeria
-      </h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-center md:text-start lg:text-start">
+              Your trusted ally <br className="hidden md:block" /> for smarter
+              tasking in Nigeria
+            </h1>
 
-      <p className="text-sm sm:text-base text-gray-500 leading-relaxed text-center md:text-start lg:text-start">
-        TaskAlley is more than a marketplace — it’s your one-stop hub to
-        post, find, and manage tasks with verified providers.
-      </p>
-    </div>
-  </div>
-</div>
+            <p className="text-sm sm:text-base text-gray-500 leading-relaxed text-center md:text-start lg:text-start">
+              TaskAlley is more than a marketplace — it’s your one-stop hub to
+              post, find, and manage tasks with verified providers.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Why Choose TaskAlleey Section */}
       <div className="project_container  py-12">
@@ -239,70 +243,45 @@ const TaskAlleyLaunch = () => {
               Join thousands of innovators already on the waitlist. Early
               signups get exclusive access + 20% off.
             </p>
-            <div className="flex  gap-8 mt-5">
-              {/* For TSX uncomment the commented types below */}
-              <div className="flex gap-5 text-center auto-cols-max">
-                <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
-                  <span className="countdown ">
-                    <span
-                      style={{ "--value": 15 }}
-                      aria-live="polite"
-                      aria-label={counter}
-                      className="text-4xl font-bold text-[#115E59]"
-                    >
-                      {timeLeft.days}
-                    </span>
-                  </span>
-                  <span className="text-base text-[#115E59] font-medium">
-                    {" "}
-                    days
-                  </span>
-                </div>
-                <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
-                  <span className="countdown font-mono text-5xl">
-                    <span
-                      style={{ "--value": 10 }}
-                      aria-live="polite"
-                      aria-label={counter}
-                      className="text-4xl font-bold text-[#115E59]"
-                    >
-                      {timeLeft.hours}
-                    </span>
-                  </span>
-                  <span className="text-base text-[#115E59] font-medium">
-                    hours
-                  </span>
-                </div>
-                <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
-                  <span className="countdown font-mono text-5xl">
-                    <span
-                      style={{ "--value": 24 }}
-                      aria-live="polite"
-                      aria-label={counter}
-                      className="text-4xl font-bold text-[#115E59]"
-                    >
-                      {timeLeft.minutes}
-                    </span>
-                  </span>
-                  <span className="text-base text-[#115E59] font-medium">
-                    min
-                  </span>
-                </div>
-                <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
-                  <span className="countdown font-mono text-5xl">
-                    <span
-                      style={{ "--value": 59 }}
-                      aria-live="polite"
-                      aria-label={counter}
-                      className="text-4xl font-bold text-[#115E59]"
-                    >
-                      {timeLeft.seconds}
-                    </span>
-                  </span>
-                  <span className="text-base text-[#115E59] font-medium">
-                    sec
-                  </span>
-                </div>
+            <div className="flex gap-5 text-center">
+              {/* Days */}
+              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-4xl font-bold text-[#115E59]">
+                  {timeLeft.days}
+                </span>
+                <span className="text-base text-[#115E59] font-medium">
+                  days
+                </span>
+              </div>
+
+              {/* Hours */}
+              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-4xl font-bold text-[#115E59]">
+                  {timeLeft.hours}
+                </span>
+                <span className="text-base text-[#115E59] font-medium">
+                  hours
+                </span>
+              </div>
+
+              {/* Minutes */}
+              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-4xl font-bold text-[#115E59]">
+                  {timeLeft.minutes}
+                </span>
+                <span className="text-base text-[#115E59] font-medium">
+                  min
+                </span>
+              </div>
+
+              {/* Seconds */}
+              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-4xl font-bold text-[#115E59]">
+                  {timeLeft.seconds}
+                </span>
+                <span className="text-base text-[#115E59] font-medium">
+                  sec
+                </span>
               </div>
             </div>
           </div>
