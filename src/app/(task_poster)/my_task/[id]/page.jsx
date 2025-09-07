@@ -5,6 +5,7 @@ import { MdDateRange } from "react-icons/md";
 import popularcateIcon from "../../../../../public/popularcate.svg";
 import Image from "next/image";
 import srvcporvider from "../../../../../public/women.svg";
+import { BsChatLeftText } from "react-icons/bs";
 import Link from "next/link";
 const TaskDetails = () => {
   const [activeTab, setActiveTab] = useState("bids");
@@ -122,7 +123,7 @@ const TaskDetails = () => {
           </div>
 
           {/* Right side */}
-          <div className="lg:w-2/3">
+          <div className="w-full md:w-auto">
             <div className="bg-[#E6F4F1] rounded-xl p-6 flex flex-col items-center text-center shadow-sm">
               <div className="mb-4">
                 <p className="text-gray-500">Task budget</p>
@@ -171,7 +172,10 @@ const TaskDetails = () => {
         <div className="mt-4 space-y-4">
           {activeTab === "bids" &&
             bids.map((bid) => (
-              <div key={bid.id} className="flex flex-col gap-4 p-4 border rounded-lg">
+              <div
+                key={bid.id}
+                className="flex flex-col lg:flex-row gap-4 p-4 border rounded-lg"
+              >
                 <Image src={srvcporvider} alt={bid.name} className="w-10" />
                 <div className="flex-1">
                   <div className="flex justify-between items-center">
@@ -185,14 +189,15 @@ const TaskDetails = () => {
                       <p className="font-semibold">{bid.price}</p>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-3 ">
-                      <button className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 cursor-pointer">
-                        Edit Task
+                      <button className="px-6 py-2 border-2 border-[#115e59] text-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 cursor-pointer">
+                        Accept the Task
                       </button>
                       <button
                         href="/construction"
-                        className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer"
+                        className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center"
                       >
-                        Remove Task
+                        <BsChatLeftText />
+                        Chat Now
                       </button>
                     </div>
                   </div>
@@ -202,12 +207,11 @@ const TaskDetails = () => {
 
           {activeTab === "questions" &&
             questions.map((q) => (
-              <div key={q.id} className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg">
-                <Image
-                  src={srvcporvider}
-                  alt={q.name}
-                  className="w-12 h-12 rounded-full"
-                />
+              <div
+                key={q.id}
+                className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg"
+              >
+                <Image src={srvcporvider} alt={q.name} className="" />
                 <div className="flex-1">
                   <div className="flex justify-between items-center">
                     <h4 className="font-semibold">{q.name}</h4>
