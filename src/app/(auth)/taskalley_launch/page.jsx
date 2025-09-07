@@ -125,11 +125,11 @@ const TaskAlleyLaunch = () => {
 
   return (
     <div className="">
-      <div className="relative">
-        <div>
+      <div className="relative min-h-screen">
+        <div className="hidden lg:block">
           <Image src={Hero} className="w-full" />
         </div>
-        <div className="pl-20 flex flex-col gap-4 absolute top-50%">
+        <div className="pl-20 flex flex-col items-center md:items-start gap-4 absolute top-1/2">
           <h6 className="text-lg text-[#115E59] font-semibold">Welcome to TaskAlley</h6>
           <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">Your trusted ally for smarter tasking in Nigeria</h1>
           <p className="text-sm text-gray-400">TaskAlley is more than a marketplace — it’s your one-stop hub to post, find, and manage tasks with verified providers.</p>
