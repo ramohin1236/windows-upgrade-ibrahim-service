@@ -110,7 +110,7 @@ const TaskAlleyLaunch = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="bg-red-500">
+    <div className="">
       {/* <div
         className="border-2 border-red-500 min-h-screen w-full bg-contain bg-red-600  bg-no-repeat"
         style={{ backgroundImage: "url('/Hero Area.png')" }}
