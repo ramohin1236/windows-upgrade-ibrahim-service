@@ -308,7 +308,7 @@ const TaskAlleyLaunch = () => {
         <h2 className="text-3xl font-bold mb-14">Frequently Asked Questions</h2>
         <div className="space-y-10 ">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b-1  border-black bg-white">
+            <div key={index} className="border-b-1  border-black ">
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center px-4 py-3 text-left text-lg font-medium cursor-pointer"
