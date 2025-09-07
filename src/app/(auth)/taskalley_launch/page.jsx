@@ -128,6 +128,19 @@ const TaskAlleyLaunch = () => {
 
   return (
     <div className="bg-[#F9FAFB]">
+
+          
+          {/* navbar */}
+             <nav className="shadow-2xl py-3 px-3">
+                 <div className="project_container py-2 ">
+                     <Image src={main_logo}/>
+                 </div>
+             </nav>
+          {/* navbar */}
+
+
+
+
       <div className="max-w-7xl mx-auto min-h-screen">
         <div
           className="min-h-screen w-full bg-cover bg-no-repeat bg-center flex items-center px-4 sm:px-8 md:px-12 lg:px-20"
