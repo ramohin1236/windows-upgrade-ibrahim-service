@@ -81,37 +81,47 @@ useEffect(() => {
 }, []);
 
 const [timeLeft, setTimeLeft] = useState({
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0,
-});
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
-useEffect(() => {
-  // Set target date = 90 days from now
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 90);
+  useEffect(() => {
+    // Run only on client
+    if (typeof window === "undefined") return;
 
-  const interval = setInterval(() => {
-    const now = new Date().getTime();
-    const difference = targetDate.getTime() - now;
+    // Load or set target date (90 days from first load)
+    let savedTarget = localStorage.getItem("targetDate");
+    let targetDate;
 
-    if (difference <= 0) {
-      clearInterval(interval);
-      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    if (savedTarget) {
+      targetDate = new Date(savedTarget);
     } else {
-      setTimeLeft({
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      });
+      targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 90);
+      localStorage.setItem("targetDate", targetDate.toISOString());
     }
-  }, 1000);
 
-  return () => clearInterval(interval);
-}, []);
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetDate.getTime() - now;
 
+      if (difference <= 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / (1000 * 60)) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="">
