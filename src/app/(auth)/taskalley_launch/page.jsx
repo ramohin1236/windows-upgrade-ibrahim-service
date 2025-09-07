@@ -333,10 +333,10 @@ const TaskAlleyLaunch = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="project_container px-6 py-20 lg:py-28">
+      <section className="project_container py-20 lg:py-28 shadow-2xl">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           {/* Left Side */}
-          <div className="relative flex-1 flex justify-center">
+          <div className="relative flex-1 flex ">
             <Image
               src={cta_image}
               alt="Call to action"
@@ -344,7 +344,7 @@ const TaskAlleyLaunch = () => {
               priority
             />
             {/* Overlay Text */}
-            <div className="absolute inset-0 flex flex-col justify-center lg:items-start items-center px-6 lg:px-12 text-left">
+            <div className="absolute inset-0 flex flex-col justify-center lg:items-start items-center text-left">
               <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug">
                 Start Posting Tasks for <br /> Free
               </p>
