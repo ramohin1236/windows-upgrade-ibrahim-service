@@ -124,15 +124,24 @@ const TaskAlleyLaunch = () => {
   }, []);
 
   return (
-    <div className="">
-      <div className="relative min-h-screen">
-        <div className="hidden lg:block">
-          <Image src={Hero} className="w-full" />
-        </div>
-        <div className="pl-20 flex flex-col items-center md:items-start gap-4 absolute top-1/2">
-          <h6 className="text-lg text-[#115E59] font-semibold">Welcome to TaskAlley</h6>
-          <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">Your trusted ally for smarter tasking in Nigeria</h1>
-          <p className="text-sm text-gray-400">TaskAlley is more than a marketplace — it’s your one-stop hub to post, find, and manage tasks with verified providers.</p>
+    <div className="bg-[#F9FAFB]">
+      <div className="max-w-7xl mx-auto min-h-screen">
+        <div
+          className="min-h-screen w-full bg-cover bg-no-repeat bg-center flex items-center"
+          style={{ backgroundImage: "url('/Hero.svg')" }}
+        >
+          <div className="pl-20 flex flex-col items-center md:items-start gap-4">
+            <h6 className="text-2xl text-[#115E59] font-semibold">
+              Welcome to TaskAlley
+            </h6>
+            <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">
+              Your trusted ally <br /> for smarter tasking in Nigeria
+            </h1>
+            <p className="text-base text-gray-400">
+              TaskAlley is more than a marketplace — it’s your one-stop hub to
+              post, find, and manage <br /> tasks with verified providers.
+            </p>
+          </div>
         </div>
       </div>
       {/* Why Choose TaskAlleey Section */}
