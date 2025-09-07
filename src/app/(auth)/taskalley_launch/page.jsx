@@ -235,7 +235,7 @@ const TaskAlleyLaunch = () => {
             <h3 className="text-2xl font-medium md:leading-normal text-[#6B7280]">
               We’re Almost There!
             </h3>
-            <p className="text-3xl font-bold leading-28">
+            <p className="text-3xl font-bold leading-4">
               TaskAlley is launching soon. Be the first to experience the future
               of smarter workflows.
             </p>
