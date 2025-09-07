@@ -15,6 +15,7 @@ import PopularService from "@/sharred/popularService";
 import cta_image from "../../../../public/cta.png";
 import facebook from "../../../../public/facebook.svg"
 import youtube from "../../../../public/youtube.svg"
+import all_icon  from "../../../../public/all_icon.png"
 import Link from "next/link";
 
 const faqs = [
@@ -160,7 +161,7 @@ const [timeLeft, setTimeLeft] = useState({
           {/* first */}
           <div className="flex flex-col gap-3 p-6 md:p-8">
             <div className="flex items-center gap-3">
-              <Image src={image2} className="w-16 " />
+              <Image src={image2} className="w-16 " alt="image2" />
               <p className="text-xl font-medium">Smarter Collaboration</p>
             </div>
             <div>
@@ -176,7 +177,7 @@ const [timeLeft, setTimeLeft] = useState({
           {/* first */}
           <div className="flex flex-col gap-3 p-6 md:p-8">
             <div className="flex items-center gap-3">
-              <Image src={image3} className="w-16 " />
+              <Image src={image3} className="w-16 " alt="image3"/>
               <p className="text-xl font-medium">Secure & Reliable</p>
             </div>
             <div>
@@ -229,7 +230,7 @@ const [timeLeft, setTimeLeft] = useState({
                 <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
                   <span className="countdown ">
                     <span
-                      style={{ "--value": 15 } /* as React.CSSProperties */}
+                      style={{ "--value": 15 } }
                       aria-live="polite"
                       aria-label={counter}
                       className="text-4xl font-bold text-[#115E59]"
@@ -245,7 +246,7 @@ const [timeLeft, setTimeLeft] = useState({
                 <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
                   <span className="countdown font-mono text-5xl">
                     <span
-                      style={{ "--value": 10 } /* as React.CSSProperties */}
+                      style={{ "--value": 10 } }
                       aria-live="polite"
                       aria-label={counter}
                       className="text-4xl font-bold text-[#115E59]"
@@ -260,7 +261,7 @@ const [timeLeft, setTimeLeft] = useState({
                 <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
                   <span className="countdown font-mono text-5xl">
                     <span
-                      style={{ "--value": 24 } /* as React.CSSProperties */}
+                      style={{ "--value": 24 } }
                       aria-live="polite"
                       aria-label={counter}
                       className="text-4xl font-bold text-[#115E59]"
@@ -275,7 +276,7 @@ const [timeLeft, setTimeLeft] = useState({
                 <div className="flex flex-col  p-4 rounded-lg text-neutral-content bg-[#E6F4F1]">
                   <span className="countdown font-mono text-5xl">
                     <span
-                      style={{ "--value": 59 } /* as React.CSSProperties */}
+                      style={{ "--value": 59 } }
                       aria-live="polite"
                       aria-label={counter}
                       className="text-4xl font-bold text-[#115E59]"
@@ -394,8 +395,8 @@ const [timeLeft, setTimeLeft] = useState({
               <div><Image src={main_logo} alt="main logg"/></div>
               <div className="text-white">Copyright 2025 TaskAlley.com</div>
               <div className="flex gap-2">
-                  <Link href="www.facebook.com"><Image src={facebook}/></Link>
-                  <Link href="www.facebook.com"><Image src={youtube}/></Link>
+                  <Link href="www.facebook.com"><Image src={all_icon} className="w-28"/></Link>
+                 
               </div>
           </div>
       </section>
