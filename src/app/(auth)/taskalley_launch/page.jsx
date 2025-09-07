@@ -12,7 +12,7 @@ import HowWorks from "@/components/home/HowWorks";
 import Lottie from "lottie-react";
 import PopularService from "@/sharred/popularService";
 import cta_image from "../../../../public/cta.png";
-import Hero from "../../../../public/Hero.svg";
+import Hero from "../../../../public/laptop.svg";
 
 import all_icon from "../../../../public/all_icon.png";
 import Link from "next/link";
@@ -128,30 +128,22 @@ const TaskAlleyLaunch = () => {
 
   return (
     <div className="bg-[#F9FAFB]">
+      {/* navbar */}
+      <nav className="shadow-2xl py-3 ">
+        <div className="project_container py-2 px-2 lg:px-4">
+          <Image src={main_logo} />
+        </div>
+      </nav>
+      {/* navbar */}
 
-          
-          {/* navbar */}
-             <nav className="shadow-2xl py-3 px-3">
-                 <div className="project_container py-2 ">
-                     <Image src={main_logo}/>
-                 </div>
-             </nav>
-          {/* navbar */}
-
-
-
-
-      <div className="max-w-7xl mx-auto min-h-screen">
-        <div
-          className="min-h-screen w-full bg-cover bg-no-repeat bg-center flex items-center px-4 sm:px-8 md:px-12 lg:px-20"
-          style={{ backgroundImage: "url('/Hero.svg')" }}
-        >
-          <div className="flex flex-col items-center  md:items-start gap-4 md:text-left max-w-2xl">
+      <div className="project_container px-4">
+        <div className="flex flex-col lg:flex-row items-center py-12 lg:py-40">
+             <div className="flex flex-col items-center  md:items-start gap-4 md:text-left max-w-2xl">
             <h6 className="text-lg sm:text-xl md:text-2xl text-[#115E59] font-semibold">
               Welcome to TaskAlley
             </h6>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-center md:text-start lg:text-start">
+            <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-center md:text-start lg:text-start">
               Your trusted ally <br className="hidden md:block" /> for smarter
               tasking in Nigeria
             </h1>
@@ -161,16 +153,19 @@ const TaskAlleyLaunch = () => {
               post, find, and manage tasks with verified providers.
             </p>
           </div>
+
+          <div>
+              <Image src={Hero}/>
+          </div>
         </div>
       </div>
 
       {/* Why Choose TaskAlleey Section */}
-      <div className="project_container  py-12">
+      <div className="project_container px-2 py-12">
         <div className=" text-center flex flex-col gap-3 pb-4 md:pb-20">
-          <h4 className="font-bold text-4xl">Why Choose TaskAlley?</h4>
+          <h4 className="font-bold text-3xl lg:text-4xl">Why Choose TaskAlley?</h4>
           <p className="text-[#6B7280]">
-            Experience excellence in digital craftsmanship with our team of
-            skilled professionals dedicated to delivering excaptional results.
+           Experience excellence in digital craftsmanship with our team of skilled professionals <br /> dedicated to delivering exceptional results.
           </p>
         </div>
         {/* first */}
@@ -244,11 +239,11 @@ const TaskAlleyLaunch = () => {
       <section className="pt-20 pb-20">
         <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center gap-10 flex-col md:flex-row">
           {/* left side */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 pl-2">
             <h3 className="text-2xl font-medium md:leading-normal text-[#6B7280]">
               We’re Almost There!
             </h3>
-            <p className="text-3xl font-bold leading-relaxed">
+            <p className="text-3xl font-bold ">
               TaskAlley is launching soon. Be the first to experience the future
               of smarter workflows.
             </p>
@@ -256,10 +251,10 @@ const TaskAlleyLaunch = () => {
               Join thousands of innovators already on the waitlist. Early
               signups get exclusive access + 20% off.
             </p>
-            <div className="flex gap-5 text-center">
+            <div className="flex gap-2 text-center">
               {/* Days */}
-              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
-                <span className="text-4xl font-bold text-[#115E59]">
+              <div className="flex flex-col items-center p-2 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-2xl md:text-4xl font-bold text-[#115E59]">
                   {timeLeft.days}
                 </span>
                 <span className="text-base text-[#115E59] font-medium">
@@ -268,8 +263,8 @@ const TaskAlleyLaunch = () => {
               </div>
 
               {/* Hours */}
-              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
-                <span className="text-4xl font-bold text-[#115E59]">
+              <div className="flex flex-col items-center p-2 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-2xl md:text-4xl font-bold text-[#115E59]">
                   {timeLeft.hours}
                 </span>
                 <span className="text-base text-[#115E59] font-medium">
@@ -278,8 +273,8 @@ const TaskAlleyLaunch = () => {
               </div>
 
               {/* Minutes */}
-              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
-                <span className="text-4xl font-bold text-[#115E59]">
+              <div className="flex flex-col items-center p-2 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-2xl md:text-4xl font-bold text-[#115E59]">
                   {timeLeft.minutes}
                 </span>
                 <span className="text-base text-[#115E59] font-medium">
@@ -288,8 +283,8 @@ const TaskAlleyLaunch = () => {
               </div>
 
               {/* Seconds */}
-              <div className="flex flex-col items-center p-4 rounded-lg bg-[#E6F4F1] w-20">
-                <span className="text-4xl font-bold text-[#115E59]">
+              <div className="flex flex-col items-center p-2 rounded-lg bg-[#E6F4F1] w-20">
+                <span className="text-2xl md:text-4xl font-bold text-[#115E59]">
                   {timeLeft.seconds}
                 </span>
                 <span className="text-base text-[#115E59] font-medium">
@@ -346,56 +341,53 @@ const TaskAlleyLaunch = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="project_container px-6 py-20 lg:py-28">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-          {/* Left Side */}
-          <div className="relative flex-1 flex justify-center">
-            <Image
-              src={cta_image}
-              alt="Call to action"
-              className="w-full max-w-lg object-contain"
-              priority
-            />
-            {/* Overlay Text */}
-            <div className="absolute inset-0 flex flex-col justify-center lg:items-start items-center px-6 lg:px-12 text-left">
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug">
-                Start Posting Tasks for <br /> Free
-              </p>
-              <p className="mt-4 text-sm md:text-base text-gray-100 max-w-md">
-                Subscribe today and unlock smarter ways to get work done.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side */}
-          <div className="flex-1 flex justify-center w-full">
-            <form className="w-full max-w-md">
-              <p className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 text-center lg:text-left">
-                Subscribe Now
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-gray-100 text-gray-800 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600 transition-all"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 text-sm md:text-base font-medium bg-teal-700 hover:bg-teal-800 text-white rounded-md transition-all"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+  <section className="bg-gray-50 py-16 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between ">
+        
+        {/* Left Side */}
+        <div className="relative flex-1 bg-teal-700 text-white rounded-l-lg p-10 shadow-lg overflow-hidden lg:py-32">
+          {/* Background Shapes */}
+          <div className="absolute -top-20 -left-28 w-96 h-96 bg-teal-800 rounded-full opacity-30"></div>
+          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500 rounded-full opacity-40"></div>
+          
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+              Start Posting Tasks for Free
+            </h2>
+            <p className="mt-4 text-base md:text-lg text-gray-100">
+              Subscribe today and unlock smarter ways to get work done.
+            </p>
           </div>
         </div>
-      </section>
+
+        {/* Right Side */}
+        <div className="flex-1 bg-white rounded-r-lg shadow-md p-8 w-full lg:py-30">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            Subscribe Now
+          </h3>
+          <form className="flex flex-col sm:flex-row items-center gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md font-medium transition"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
 
       {/* navbarrrrrrrrrr */}
 
       <section className="bg-black py-4 mt-20">
-        <div className="project_container px-6 flex justify-between">
+        <div className="project_container px-6 flex flex-wrap items-center  justify-between">
           <div>
             <Image src={main_logo} alt="main logg" />
           </div>
