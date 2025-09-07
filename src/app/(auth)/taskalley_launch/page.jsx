@@ -66,49 +66,53 @@ const faqs = [
 ];
 
 const TaskAlleyLaunch = () => {
-  const [counter, setCounter] = useState(15);
-  const [openIndex, setOpenIndex] = useState(null);
+const [counter, setCounter] = useState(15);
+const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounter((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCounter((prev) => (prev > 0 ? prev - 1 : 0));
+  }, 1000);
+  return () => clearInterval(interval);
+}, []);
 
-  useEffect(() => {
-    // Set your target date (example: 7 days from now)
-    const targetDate = new Date("2025-09-15T00:00:00").getTime();
+const [timeLeft, setTimeLeft] = useState({
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+});
 
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
+useEffect(() => {
+  // Set target date = 90 days from now
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 90);
 
-      if (difference <= 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / (1000 * 60)) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      }
-    }, 1000);
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const difference = targetDate.getTime() - now;
 
-    return () => clearInterval(interval);
-  }, []);
+    if (difference <= 0) {
+      clearInterval(interval);
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    } else {
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      });
+    }
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <div className="">
       {/* <div
