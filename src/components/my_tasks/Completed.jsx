@@ -174,7 +174,7 @@ const Completed = () => {
           </div>
         </div>
       </div>
-
+            
       <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg">
         <div className="w-16 h-16 rounded-full overflow-clip">
           {" "}
@@ -184,6 +184,7 @@ const Completed = () => {
             className="w-full h-full object-cover"
           />
         </div>
+        
         <div className="flex-1 flex flex-col justify-between">
           <div className="flex justify-between items-center">
             <h4 className="font-semibold">Grace Carey</h4>
@@ -203,6 +204,7 @@ const Completed = () => {
       </div>
 
       {/* Feedback section - only when completed */}
+    
       {status === "Completed" && (
         <div className="flex flex-col gap-4 bg-gray-50 p-6 rounded-xl shadow">
           {!showFeedback ? (

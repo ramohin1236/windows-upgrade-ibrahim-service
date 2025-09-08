@@ -6,12 +6,13 @@ import srvcporvider from "../../../../../public/women.svg";
 import Bids from "@/components/my_tasks/Bids";
 import Progress from "@/components/my_tasks/Progress";
 import Completed from "@/components/my_tasks/Completed";
+import Cancelled from "@/components/my_tasks/Cancelled";
 
 const TaskDetails = () => {
   const status = ["Bids", "Progress", "Completed", "Cancelled"];
 
 
-  const [currentStatus, setCurrentStatus] = useState("Bids");
+  const [currentStatus, setCurrentStatus] = useState("Cancelled");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
@@ -69,7 +70,7 @@ const TaskDetails = () => {
           {currentStatus === "Bids" && <Bids />}
           {currentStatus === "Progress" && <Progress/>}
           {currentStatus === "Completed" && <Completed/>}
-          {currentStatus === "Cancelled" && <p>Cancelled</p>}
+          {currentStatus === "Cancelled" && <Cancelled/>}
         </div>
       </div>
     </div>
