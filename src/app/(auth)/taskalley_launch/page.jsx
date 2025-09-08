@@ -131,14 +131,14 @@ const TaskAlleyLaunch = () => {
       {/* navbar */}
       <nav className="shadow-2xl py-3 ">
         <div className="project_container py-2 px-2 lg:px-4">
-          <Image src={main_logo} />
+          <Image alt="main_logo" src={main_logo} />
         </div>
       </nav>
       {/* navbar */}
 
       <div className="project_container px-4">
         <div className="flex flex-col lg:flex-row items-center py-12 lg:py-40">
-             <div className="flex flex-col items-center  md:items-start gap-4 md:text-left max-w-2xl">
+          <div className="flex flex-col items-center  md:items-start gap-4 md:text-left max-w-2xl">
             <h6 className="text-lg sm:text-xl md:text-2xl text-[#115E59] font-semibold">
               Welcome to TaskAlley
             </h6>
@@ -155,7 +155,7 @@ const TaskAlleyLaunch = () => {
           </div>
 
           <div>
-              <Image src={Hero}/>
+            <Image alt="Hero" src={Hero} />
           </div>
         </div>
       </div>
@@ -163,9 +163,13 @@ const TaskAlleyLaunch = () => {
       {/* Why Choose TaskAlleey Section */}
       <div className="project_container px-2 py-12">
         <div className=" text-center flex flex-col gap-3 pb-4 md:pb-20">
-          <h4 className="font-bold text-3xl lg:text-4xl">Why Choose TaskAlley?</h4>
+          <h4 className="font-bold text-3xl lg:text-4xl">
+            Why Choose TaskAlley?
+          </h4>
           <p className="text-[#6B7280]">
-           Experience excellence in digital craftsmanship with our team of skilled professionals <br /> dedicated to delivering exceptional results.
+            Experience excellence in digital craftsmanship with our team of
+            skilled professionals <br /> dedicated to delivering exceptional
+            results.
           </p>
         </div>
         {/* first */}
@@ -220,7 +224,7 @@ const TaskAlleyLaunch = () => {
           {/* first */}
           <div className="flex flex-col gap-3 p-6 md:p-8">
             <div className="flex items-center gap-3">
-              <Image src={image4} className="w-16 " />
+              <Image alt="image4" src={image4} className="w-16 " />
               <p className="text-xl font-medium">Insightful Tracking</p>
             </div>
             <div>
@@ -341,48 +345,46 @@ const TaskAlleyLaunch = () => {
       </section>
 
       {/* CTA Section */}
-  <section className="bg-gray-50 py-16 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between ">
-        
-        {/* Left Side */}
-        <div className="relative flex-1 bg-teal-700 text-white rounded-l-lg p-10 shadow-lg overflow-hidden lg:py-32">
-          {/* Background Shapes */}
-          <div className="absolute -top-20 -left-28 w-96 h-96 bg-teal-800 rounded-full opacity-30"></div>
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500 rounded-full opacity-40"></div>
-          
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-              Start Posting Tasks for Free
-            </h2>
-            <p className="mt-4 text-base md:text-lg text-gray-100">
-              Subscribe today and unlock smarter ways to get work done.
-            </p>
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between ">
+          {/* Left Side */}
+          <div className="relative flex-1 bg-teal-700 text-white rounded-l-lg p-10 shadow-lg overflow-hidden lg:py-32">
+            {/* Background Shapes */}
+            <div className="absolute -top-20 -left-28 w-96 h-96 bg-teal-800 rounded-full opacity-30"></div>
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500 rounded-full opacity-40"></div>
+
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+                Start Posting Tasks for Free
+              </h2>
+              <p className="mt-4 text-base md:text-lg text-gray-100">
+                Subscribe today and unlock smarter ways to get work done.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side */}
+          <div className="flex-1 bg-white rounded-r-lg shadow-md p-8 w-full lg:py-30">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              Subscribe Now
+            </h3>
+            <form className="flex flex-col sm:flex-row items-center gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                required
+              />
+              <button
+                type="submit"
+                className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md font-medium transition"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
-
-        {/* Right Side */}
-        <div className="flex-1 bg-white rounded-r-lg shadow-md p-8 w-full lg:py-30">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-            Subscribe Now
-          </h3>
-          <form className="flex flex-col sm:flex-row items-center gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md font-medium transition"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-
-      </div>
-    </section>
+      </section>
 
       {/* navbarrrrrrrrrr */}
 

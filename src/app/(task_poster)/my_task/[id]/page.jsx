@@ -7,6 +7,7 @@ import Image from "next/image";
 import srvcporvider from "../../../../../public/women.svg";
 import { BsChatLeftText } from "react-icons/bs";
 import Link from "next/link";
+import { FaStar } from "react-icons/fa6";
 const TaskDetails = () => {
   const [activeTab, setActiveTab] = useState("bids");
 
@@ -39,14 +40,14 @@ const TaskDetails = () => {
       name: "Ronald Richards",
       date: "24 January, 2023",
       message:
-        "I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!",
+        "I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!I was a bit nervous to be buying a secondhand phone from Amazon, but I couldn't be happier with my purchase!",
     },
     {
       id: 2,
       name: "Ronald Richards",
       date: "24 January, 2023",
       message:
-        "Does this task include moving the couch upstairs too, or just ground floor?",
+        "Does this task include moving the couch upstairs too, or just ground floor?Does this task include moving the couch upstairs too, or just ground floor?Does this task include moving the couch upstairs too, or just ground floor?Does this task include moving the couch upstairs too, or just ground floor?Does this task include moving the couch upstairs too, or just ground floor?Does this task include moving the couch upstairs too, or just ground floor?Does this task include moving the couch upstairs too, or just ground floor?",
     },
   ];
 
@@ -176,31 +177,54 @@ const TaskDetails = () => {
                 key={bid.id}
                 className="flex flex-col lg:flex-row gap-4 p-4 border rounded-lg"
               >
-                <Image src={srvcporvider} alt={bid.name} className="w-10" />
-                <div className="flex-1">
-                  <div className="flex justify-between items-center">
-                    <h4 className="font-semibold">{bid.name}</h4>
-                    <p className="text-sm text-gray-500">{bid.date}</p>
-                  </div>
-                  <p className="text-gray-600 text-sm mt-2">{bid.message}</p>
-                  <div className="flex flex-col md:flex-row  justify-between md:items-center mt-16 gap-5">
+                {/* left side */}
+                <div className="flex flex-col justify-between gap-10 bg-[#E6F4F1] rounded-xl px-4 py-4 ">
+                  <div className="flex flex-wrap lg:justify-between items-center gap-4 md:gap-8">
+                    <div className="w-14 h-14 md:w-24 md:h-24  rounded-full overflow-clip">
+                      <Image
+                        src={srvcporvider}
+                        alt={bid.name}
+                        width={500}
+                        height={500}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="">
+                      <h4 className="font-semibold md:text-xl">{bid.name}</h4>
+                      <p className="flex items-center text-gray-500 gap-1 text-sm md:text-base">
+                        <FaStar className="text-yellow-500 text-sm md:text-base" />{" "}
+                        (145 Reviews)
+                      </p>
+                    </div>
                     <div>
                       {" "}
-                      <p className="font-semibold">{bid.price}</p>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-3 ">
-                      <button className="px-6 py-2 border-2 border-[#115e59] text-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 cursor-pointer">
-                        Accept the Task
-                      </button>
-                      <button
-                        href="/construction"
-                        className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center"
-                      >
-                        <BsChatLeftText />
-                        Chat Now
-                      </button>
+                      <p className="font-semibold text-xl md:text-3xl">
+                        {bid.price}
+                      </p>
                     </div>
                   </div>
+                  {/* accept and chat button */}
+                  <div className="flex flex-col sm:flex-row gap-3  ">
+                    <button className="px-6 py-2 border-2 border-[#115e59] text-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 cursor-pointer">
+                      Accept the Task
+                    </button>
+                    <button
+                      href="/construction"
+                      className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center"
+                    >
+                      <BsChatLeftText />
+                      Chat Now
+                    </button>
+                  </div>
+                </div>
+                {/* right side */}
+
+                <div className="flex-1">
+                  <p className="text-gray-600 text-sm mt-2">{bid.message}</p>
+                  <div className="flex justify-between items-center mt-6">
+                    <p className="text-sm text-gray-500">{bid.date}</p>
+                  </div>
+                  <div className="flex flex-col md:flex-row  justify-between md:items-center mt-16 gap-5"></div>
                 </div>
               </div>
             ))}
@@ -211,26 +235,32 @@ const TaskDetails = () => {
                 key={q.id}
                 className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg"
               >
-                <Image src={srvcporvider} alt={q.name} className="" />
-                <div className="flex-1">
+                <div className="w-16 h-16 rounded-full overflow-clip">
+                  {" "}
+                  <Image
+                    src={srvcporvider}
+                    alt={q.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 flex flex-col justify-between">
                   <div className="flex justify-between items-center">
                     <h4 className="font-semibold">{q.name}</h4>
                     <p className="text-sm text-gray-500">{q.date}</p>
                   </div>
-                  <p className="text-gray-600 text-sm mt-2">{q.message}</p>
-                  <button className="mt-3 px-3 py-1 bg-teal-100 text-teal-600 rounded-lg">
-                    Chat Now
-                  </button>
+                  <div>
+                    <p className="text-gray-600 text-sm mt-2">{q.message}</p>
+                    <button
+                      href="/construction"
+                      className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center mt-12"
+                    >
+                      <BsChatLeftText />
+                      Chat Now
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
-        </div>
-
-        {/* View More */}
-        <div className="mt-6 flex justify-center">
-          <button className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg">
-            View More
-          </button>
         </div>
       </div>
     </div>
