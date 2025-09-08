@@ -94,7 +94,7 @@ const categories = [
       locations: ['Los Angeles, CA 90024', 'New York, USA'],
       date: '15 May 2020 8:00 am',
       category: 'Cleaning',
-      status: 'Open',
+      status: 'progress',
       offers: 0,
       image: srvcporvider
     },
@@ -105,7 +105,7 @@ const categories = [
       locations: ['Los Angeles, CA 90024', 'New York, USA'],
       date: '15 May 2020 8:00 am',
       category: 'Cleaning',
-      status: 'Open',
+      status: 'progress',
       offers: 1,
       image: srvcporvider
     },
@@ -116,7 +116,7 @@ const categories = [
       locations: ['Los Angeles, CA 90024', 'New York, USA'],
       date: '15 May 2020 8:00 am',
       category: 'Cleaning',
-      status: 'Open',
+      status: 'progress',
       offers: 1,
       image: srvcporvider
     }
@@ -132,7 +132,7 @@ const categories = [
       locations: ['Los Angeles, CA 90024', 'New York, USA'],
       date: '15 May 2020 8:00 am',
       category: 'Cleaning',
-      status: 'Open',
+      status: 'completed',
       offers: 0,
       image: srvcporvider
     },
@@ -143,7 +143,7 @@ const categories = [
       locations: ['Los Angeles, CA 90024', 'New York, USA'],
       date: '15 May 2020 8:00 am',
       category: 'Cleaning',
-      status: 'Open',
+      status: 'completed',
       offers: 1,
       image: srvcporvider
     },
@@ -154,7 +154,7 @@ const categories = [
       locations: ['Los Angeles, CA 90024', 'New York, USA'],
       date: '15 May 2020 8:00 am',
       category: 'Cleaning',
-      status: 'Open',
+      status: 'completed',
       offers: 1,
       image: srvcporvider
     }
