@@ -7,8 +7,8 @@ const TaskInfoSection = () => {
       {/* left side */}
       <div>
         <div className="flex mt-8 items-center gap-3">
-          <div className="w-8 md:w-12 h-8 md:h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
-            <User className="w-4 md:w-6 h-4 md:h-6 text-blue-600" />
+          <div className="bg-[#E6F4F1] rounded-full p-2 md:p-3">
+            <User className="w-4 md:w-6 h-4 md:h-6 text-[#115E59]" />
           </div>
           <div>
             <p className="text-base md:text-xl font-semibold"> Assigned To</p>

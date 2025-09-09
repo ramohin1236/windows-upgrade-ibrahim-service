@@ -80,7 +80,7 @@ const DateExtensionRequestSection = ({ extensionStatus }) => {
           </div>
 
           {/* Current and New Date Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6  border px-4 py-2 rounded-2xl">
             {/* Current Date */}
             <div>
               <h4 className="font-medium text-gray-900 mb-2">

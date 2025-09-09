@@ -18,7 +18,7 @@ const TaskDetails = () => {
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
         <div className="flex items-center gap-4 ">
           <Image
             src={popularcateIcon}

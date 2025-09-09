@@ -177,13 +177,13 @@ const Bids = () => {
                       <button className="px-6 py-2 border-2 border-[#115e59] text-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 cursor-pointer">
                         Accept the Task
                       </button>
-                      <button
-                        href="/construction"
+                      <Link
+                        href="/chat"
                         className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center"
                       >
                         <BsChatLeftText />
                         Chat Now
-                      </button>
+                      </Link>
                     </div>
                   </div>
                   {/* right side */}
