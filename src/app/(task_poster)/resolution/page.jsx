@@ -7,7 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import popularcateIcon from "../../../../public/popularcate.svg";
 
 const Resolution = () => {
-  const [openModal, setOpenModal] = useState(null); // null | "date" | "cancel"
+  const [openModal, setOpenModal] = useState(null); 
 
   const options = [
     {
@@ -72,7 +72,7 @@ const Resolution = () => {
             {/* Close button */}
             <button
               onClick={() => setOpenModal(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 cursor-pointer"
             >
               <X size={22} />
             </button>
@@ -158,7 +158,7 @@ const Resolution = () => {
             {/* Close button */}
             <button
               onClick={() => setOpenModal(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 cursor-pointer"
             >
               <X size={22} />
             </button>

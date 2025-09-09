@@ -7,14 +7,13 @@ import Bids from "@/components/my_tasks/Bids";
 import Progress from "@/components/my_tasks/Progress";
 import Completed from "@/components/my_tasks/Completed";
 import Cancelled from "@/components/my_tasks/Cancelled";
-import { BsChatLeftText } from "react-icons/bs";
 import { Handshake } from "lucide-react";
 import Link from "next/link";
 
 const TaskDetails = () => {
   const status = ["Bids", "Progress", "Completed", "Cancelled"];
 
-  const [currentStatus, setCurrentStatus] = useState("Completed");
+  const [currentStatus, setCurrentStatus] = useState("Progress");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
@@ -23,7 +22,7 @@ const TaskDetails = () => {
         <div className="flex items-center gap-4 ">
           <Image
             src={popularcateIcon}
-            alt="Popular Category "
+            alt="Popular Category"
             height={24}
             width={24}
           />
@@ -31,7 +30,7 @@ const TaskDetails = () => {
             My Tasks
           </p>
         </div>
-
+      
         <div>
           {currentStatus === "Progress" && (
             <div>

@@ -1,0 +1,49 @@
+import React from "react";
+import { Calendar, MapPin, MessageCircle, User } from "lucide-react";
+
+const TaskInfoSection = () => {
+  return (
+    <div className="flex flex-col md:flex-row justify-between">
+      {/* left side */}
+      <div>
+        <div className="flex mt-8 items-center gap-3">
+          <div className="w-8 md:w-12 h-8 md:h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+            <User className="w-4 md:w-6 h-4 md:h-6 text-blue-600" />
+          </div>
+          <div>
+            <p className="text-base md:text-xl font-semibold"> Assigned To</p>
+            <p className="text-[#6B7280] text-sm">Marvin Fey</p>
+          </div>
+        </div>
+        <div className="flex mt-8 items-center gap-3">
+          <div className="bg-[#E6F4F1] rounded-full p-2 md:p-3">
+            <MapPin className="text-[#115E59] text-sm md:text-xl" />
+          </div>
+          <div>
+            <p className="text-base md:text-xl font-semibold"> Location</p>
+            <p className="text-[#6B7280] text-sm">New York, USA</p>
+          </div>
+        </div>
+        <div className="flex mt-8 items-center gap-3">
+          <div className="bg-[#E6F4F1] rounded-full p-2 md:p-3 ">
+            <Calendar className="text-[#115E59] text-sm md:text-xl" />
+          </div>
+          <div>
+            <p className="text-base md:text-xl font-semibold">To Be Done On</p>
+            <p className="text-[#6B7280] text-sm">15 May 2020 8:00 am</p>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div>
+        <button className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center mt-12">
+          <MessageCircle className="w-4 h-4" />
+          Chat Now
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default TaskInfoSection;
