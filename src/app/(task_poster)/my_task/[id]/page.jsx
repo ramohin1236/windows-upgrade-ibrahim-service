@@ -7,17 +7,19 @@ import Bids from "@/components/my_tasks/Bids";
 import Progress from "@/components/my_tasks/Progress";
 import Completed from "@/components/my_tasks/Completed";
 import Cancelled from "@/components/my_tasks/Cancelled";
+import { BsChatLeftText } from "react-icons/bs";
+import { Handshake } from "lucide-react";
+import Link from "next/link";
 
 const TaskDetails = () => {
   const status = ["Bids", "Progress", "Completed", "Cancelled"];
 
-
-  const [currentStatus, setCurrentStatus] = useState("Bids");
+  const [currentStatus, setCurrentStatus] = useState("Completed");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
       {/* Header */}
-      <div>
+      <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-4 ">
           <Image
             src={popularcateIcon}
@@ -28,6 +30,33 @@ const TaskDetails = () => {
           <p className="font-semibold text-md md:text-xl text-color pb-3">
             My Tasks
           </p>
+        </div>
+
+        <div>
+          {currentStatus === "Progress" && (
+            <div>
+              {" "}
+              <Link
+                href="/resolution"
+                className="px-6 py-2.5 bg-[#E6F4F1] text-teal-800 border border-teal-800 rounded-md  transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center mt-12"
+              >
+                <Handshake className="text-sm font-semibold"/>
+                Resolution Center
+              </Link>
+            </div>
+          )}
+          {currentStatus === "Completed" && (
+            <div>
+              {" "}
+              <Link
+                href="/resolution"
+                className="px-6 py-2.5 bg-[#E6F4F1] text-teal-800 border border-teal-800 rounded-md  transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center mt-12"
+              >
+                <Handshake className="text-sm font-semibold"/>
+                Resolution Center
+              </Link>
+            </div>
+          )}
         </div>
       </div>
 
@@ -68,9 +97,9 @@ const TaskDetails = () => {
         {/* Conditional Sections */}
         <div className="mt-4">
           {currentStatus === "Bids" && <Bids />}
-          {currentStatus === "Progress" && <Progress/>}
-          {currentStatus === "Completed" && <Completed/>}
-          {currentStatus === "Cancelled" && <Cancelled/>}
+          {currentStatus === "Progress" && <Progress />}
+          {currentStatus === "Completed" && <Completed />}
+          {currentStatus === "Cancelled" && <Cancelled />}
         </div>
       </div>
     </div>
