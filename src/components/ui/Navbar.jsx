@@ -121,9 +121,9 @@ const Navbar = () => {
               </Link>
             </>
           ) : (
-            <button className="text-teal-700 text-2xl">
+            <Link href="/profile_info" className="text-teal-700 text-2xl">
               <FaUserCircle />
-            </button>
+            </Link>
           )}
         </div>
 
@@ -207,9 +207,9 @@ const Navbar = () => {
             >
               List my services
             </Link>
-            <button className="w-full flex justify-center pt-3 text-teal-700 text-2xl">
+            <Link href="/profile_info" className="w-full flex cursor-pointer justify-center pt-3 text-teal-700 text-2xl">
               <FaUserCircle />
-            </button>
+            </Link>
           </>
         )}
       </div>
