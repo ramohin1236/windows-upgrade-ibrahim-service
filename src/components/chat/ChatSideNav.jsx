@@ -6,7 +6,7 @@ const ChatSideNav = () => {
   const chatUser = [
     {
       id: 1,
-      Name: "Lee Williamson",
+      Name: "Lee Williamso",
       short_message: "Hey, are you available for a quick call?",
       image: "https://i.pravatar.cc/150?img=1",
     },
