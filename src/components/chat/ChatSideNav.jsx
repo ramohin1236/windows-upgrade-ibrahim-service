@@ -1,4 +1,5 @@
 "use client";
+import { Menu, Search } from "lucide-react";
 import React, { useState } from "react";
 import { FaHome } from "react-icons/fa";
 
@@ -40,49 +41,68 @@ const ChatSideNav = () => {
       short_message: "Let’s finalize the design this week.",
       image: "https://i.pravatar.cc/150?img=6",
     },
+    {
+      id: 6,
+      Name: "Marvin McKinney",
+      short_message: "Let’s finalize the design this week.",
+      image: "https://i.pravatar.cc/150?img=6",
+    },
+    {
+      id: 6,
+      Name: "Marvin McKinney",
+      short_message: "Let’s finalize the design this week.",
+      image: "https://i.pravatar.cc/150?img=6",
+    },
+    {
+      id: 6,
+      Name: "Marvin McKinney",
+      short_message: "Let’s finalize the design this week.",
+      image: "https://i.pravatar.cc/150?img=6",
+    },
   ];
 
   return (
     <>
+     {/* Mobile hamburger button */}
+           
       {/* Sidebar */}
-      <nav className="pb-6 space-y-2">
-        {/* Search */}
-        <div className="relative bg-gray-100 px-4 py-2.5 rounded-md mt-6">
-          <input
-            className="text-sm text-slate-800 outline-none bg-transparent px-1 w-full"
-            placeholder="Search..."
-          />
+      <div className="relative ">
+        <div className="mb-8 border-b pb-4">
+          <div className="relative mx-auto ">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search your perfect event"
+              
+            
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-[#E6F4F1] text-gray-600"
+            />
+          </div>
         </div>
 
-        {/* Profile */}
-        <div className="flex gap-5 items-center cursor-pointer"></div>
-
-        {/* Nav Links */}
-        <ul className="space-y-2 pl-2 flex-1 mt-2">
+        {/* Scrollable Chat List Container */}
+        <div className="w-full max-h-[650px] overflow-y-auto">
           {chatUser.map((user, index) => (
-            <li
+            <ul
               key={index}
-              className="flex items-center gap-4 hover:bg-[#E6F4F1] py-4 px-3 mr-2 rounded-xl cursor-pointer"
+              className="flex items-center gap-3 p-4 hover:bg-[#E6F4F1] cursor-pointer rounded-2xl "
             >
-              <div className="relative">
-                <div>
-                  <img
-                    src="https://readymadeui.com/profile_2.webp"
-                    alt="profile"
-                    className="w-16 h-16 rounded-full border-white"
-                  />
-                </div>
-                <div className="h-3 w-3 rounded-full bg-green-600 border-2 border-white block absolute  right-0"></div>
+              <div className="w-16 h-16 overflow-clip">
+                <img
+                  src={user.image}
+                  className="rounded-full w-full"
+                  alt={user.Name}
+                />
               </div>
 
               <div>
-                <p className="text-base font-medium">{user.Name}</p>
-                <p className="text-sm text-[#6B7280]">{user.short_message}</p>
+                <p className="text-xl font-semibold">{user.Name}</p>
+                <p className="text-sm text-gray-500">{user.short_message}</p>
               </div>
-            </li>
+            </ul>
           ))}
-        </ul>
-      </nav>
+        </div>
+      </div>
     </>
   );
 };

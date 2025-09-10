@@ -4,7 +4,7 @@ import { Search, MapPin, Star, ChevronDown, ChevronUp } from "lucide-react";
 import FilterSection from "@/components/serviceprovider/FilterSection";
 import CheckboxFilter from "@/components/serviceprovider/CheckboxFilter";
 
-import ai from '../../../../public/ai.png'
+import ai from "../../../../public/ai.png";
 import ServiceCard from "@/components/serviceprovider/ServiceCard";
 
 const ServiceListing = () => {
@@ -40,7 +40,7 @@ const ServiceListing = () => {
       category: "Cleaning",
       location: "New York, USA",
       rating: 4.5,
-      image: {ai},
+      image: { ai },
       price: null,
     },
     {
@@ -49,7 +49,7 @@ const ServiceListing = () => {
       category: "Cleaning",
       location: "New York, USA",
       rating: 4.5,
-      image: {ai},
+      image: { ai },
       price: null,
     },
     {
@@ -58,7 +58,7 @@ const ServiceListing = () => {
       category: "Cleaning",
       location: "New York, USA",
       rating: 4.5,
-      image: {ai},
+      image: { ai },
       price: null,
     },
     {
@@ -67,7 +67,7 @@ const ServiceListing = () => {
       category: "Cleaning",
       location: "New York, USA",
       rating: 4.5,
-      image: {ai},
+      image: { ai },
       price: null,
     },
   ];
@@ -99,74 +99,70 @@ const ServiceListing = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="project_container mx-auto px-6 py-8">
-       
-
         {/* Main Content */}
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Sidebar Filters */}
           <div className="col-span-1">
             <div className="bg-white rounded-lg shadow-sm p-6 hidden lg:block">
               {/* Service Category Filter */}
-             <div >
-                 <FilterSection
-                title="Select Service Category"
-                isOpen={categoryFilterOpen}
-                onToggle={() => setCategoryFilterOpen(!categoryFilterOpen)}
-              >
-                <CheckboxFilter
-                  options={serviceCategories}
-                  selectedOptions={selectedCategories}
-                  onChange={handleCategoryChange}
-                />
-              </FilterSection>
-
-             </div>
+              <div>
+                <FilterSection
+                  title="Select Service Category"
+                  isOpen={categoryFilterOpen}
+                  onToggle={() => setCategoryFilterOpen(!categoryFilterOpen)}
+                >
+                  <CheckboxFilter
+                    options={serviceCategories}
+                    selectedOptions={selectedCategories}
+                    onChange={handleCategoryChange}
+                  />
+                </FilterSection>
+              </div>
               {/* Sort By Filter */}
-             <div >
-                 <FilterSection
-                title="Sort By"
-                isOpen={sortByOpen}
-                onToggle={() => setSortByOpen(!sortByOpen)}
-              >
-                <div className="space-y-2">
-                  {sortOptions.map((option) => (
-                    <label
-                      key={option.id}
-                      className="flex items-center gap-3 cursor-pointer"
-                    >
-                      <input
-                        type="radio"
-                        name="sortBy"
-                        value={option.id}
-                        checked={selectedSortBy === option.id}
-                        onChange={() => handleSortChange(option.id)}
-                        className="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500"
-                      />
-                      <span className="text-gray-700">{option.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </FilterSection>
-             </div>
+              <div>
+                <FilterSection
+                  title="Sort By"
+                  isOpen={sortByOpen}
+                  onToggle={() => setSortByOpen(!sortByOpen)}
+                >
+                  <div className="space-y-2">
+                    {sortOptions.map((option) => (
+                      <label
+                        key={option.id}
+                        className="flex items-center gap-3 cursor-pointer"
+                      >
+                        <input
+                          type="radio"
+                          name="sortBy"
+                          value={option.id}
+                          checked={selectedSortBy === option.id}
+                          onChange={() => handleSortChange(option.id)}
+                          className="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500"
+                        />
+                        <span className="text-gray-700">{option.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </FilterSection>
+              </div>
             </div>
           </div>
 
           {/* Services Grid */}
           <div className="col-span-3">
-           
- {/* Search Bar */}
-        <div className="mb-8">
-          <div className="relative mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search your perfect event"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-            />
-          </div>
-        </div>
+            {/* Search Bar */}
+            <div className="mb-8">
+              <div className="relative mx-auto">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search your perfect event"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                />
+              </div>
+            </div>
             {/* Services Grid */}
             {filteredServices.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,8 +183,6 @@ const ServiceListing = () => {
                 </p>
               </div>
             )}
-
-          
           </div>
         </div>
       </div>
