@@ -4,10 +4,10 @@ import Link from "next/link";
 import client from "../../../public/client.png";
 import { CgProfile } from "react-icons/cg";
 import { IoIosNotifications } from "react-icons/io";
-import { CiLink } from "react-icons/ci";
 import { FaDollarSign } from "react-icons/fa6";
 import { IoIosSettings } from "react-icons/io";
 import { TbDiscount } from "react-icons/tb";
+import { FaMoneyBillTransfer } from "react-icons/fa6";
 
 const sidebarLinks = [
   { name: "Profile Info", href: "/profile_info", icon: <CgProfile /> },
@@ -16,8 +16,8 @@ const sidebarLinks = [
     href: "/notifications",
     icon: <IoIosNotifications />,
   },
-  { name: "Linked Account", href: "/linked_account", icon: <CiLink /> },
-  { name: "Earnings", href: "/Earnings", icon: <FaDollarSign /> },
+  { name: "My Transactions", href: "/transaction", icon: <FaMoneyBillTransfer />
+ },
   {
     name: "Security Settings",
     href: "/security_settings",
@@ -29,7 +29,7 @@ const sidebarLinks = [
 const ProfileSideNav = ({open}) => {
   return (
     <div
-      className={`fixed md:relative top-0 left-0 min-h-full rounded-l-lg w-64 bg-[#E6F4F1] shadow-lg z-40 transform transition-transform duration-300
+      className={`fixed md:relative top-0 left-0 min-h-full rounded-l-lg w-96 bg-[#E6F4F1] shadow-lg z-40 transform transition-transform duration-300
                ${
                  open ? "translate-x-0" : "-translate-x-full"
                } md:translate-x-0`}

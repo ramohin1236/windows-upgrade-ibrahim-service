@@ -207,6 +207,7 @@ const Navbar = () => {
             >
               List my services
             </Link>
+            
             <Link href="/profile_info" className="w-full flex cursor-pointer justify-center pt-3 text-teal-700 text-2xl">
               <FaUserCircle />
             </Link>

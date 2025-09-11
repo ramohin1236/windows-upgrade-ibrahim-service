@@ -12,8 +12,8 @@ const ProfileLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className="bg-gray-100">
-        <div className="project_container min-h-screen flex justify-center items-center">
-          <div className="flex shadow-lg rounded-xl overflow-hidden min-h-[900px] w-full p-4">
+        <div className="max-w-8/12 mx-auto min-h-screen flex justify-center items-center">
+          <div className="flex shadow-lg rounded-xl overflow-hidden min-h-[1000px] w-full p-4">
             {/* Sidebar (mobile toggle button) */}
             <button
               onClick={() => setOpen(true)}

@@ -2,10 +2,11 @@ import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import client from "../../../../public/client.png";
+import Link from "next/link";
 
 const ProfileInfo = () => {
   return (
-    <div className="p-6">
+    <div className="py-6 md:p-6">
       {/* Header */}
       <div className="flex items-center gap-2 mb-6">
         <ArrowLeft className="w-5 h-5 text-gray-600 cursor-pointer" />
@@ -36,9 +37,11 @@ const ProfileInfo = () => {
                 <h3 className="font-semibold text-gray-800 text-xl">Phone Number</h3>
                 <p className="text-gray-600">(555) 987-6543</p>
               </div>
-              <button className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 text-[#115e59] cursor-pointer">
+              <Link
+              href="/update_info"
+              className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 text-[#115e59] cursor-pointer">
                 Update Profile
-              </button>
+              </Link>
             </div>
 
             {/* Right Column */}
