@@ -29,7 +29,7 @@ const sidebarLinks = [
 const ProfileSideNav = ({open}) => {
   return (
     <div
-      className={`fixed md:relative top-0 left-0 min-h-full rounded-l-lg w-96 bg-[#E6F4F1] shadow-lg z-40 transform transition-transform duration-300
+      className={`fixed md:relative top-0 left-0 min-h-full rounded-l-lg  bg-[#E6F4F1] shadow-lg z-40 transform transition-transform duration-300
                ${
                  open ? "translate-x-0" : "-translate-x-full"
                } md:translate-x-0`}

@@ -4,15 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
 import { MdMenu, MdClose } from "react-icons/md";
 import taskalleyLogo from "../../../public/taskalley.svg";
-
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
+import { RiUserSettingsFill } from "react-icons/ri";
+import { PiSignOutBold } from "react-icons/pi";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState(true); 
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -37,13 +39,15 @@ const Navbar = () => {
   // helper for active links
   const linkClass = (path) =>
     pathname === path
-      ? "text-teal-700 font-semibold"
+      ? "text-teal-700 font-medium"
       : "text-gray-800 hover:text-teal-700";
 
   return (
-    <nav className={`w-full bg-white shadow-sm sticky top-0 z-50 py-2 transform transition-transform duration-500 ${
-    isVisible ? "translate-y-0" : "-translate-y-full"
-  }`}>
+    <nav
+      className={`w-full bg-white shadow-sm sticky top-0 z-50 py-2 transform transition-transform duration-500 ${
+        isVisible ? "translate-y-0": "-translate-y-full"
+      }`}
+    >
       <div className="max-w-[1240px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Left - Logo */}
         <Link
@@ -79,7 +83,7 @@ const Navbar = () => {
                 href="/construction"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
-               Contact / Help	
+                Contact / Help
               </Link>
             </>
           ) : (
@@ -121,9 +125,78 @@ const Navbar = () => {
               </Link>
             </>
           ) : (
-            <Link href="/profile_info" className="text-teal-700 text-2xl">
-              <FaUserCircle />
-            </Link>
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-16 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3  px-4 pr-10 py-4 shadow flex flex-col gap-5 
+                "
+              >
+                <div className="flex items-center gap-3 pr-12 pb-6 border-b">
+                  <div className="w-16 h-16 overflow-clip rounded-xl">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
+                  </div>
+                  <div className="justify-between">
+                    <p className="text-xl font-bold">Mr.Kashem</p>
+                    <p>email@gmail.com</p>
+                  </div>
+                </div>
+                <Link className="flex items-center gap-2 text-xl" href="/my_task">
+                  <div>
+                    <FaCalendarAlt className="text-[#115e59]"/>
+                  </div>
+                  <p >
+                    My tasks
+                    
+                  </p>
+                </Link>
+                <Link className="flex items-center gap-2 text-xl" href="/chat">
+                  <div>
+                    <FaMessage className="text-[#115e59]"/>
+
+                  </div>
+                  <p >
+                    Messages
+                    
+                  </p>
+                </Link>
+                <Link className="flex items-center gap-2 text-xl border-b pb-4" href="/profile_info">
+                  <div>
+                    <RiUserSettingsFill className="text-[#115e59]"/>
+
+                  </div>
+                  <p >
+                    My Profile 
+                    
+                  </p>
+                </Link>
+                <Link className="flex items-center gap-2 text-xl" href="">
+                  <div>
+                    <PiSignOutBold  className="text-[#115e59]"/>
+
+                  </div>
+                  <p >
+                    Sign Out
+                    
+                  </p>
+                </Link>
+               
+              </ul>
+            </div>
           )}
         </div>
 
@@ -170,7 +243,7 @@ const Navbar = () => {
               href="/construction"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
-              Contact / Help	
+              Contact / Help
             </Link>
             <div className="flex gap-3 pt-4">
               <Link
@@ -207,10 +280,39 @@ const Navbar = () => {
             >
               List my services
             </Link>
-            
-            <Link href="/profile_info" className="w-full flex cursor-pointer justify-center pt-3 text-teal-700 text-2xl">
-              <FaUserCircle />
-            </Link>
+            {/* Profile */}
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a className="justify-between">
+                    Profile
+                    <span className="badge">New</span>
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+            {/* profile */}
           </>
         )}
       </div>
