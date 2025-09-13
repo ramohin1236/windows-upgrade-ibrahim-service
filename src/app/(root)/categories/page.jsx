@@ -8,6 +8,7 @@ import service4 from "../../../../public/service4.svg";
 import service5 from "../../../../public/service5.svg";
 import service6 from "../../../../public/service6.svg";
 import CategoriesCard from "@/components/ui/CategoriesCard";
+import Link from "next/link";
 
 const data = [
   {
@@ -100,12 +101,15 @@ const Categories = () => {
       {/* cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.map((item, index) => (
-          <CategoriesCard
-            key={item.id}
+          <Link
+          key={item.id}
+          href="/browseservice"
+          ><CategoriesCard
+            
             icon={item.icon}
             title={item.cateName}
             subtitle={item.providers}
-          />
+          /></Link>
         ))}
       </div>
     </section>

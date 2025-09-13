@@ -13,7 +13,7 @@ import { PiSignOutBold } from "react-icons/pi";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const [isVisible, setIsVisible] = useState(true);
@@ -62,25 +62,25 @@ const Navbar = () => {
           {!isLoggedIn ? (
             <>
               <Link
-                href="/construction"
+                href="/role"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Request a Service
               </Link>
               <Link
-                href="/construction"
+                href="/categories"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Categories
               </Link>
               <Link
-                href="/construction"
+                href="/browseservice"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Browse Service
               </Link>
               <Link
-                href="/construction"
+                href="/contact"
                 className="hover:bg-[#247570] hover:text-white px-4 py-2 text-black rounded-md"
               >
                 Contact / Help
@@ -94,11 +94,11 @@ const Navbar = () => {
               >
                 Post a Task
               </Link>
-              <Link href="/construction" className={linkClass("/browse-tasks")}>
+              <Link href="/my_task" className={linkClass("/browse-tasks")}>
                 Browse tasks
               </Link>
               <Link
-                href="/construction"
+                href="/service-listing"
                 className={linkClass("/list-services")}
               >
                 List my services
@@ -112,13 +112,13 @@ const Navbar = () => {
           {!isLoggedIn ? (
             <>
               <Link
-                href="/construction"
+                href="/login"
                 className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300"
               >
                 Log In
               </Link>
               <Link
-                href="/construction"
+                href="/register"
                 className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105"
               >
                 Register
@@ -161,7 +161,6 @@ const Navbar = () => {
                   </div>
                   <p >
                     My tasks
-                    
                   </p>
                 </Link>
                 <Link className="flex items-center gap-2 text-xl" href="/chat">
@@ -171,7 +170,6 @@ const Navbar = () => {
                   </div>
                   <p >
                     Messages
-                    
                   </p>
                 </Link>
                 <Link className="flex items-center gap-2 text-xl border-b pb-4" href="/profile_info">
@@ -181,7 +179,6 @@ const Navbar = () => {
                   </div>
                   <p >
                     My Profile 
-                    
                   </p>
                 </Link>
                 <Link className="flex items-center gap-2 text-xl" href="">
@@ -191,15 +188,12 @@ const Navbar = () => {
                   </div>
                   <p >
                     Sign Out
-                    
                   </p>
                 </Link>
-               
               </ul>
             </div>
           )}
         </div>
-
         {/* Mobile / Tablet Menu Button */}
         <button
           className="lg:hidden text-3xl text-teal-700 transition-transform duration-300 ease-in-out"
@@ -212,7 +206,6 @@ const Navbar = () => {
           )}
         </button>
       </div>
-
       {/* Mobile / Tablet Dropdown */}
       <div
         className={`lg:hidden bg-white shadow-md px-6 overflow-hidden transition-all duration-500 ease-in-out ${
@@ -228,32 +221,32 @@ const Navbar = () => {
               Request a Service
             </Link>
             <Link
-              href="/construction"
+              href="/categories"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Categories
             </Link>
             <Link
-              href="/construction"
+              href="/browseservice"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Browse service
             </Link>
             <Link
-              href="/construction"
+              href="/contact"
               className="block px-4 py-3 mx-6 text-lg hover:bg-[#115e59] text-[#115e59] rounded-md text-center hover:text-white"
             >
               Contact / Help
             </Link>
             <div className="flex gap-3 pt-4">
               <Link
-                href="/construction"
+                href="/login"
                 className="flex-1 text-center px-4 py-3 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50"
               >
                 Log In
               </Link>
               <Link
-                href="/construction"
+                href="/register"
                 className="flex-1 text-center px-4 py-3 bg-teal-700 text-white rounded-md hover:bg-teal-800"
               >
                 Register
@@ -269,13 +262,13 @@ const Navbar = () => {
               Post a Task
             </Link>
             <Link
-              href="/construction"
+              href="/my_task"
               className={`block px-4 py-3 ${linkClass("/browse-tasks")}`}
             >
               Browse tasks
             </Link>
             <Link
-              href="/construction"
+              href="/service-listing"
               className={`block px-4 py-3 ${linkClass("/list-services")}`}
             >
               List my services

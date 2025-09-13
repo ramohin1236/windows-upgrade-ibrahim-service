@@ -118,13 +118,7 @@ const CancellationStatusComponent = ({ cancellationStatus }) => {
       </div>
 
       {/* Mark As Complete Button (conditional) */}
-      {cancellationContent?.showMarkComplete && (
-        <div className="flex justify-start">
-          <button className="px-6 py-2.5 bg-[#115E59] hover:bg-teal-700 text-white rounded-md transition-colors font-medium cursor-pointer">
-            Mark As Complete
-          </button>
-        </div>
-      )}
+     
     </>
   );
 };

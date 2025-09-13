@@ -26,7 +26,7 @@ const DateExtensionRequestSection = ({ extensionStatus }) => {
           },
           showMarkComplete: true,
         };
-      case "approved":
+      case "accepted":
         return {
           statusText: "Approved By Service Provider",
           statusColor: "text-green-600",

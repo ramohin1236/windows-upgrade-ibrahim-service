@@ -14,8 +14,8 @@ import DateExtensionRequestSection from "./DateExtensionRequestSection";
 // cancellationStatus = null
 
 const Progress = ({
-  cancellationStatus = "in-progress",
-  extensionStatus = null,
+  cancellationStatus = null,
+  extensionStatus = null
 }) => {
   const steps = [
     { id: 1, label: "Offered", date: "Feb 21, 2023", completed: true },
@@ -35,13 +35,18 @@ const Progress = ({
       <PricingSection />
 
       {/* Progress Bar */}
-      <ProgressBarComponent steps={steps} progressWidth="66.67%" />
+      <ProgressBarComponent steps={steps} progressWidth="50%" />
 
       {/* Cancellation Status Section (conditional) */}
       <div>
         <CancellationStatusComponent cancellationStatus={cancellationStatus} />
         <DateExtensionRequestSection extensionStatus={extensionStatus} />
       </div>
+       <div className="flex justify-start">
+          <button className="px-6 py-2.5 bg-[#115E59] hover:bg-teal-700 text-white rounded-md transition-colors font-medium cursor-pointer">
+            Mark As Complete
+          </button>
+        </div>
     </div>
   );
 };

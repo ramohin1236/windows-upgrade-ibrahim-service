@@ -6,6 +6,7 @@ import CheckboxFilter from "@/components/serviceprovider/CheckboxFilter";
 
 import ai from "../../../../public/ai.png";
 import ServiceCard from "@/components/serviceprovider/ServiceCard";
+import Link from "next/link";
 
 const ServiceListing = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -167,7 +168,7 @@ const ServiceListing = () => {
             {filteredServices.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {filteredServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
+                  <Link key={service.id} href='/servicedetails'><ServiceCard  service={service} /></Link>
                 ))}
               </div>
             ) : (

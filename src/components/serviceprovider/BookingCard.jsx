@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Clock, Shield, MessageCircle} from "lucide-react";
+import Link from "next/link";
 
 
 const BookingCard = () => {
@@ -17,10 +18,10 @@ const BookingCard = () => {
         <div className="text-3xl font-bold text-gray-900 mb-6">₦24.00</div>
 
         <div className="space-y-3">
-          <button className="w-full flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+          <Link href="/chat" className="w-full flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors">
             <MessageCircle className="w-4 h-4" />
             Chat Now
-          </button>
+          </Link>
 
           <button className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">
             Submit a Offer

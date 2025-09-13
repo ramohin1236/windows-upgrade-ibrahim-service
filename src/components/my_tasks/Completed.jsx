@@ -9,11 +9,12 @@ import srvcporvider from "../../../public/women.svg";
 
 const Completed = () => {
   // Status state (In Progress / Completed)
-  const [status, setStatus] = useState("In Progress");
+  const [status, setStatus] = useState("Completed");
 
   // Feedback toggle state
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedback, setFeedback] = useState("");
+
 
   const steps =
     status === "Completed"
@@ -43,7 +44,7 @@ const Completed = () => {
           { id: 3, label: "Completed on", date: "", completed: false },
         ];
 
-  const progressWidth = status === "Completed" ? "100%" : "66.67%";
+  const progressWidth = status === "Completed" ? "100%" : "100%";
 
   return (
     <div className="flex flex-col gap-12 pb-20">
@@ -135,14 +136,14 @@ const Completed = () => {
                       ${
                         step.completed
                           ? "bg-[#115E59] border-[#115E59]"
-                          : "bg-gray-400 border-gray-400"
+                          : "bg-[#115E59] border-[#115E59]"
                       }
                     `}
                   >
                     {step.completed ? (
                       <Check className="w-6 h-6 text-white" strokeWidth={3} />
                     ) : (
-                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                      <Check className="w-6 h-6 text-white" strokeWidth={3} />
                     )}
                   </div>
 
@@ -243,14 +244,14 @@ const Completed = () => {
       )}
 
       {/* Demo Buttons for Switching Status */}
-      <div className="flex gap-4">
+      {/* <div className="flex gap-4">
         <button
           onClick={() => setStatus("Completed")}
           className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 cursor-pointer text-[#115e59]"
         >
           Set Completed
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

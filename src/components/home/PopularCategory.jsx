@@ -73,7 +73,7 @@ const PopularCategory = () => {
           </div>
           <div className="flex">
             <Link
-              href="/construction"
+              href="/categories"
               className="px-4 py-3 md:px-6 md:py-4 text-md md:text-xl font-semibold bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 flex items-center justify-center gap-3"
             >
               View More
@@ -89,7 +89,7 @@ const PopularCategory = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.map((item) => (
-            <CateCard key={item.id} item={item} />
+            <Link key={item.id} href="browseservice"><CateCard  item={item} /></Link>
           ))}
         </div>
       </div>
