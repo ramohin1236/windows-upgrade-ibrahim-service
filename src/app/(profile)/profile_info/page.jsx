@@ -34,12 +34,15 @@ const ProfileInfo = () => {
                 <p className="text-gray-600">Wade Warren</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 text-xl">Phone Number</h3>
+                <h3 className="font-semibold text-gray-800 text-xl">
+                  Phone Number
+                </h3>
                 <p className="text-gray-600">(555) 987-6543</p>
               </div>
               <Link
-              href="/update_info"
-              className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 text-[#115e59] cursor-pointer">
+                href="/update_info"
+                className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition transform duration-300 text-[#115e59] cursor-pointer"
+              >
                 Update Profile
               </Link>
             </div>
@@ -51,7 +54,9 @@ const ProfileInfo = () => {
                 <p className="text-gray-600">WadeWarren@email.com</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 text-xl">Location</h3>
+                <h3 className="font-semibold text-gray-800 text-xl">
+                  Location
+                </h3>
                 <p className="text-gray-600">
                   1234 Maple Avenue, Suite 5B <br />
                   San Diego, California, 92103, USA

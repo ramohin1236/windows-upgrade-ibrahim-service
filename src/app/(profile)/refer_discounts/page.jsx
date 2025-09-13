@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { ArrowLeft, Copy, Share, Check } from "lucide-react";
 
 const ReferDiscounts = ({ onBack }) => {
-  const [activeTab, setActiveTab] = useState('my-discounts');
+  const [activeTab, setActiveTab] = useState("my-discounts");
   const [copied, setCopied] = useState(false);
 
   // Sample referral data
@@ -12,34 +12,34 @@ const ReferDiscounts = ({ onBack }) => {
       type: "Got a referral",
       status: "Active",
       value: "₦0.00",
-      appliedDate: "—"
+      appliedDate: "—",
     },
     {
       type: "Got a referral",
       status: "Used",
       value: "₦0.00",
-      appliedDate: "Jul 15, 2025"
+      appliedDate: "Jul 15, 2025",
     },
     {
       type: "Joined with a referral",
       status: "Used",
       value: "₦0.00",
-      appliedDate: "Jul 15, 2025"
-    }
+      appliedDate: "Jul 15, 2025",
+    },
   ];
 
   const referralCode = "TASK-USR123";
 
   const getStatusColor = (status) => {
     switch (status?.toLowerCase()) {
-      case 'active':
-        return 'text-green-600 bg-green-50';
-      case 'used':
-        return 'text-red-600 bg-red-50';
-      case 'pending':
-        return 'text-yellow-600 bg-yellow-50';
+      case "active":
+        return "text-green-600 bg-green-50";
+      case "used":
+        return "text-red-600 bg-red-50";
+      case "pending":
+        return "text-yellow-600 bg-yellow-50";
       default:
-        return 'text-gray-600 bg-gray-50';
+        return "text-gray-600 bg-gray-50";
     }
   };
 
@@ -49,23 +49,23 @@ const ReferDiscounts = ({ onBack }) => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy:', err);
+      console.error("Failed to copy:", err);
     }
   };
 
   const handleShareLink = () => {
     const shareUrl = `https://taskalley.com/refer/${referralCode}`;
-    
+
     if (navigator.share) {
       navigator.share({
-        title: 'Join TaskAlley',
-        text: 'Join me on TaskAlley and get rewards!',
+        title: "Join TaskAlley",
+        text: "Join me on TaskAlley and get rewards!",
         url: shareUrl,
       });
     } else {
       // Fallback: copy URL to clipboard
       navigator.clipboard.writeText(shareUrl);
-      alert('Referral link copied to clipboard!');
+      alert("Referral link copied to clipboard!");
     }
   };
 
@@ -87,21 +87,21 @@ const ReferDiscounts = ({ onBack }) => {
       {/* Tabs */}
       <div className="flex gap-1 mb-6">
         <button
-          onClick={() => setActiveTab('my-discounts')}
+          onClick={() => setActiveTab("my-discounts")}
           className={`px-4 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer ${
-            activeTab === 'my-discounts'
-              ? 'bg-[#115e59] text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            activeTab === "my-discounts"
+              ? "bg-[#115e59] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           My Discounts
         </button>
         <button
-          onClick={() => setActiveTab('referral-program')}
+          onClick={() => setActiveTab("referral-program")}
           className={`px-4 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer ${
-            activeTab === 'referral-program'
-              ? 'bg-[#115e59] text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            activeTab === "referral-program"
+              ? "bg-[#115e59] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Referral Program
@@ -109,7 +109,7 @@ const ReferDiscounts = ({ onBack }) => {
       </div>
 
       {/* Tab Content */}
-      {activeTab === 'my-discounts' && (
+      {activeTab === "my-discounts" && (
         <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
           {/* Mobile View */}
           <div className="block lg:hidden">
@@ -121,9 +121,7 @@ const ReferDiscounts = ({ onBack }) => {
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="text-2xl text-gray-900 ">
-                        {item.type}
-                      </h3>
+                      <h3 className="text-2xl text-gray-900 ">{item.type}</h3>
                       <div className="mt-1">
                         <span
                           className={`inline-block px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(
@@ -199,14 +197,14 @@ const ReferDiscounts = ({ onBack }) => {
         </div>
       )}
 
-      {activeTab === 'referral-program' && (
+      {activeTab === "referral-program" && (
         <div className="space-y-6">
           {/* Referral Code Section */}
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-5 h-5 text-teal-600">
                 <svg viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
                 </svg>
               </div>
               <h2 className="text-lg font-semibold text-gray-900">
@@ -219,7 +217,11 @@ const ReferDiscounts = ({ onBack }) => {
                 <div className="flex items-center gap-2 px-4 py-3 bg-gray-50 border border-gray-200 rounded-md">
                   <div className="w-5 h-5 text-gray-400">
                     <svg viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"/>
+                      <path
+                        fillRule="evenodd"
+                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
                   <span className="font-mono text-gray-900 text-sm">
@@ -273,7 +275,9 @@ const ReferDiscounts = ({ onBack }) => {
                 <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <span className="text-teal-600 font-semibold text-xs">2</span>
                 </div>
-                <p>They sign up using your code and complete their first task</p>
+                <p>
+                  They sign up using your code and complete their first task
+                </p>
               </div>
               <div className="flex gap-3">
                 <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">

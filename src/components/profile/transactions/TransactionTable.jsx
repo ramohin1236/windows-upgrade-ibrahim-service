@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const TransactionTable = ({ transactions }) => {
-    const getStatusColor = (status) => {
+  const getStatusColor = (status) => {
     switch (status?.toLowerCase()) {
-      case 'completed':
-        return 'text-green-600';
-      case 'in progress':
-        return 'text-blue-600';
-      case 'pending':
-        return 'text-yellow-600';
-      case 'cancelled':
-        return 'text-red-600';
+      case "completed":
+        return "text-green-600";
+      case "in progress":
+        return "text-blue-600";
+      case "pending":
+        return "text-yellow-600";
+      case "cancelled":
+        return "text-red-600";
       default:
-        return 'text-gray-600';
+        return "text-gray-600";
     }
   };
 
@@ -62,7 +62,9 @@ const TransactionTable = ({ transactions }) => {
                 >
                   {transaction.status}
                 </span>
-                <span className="text-sm text-gray-500">{transaction.date}</span>
+                <span className="text-sm text-gray-500">
+                  {transaction.date}
+                </span>
               </div>
             </div>
           ))}
@@ -131,7 +133,7 @@ const TransactionTable = ({ transactions }) => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TransactionTable
+export default TransactionTable;
