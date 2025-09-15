@@ -24,10 +24,19 @@ const Resolution = () => {
 
   const handleButtonSubmit = (e) => {
     e.preventDefault();
-    
-    const timeValue = e.target.value;
-    console.log(e.target)
+
+    const dateValue = e.target.date.value;
+    const timeValue = e.target.time.value;
+    const reasonValue = e.target.reason.value;
+
+    const info = {
+      reaseon: reasonValue,
+      time: timeValue,
+      value: dateValue,
+    };
+      localStorage.setItem("extention", JSON.stringify(info));
   };
+
 
   return (
     <div className="project_container py-10 lg:py-44 p-6">
