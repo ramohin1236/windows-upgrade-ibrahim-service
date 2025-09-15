@@ -9,7 +9,7 @@ const BookingCard = () => {
       {/* Booking Card */}
       <div className="bg-white rounded-lg shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
-          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="bg-[#d6f1f0] text-[#00786f] px-3 py-1 rounded-full text-sm font-medium">
             Cleaning
           </span>
         </div>
@@ -18,12 +18,12 @@ const BookingCard = () => {
         <div className="text-3xl font-bold text-gray-900 mb-6">₦24.00</div>
 
         <div className="space-y-3">
-          <Link href="/chat" className="w-full flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+          <Link href="/chat" className="w-full flex items-center justify-center gap-2 bg-white border px-4 py-3 rounded-lg hover:bg-teal-50 transition-colors border-teal-700 text-teal-700 ">
             <MessageCircle className="w-4 h-4" />
             Chat Now
           </Link>
 
-          <button className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">
+          <button className="w-full bg-[#00786f] hover:bg-[#074641] cursor-pointer text-white px-4 py-3 rounded-lg font-medium transition-colors">
             Submit a Offer
           </button>
         </div>
@@ -34,15 +34,15 @@ const BookingCard = () => {
         <h3 className="font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
         <div className="space-y-3 text-sm text-gray-600">
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-green-600" />
+            <Shield className="w-4 h-4 text-[#00786f]" />
             <span>Verified & Insured</span>
           </div>
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-green-600" />
+            <Clock className="w-4 h-4 text-[#00786f]" />
             <span>7 Days Availability</span>
           </div>
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-green-600" />
+            <MapPin className="w-4 h-4 text-[#00786f]" />
             <span>Manhattan Coverage</span>
           </div>
         </div>

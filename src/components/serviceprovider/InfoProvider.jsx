@@ -28,7 +28,7 @@ const InfoProvider = () => {
         </div>
         <div className="">
           <div className="flex items-center gap-4 mt-2">
-            <div className="flex items-center gap-1 text-green-600">
+            <div className="flex items-center gap-1 text-[#00786f]">
               <Shield className="w-4 h-4" />
               <span className="text-sm font-medium">Verified</span>
             </div>

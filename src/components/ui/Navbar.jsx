@@ -13,7 +13,7 @@ import { PiSignOutBold } from "react-icons/pi";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
   const [isVisible, setIsVisible] = useState(true);

@@ -14,8 +14,8 @@ const ServiceTabs = () => {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-2 font-medium border-b-2 transition-colors ${
               activeTab === tab
-                ? "border-green-600 text-green-600"
-                : "border-transparent text-gray-500 hover:text-gray-700"
+                ? "border-[#00786f] text-[#00786f] cursor-pointer"
+                : "border-transparent text-[#00786f] cursor-pointer"
             }`}
           >
             {tab}

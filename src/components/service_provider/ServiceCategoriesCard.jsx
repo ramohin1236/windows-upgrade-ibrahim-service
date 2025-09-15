@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 const ServiceCategoriesCard = ({ data }) => {
   return (
-    <div className=" bg-white rounded-xl shadow-md overflow-hidden flex w-full items-center flex-col md:flex-row">
+    <div className=" bg-white rounded-xl shadow-md overflow-hidden 
+    flex w-full items-center flex-col md:flex-row">
       {/* Left Side - Image */}
-      <div className="relative h-64">
+      <div className="relative lg:h-64">
         <Image
           src={data.image}
           alt="Cleaning Service"
@@ -14,15 +16,6 @@ const ServiceCategoriesCard = ({ data }) => {
           className="h-full w-full object-cover"
         />
 
-        {/* Badge - Top Left */}
-        {/* <span className="absolute top-3 left-3 bg-emerald-100 text-emerald-700 text-sm font-semibold px-3 py-1 rounded-lg">
-          Cleaning
-        </span> */}
-
-        {/* Rating - Top Right */}
-        {/* <span className="absolute top-3 right-3 flex items-center gap-1 bg-yellow-100 text-yellow-700 text-sm font-semibold px-3 py-1 rounded-lg">
-          <FaStar className="text-yellow-500" /> 4.5
-        </span> */}
       </div>
 
       {/* Right Side - Details */}
@@ -50,9 +43,9 @@ const ServiceCategoriesCard = ({ data }) => {
 
         {/* Button */}
         <div className="mt-4">
-          <button className="px-5 py-2 bg-emerald-700 text-white text-sm rounded-lg shadow hover:bg-emerald-800 transition">
+          <Link href={`/list_my_service/list_my_service_details/${data.id}`} className="px-5 py-2 bg-emerald-700 text-white text-sm rounded-lg shadow hover:bg-emerald-800 transition">
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
