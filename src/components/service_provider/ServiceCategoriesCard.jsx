@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaStar } from "react-icons/fa";
 
 const ServiceCategoriesCard = ({ data }) => {
   return (

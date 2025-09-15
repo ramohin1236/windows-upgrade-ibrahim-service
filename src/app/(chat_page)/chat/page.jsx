@@ -17,9 +17,9 @@ const ChatInterface = () => {
   const messagesEndRef = useRef(null);
 
   // Auto scroll bottom
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  // useEffect(() => {
+  //   messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  // }, [messages]);
 
   const sendMessage = () => {
     if (input.trim() === "") return;

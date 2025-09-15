@@ -13,7 +13,7 @@ import Link from "next/link";
 const ServiceTaskStatusDetails = () => {
   const status = ["Progress", "Ongoing tasks", "Completed", "Cancelled"];
 
-  const [currentStatus, setCurrentStatus] = useState("Ongoing tasks");
+  const [currentStatus, setCurrentStatus] = useState("Progress");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
@@ -32,8 +32,8 @@ const ServiceTaskStatusDetails = () => {
         </div>
 
         <div>
-          {currentStatus === "Progress" && <div> </div>}
-          {currentStatus === "Completed" && (
+          {/* {currentStatus === "Progress" && <div> </div>} */}
+          {currentStatus === "Progress" && (
             <div>
               {" "}
               <Link

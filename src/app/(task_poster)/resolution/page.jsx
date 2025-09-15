@@ -7,7 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import popularcateIcon from "../../../../public/popularcate.svg";
 
 const Resolution = () => {
-  const [openModal, setOpenModal] = useState(null); 
+  const [openModal, setOpenModal] = useState(null);
 
   const options = [
     {
@@ -21,6 +21,13 @@ const Resolution = () => {
       action: () => setOpenModal("cancel"),
     },
   ];
+
+  const handleButtonSubmit = (e) => {
+    e.preventDefault();
+    
+    const timeValue = e.target.value;
+    console.log(e.target)
+  };
 
   return (
     <div className="project_container py-10 lg:py-44 p-6">
@@ -94,13 +101,14 @@ const Resolution = () => {
               </div>
             </div>
 
-            <form className="space-y-5">
+            <form onSubmit={handleButtonSubmit} className="space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-gray-700 font-medium mb-1">
                     New Proposed Date
                   </label>
                   <input
+                    name="date"
                     type="date"
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#115E59] focus:outline-none text-[#6B7280]"
                   />
@@ -110,6 +118,7 @@ const Resolution = () => {
                     New Proposed Time
                   </label>
                   <input
+                    name="time"
                     type="time"
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#115E59] focus:outline-none"
                   />
@@ -121,6 +130,7 @@ const Resolution = () => {
                   Reason for Request
                 </label>
                 <textarea
+                  name="reason"
                   rows={3}
                   placeholder="e.g., Need more time for quality work / Client requested delay"
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#115E59] focus:outline-none text-[#6B7280]"

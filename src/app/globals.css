@@ -113,11 +113,14 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .project_container {
   max-width: 1240px;
   margin: 0 auto;      
-  /* padding-left: 24px; */
-  /* padding-right: 24px; */
+  
 }
 .brand_color{
   background-color: #115e59;
@@ -132,11 +135,11 @@ background: linear-gradient(90deg, rgba(133, 172, 170, 1) 0%, rgba(155, 188, 186
 }
 
 .mySwiper .swiper-pagination-bullet {
-  background-color: #DCFCE7 !important; /* inactive */
+  background-color: #DCFCE7 !important; 
   opacity: 1 !important;
 }
 .mySwiper .swiper-pagination-bullet-active {
-  background-color: #115E59 !important; /* active */
+  background-color: #115E59 !important;
 }
 .mySwiper .swiper-pagination {
   position: relative !important;
@@ -155,7 +158,6 @@ background: linear-gradient(90deg, rgba(133, 172, 170, 1) 0%, rgba(155, 188, 186
 /* Firefox */
 * {
   scrollbar-width: thin;                         
-  /* scrollbar-color: var(--sb-thumb) var(--sb-track); / */
 }
 
 /* WebKit (Chrome, Edge, Safari, etc.) */

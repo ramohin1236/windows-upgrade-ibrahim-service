@@ -189,7 +189,7 @@ const PopularService = () => {
                     </div>
                     <span>⭐ {service.rating}</span>
                   </div>
-                  <h3 className="font-medium text-2xl mt-2">{service.title}</h3>
+                  <h3 className="font-medium text-xl mt-2">{service.title}</h3>
                   <button className="mt-6 px-4 py-2 bg-[#E6F4F1] hover:text-white rounded-md hover:bg-teal-800 text-[#115e59] cursor-pointer font-medium transition transform duration-300">
                     Book Now
                   </button>

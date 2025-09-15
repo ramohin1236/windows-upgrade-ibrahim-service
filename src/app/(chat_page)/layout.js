@@ -24,7 +24,7 @@ const ChatLayout = ({ children }) => {
         {/* Sidebar */}
         <div className="project_container flex justify-center items-center p-4">
           <div className="w-full flex gap-3 shadow-xl rounded-xl p-4">
-            <div  className={`fixed top-0 left-0 h-full w-96 bg-white  z-40 transform transition-transform duration-300 md:relative md:translate-x-0 
+            <div  className={`fixed top-0 left-0 h-full w-72 lg:w-96 bg-white  z-40 transform transition-transform duration-300 md:relative md:translate-x-0 
             ${open ? "translate-x-0" : "-translate-x-full"} md:block`}>
               <ChatSideNav />
             </div>

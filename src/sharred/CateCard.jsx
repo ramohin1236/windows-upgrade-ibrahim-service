@@ -9,8 +9,8 @@ const CateCard = ({item}) => {
             <Image src={item.icon} alt={item.cateName} height={60} />
         </div>
         <div className='flex flex-col gap-2 mt-3'>
-            <h5 className='text-[#1F2937] text-2xl font-semibold'>{item.cateName}</h5>
-            <p className='text-[#6B7280] text-xl'> {item.providers}</p>
+            <h5 className='text-[#1F2937] text-xl font-semibold'>{item.cateName}</h5>
+            <p className='text-[#6B7280] text-md'> {item.providers}</p>
         </div>
     </div>
   )
