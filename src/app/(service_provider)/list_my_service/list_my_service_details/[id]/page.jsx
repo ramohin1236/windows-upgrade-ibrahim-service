@@ -3,12 +3,10 @@ import React from "react";
 import { useState } from "react";
 import service_main_image from "../../../../../../public/main_home.jpg";
 import service_second from "../../../../../../public/service_second.png";
-
 import Image from "next/image";
 import InfoProvider from "@/components/serviceprovider/InfoProvider";
 import ServiceTabs from "@/components/serviceprovider/ServiceTabs";
 import BookingCard from "@/components/serviceprovider/BookingCard";
-import Link from "next/link";
 import { PiNotePencilFill } from "react-icons/pi";
 import { MdBlock } from "react-icons/md";
 

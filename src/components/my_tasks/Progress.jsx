@@ -14,8 +14,8 @@ import DateExtensionRequestSection from "./DateExtensionRequestSection";
 // cancellationStatus = null
 
 const Progress = ({
-  cancellationStatus = null,
-  extensionStatus = null
+  cancellationStatus = "in-progress",
+  extensionStatus = "rejected"
 }) => {
   const steps = [
     { id: 1, label: "Offered", date: "Feb 21, 2023", completed: true },
