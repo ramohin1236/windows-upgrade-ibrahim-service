@@ -43,6 +43,7 @@ const ServiceProgress = ({
         <CancellationStatusComponent cancellationStatus={cancellationStatus} />
         <DateExtensionRequestSection extensionStatus={extensionStatus} />
       </div>
+      
     </div>
   );
 };

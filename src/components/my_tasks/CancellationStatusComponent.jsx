@@ -1,9 +1,13 @@
-import React from "react";
-import { Check, GitPullRequest } from "lucide-react";
+"use client";
+import React, { useState } from "react";
+import { Check, GitPullRequest, X } from "lucide-react";
 import client from "../../../public/client.png";
 import Image from "next/image";
 
 const CancellationStatusComponent = ({ cancellationStatus }) => {
+  const [showRejectModal, setShowRejectModal] = useState(false);
+  const serviceProvider = true;
+    
   const getCancellationContent = () => {
     if (!cancellationStatus) return null;
 
@@ -109,7 +113,7 @@ const CancellationStatusComponent = ({ cancellationStatus }) => {
               <p className="text-gray-500 text-sm">15 May 2020 8:00 am</p>
             </div>
 
-            {/* Rejection Reason (only for rejected status) */}
+            {/* Rejection Reason */}
             {cancellationStatus === "rejected" &&
               cancellationContent.rejectionReason && (
                 <div className="mb-6">
@@ -123,14 +127,107 @@ const CancellationStatusComponent = ({ cancellationStatus }) => {
               )}
 
             {/* Action Button */}
-            <button className="px-6 py-2.5 bg-[#115E59] hover:bg-teal-700 text-white rounded-md transition-colors font-medium cursor-pointer">
+            <button className="px-6 mr-4 py-2.5 bg-[#115E59] hover:bg-teal-700 text-white rounded-md transition-colors font-medium cursor-pointer">
               {cancellationContent.button.text}
             </button>
+
+            {serviceProvider && (
+              <button
+                onClick={() => setShowRejectModal(true)}
+                className="px-6 mt-3 md:mt-0 py-2.5 bg-[#115E59] hover:bg-teal-700 text-white rounded-md transition-colors font-medium cursor-pointer"
+              >
+                Reject the request
+              </button>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Mark As Complete Button (conditional) */}
+      {/* Modal */}
+      {showRejectModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/50">
+          <div className="bg-white rounded-lg shadow-lg max-w-lg w-full mx-4 p-6 relative">
+            {/* Close button */}
+            <button
+              onClick={() => setShowRejectModal(false)}
+              className="absolute top-3 right-3 text-red-500 hover:text-red-700 cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Reject Cancellation Request
+            </h3>
+
+            {/* Textarea */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Reason for Rejection
+              </label>
+              <textarea
+                className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                rows="4"
+                placeholder="Please explain why you are rejecting this cancellation request."
+              />
+            </div>
+            {/* File Upload */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Evidence (Optional)
+              </label>
+              <label
+                htmlFor="evidence"
+                className="border-2 border-dashed rounded-lg p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-gray-50"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-gray-400 mb-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 010 10h-1m-4-4v6m0 0l-2-2m2 2l2-2"
+                  />
+                </svg>
+                <p className="text-sm text-gray-500">
+                  Click to upload document
+                </p>
+                <input
+                  id="evidence"
+                  type="file"
+                  className="hidden"
+                  onChange={(e) => {
+                    if (e.target.files.length > 0) {
+                      alert(`File selected: ${e.target.files[0].name}`);
+                    }
+                  }}
+                />
+              </label>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setShowRejectModal(false)}
+                className="px-6 py-2.5 border border-gray-300
+                cursor-pointer text-gray-700 rounded-md hover:bg-gray-100"
+              >
+                Cancel
+              </button>
+              <button
+                className="px-6 py-2.5 bg-[#115E59] text-white rounded-md
+              cursor-pointer hover:bg-teal-700"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

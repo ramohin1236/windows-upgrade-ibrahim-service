@@ -37,6 +37,7 @@ const ProgressBarComponent = ({ steps, progressWidth = "66.67%" }) => {
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   )}
                 </div>
+
                 {/* Label */}
                 <div className="mt-3 min-w-[80px]">
                   <p
@@ -47,6 +48,7 @@ const ProgressBarComponent = ({ steps, progressWidth = "66.67%" }) => {
                   >
                     {step.label}
                   </p>
+
                   {/* Date */}
                   {step.date && (
                     <div

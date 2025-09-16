@@ -20,7 +20,7 @@ const ServiceTaskStatusDetails = () => {
     "Cancelled",
   ];
 
-  const [currentStatus, setCurrentStatus] = useState("Ongoing tasks");
+  const [currentStatus, setCurrentStatus] = useState("Bids Received");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">

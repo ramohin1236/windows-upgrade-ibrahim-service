@@ -16,8 +16,8 @@ import DateExtensionRequestSection from "../my_tasks/DateExtensionRequestSection
 // cancellationStatus = null
 
 const BidsReceived = ({
-  cancellationStatus = null,
-  extensionStatus = null
+  cancellationStatus = "in-progress",
+  extensionStatus = "in-progress"
 }) => {
   const steps = [
     { id: 1, label: "Offered", date: "Feb 21, 2023", completed: true },
