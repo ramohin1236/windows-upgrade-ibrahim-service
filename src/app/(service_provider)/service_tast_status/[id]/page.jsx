@@ -3,17 +3,24 @@ import { useState } from "react";
 import popularcateIcon from "../../../../../public/popularcate.svg";
 import Image from "next/image";
 import srvcporvider from "../../../../../public/women.svg";
-import Bids from "@/components/my_tasks/Bids";
-import Progress from "@/components/my_tasks/Progress";
 import Completed from "@/components/my_tasks/Completed";
 import Cancelled from "@/components/my_tasks/Cancelled";
 import { Handshake } from "lucide-react";
 import Link from "next/link";
+import ServiceProgress from "@/components/service_provider/ServiceProgress";
+import ServiceBids from "@/components/service_provider/ServiceBids";
+import BidsReceived from "@/components/service_provider/BidsReceived";
 
 const ServiceTaskStatusDetails = () => {
-  const status = ["Progress", "Ongoing tasks", "Completed", "Cancelled"];
+  const status = [
+    "Ongoing tasks",
+    "Bid Made",
+    "Bids Received",
+    "Completed",
+    "Cancelled",
+  ];
 
-  const [currentStatus, setCurrentStatus] = useState("Progress");
+  const [currentStatus, setCurrentStatus] = useState("Ongoing tasks");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
@@ -32,8 +39,8 @@ const ServiceTaskStatusDetails = () => {
         </div>
 
         <div>
-          {/* {currentStatus === "Progress" && <div> </div>} */}
-          {currentStatus === "Progress" && (
+          {/* {currentStatus === "Bid Made" && <div> </div>} */}
+          {currentStatus === "Ongoing tasks" && (
             <div>
               {" "}
               <Link
@@ -67,8 +74,9 @@ const ServiceTaskStatusDetails = () => {
 
         {/* Conditional Sections */}
         <div className="mt-4">
-          {currentStatus === "Ongoing tasks" && <Bids />}
-          {currentStatus === "Progress" && <Progress />}
+          {currentStatus === "Ongoing tasks" && <ServiceProgress />}
+          {currentStatus === "Bid Made" && <ServiceBids />}
+          {currentStatus === "Bids Received" && <BidsReceived />}
           {currentStatus === "Completed" && <Completed />}
           {currentStatus === "Cancelled" && <Cancelled />}
         </div>

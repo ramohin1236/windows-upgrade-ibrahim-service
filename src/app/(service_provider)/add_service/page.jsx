@@ -336,7 +336,7 @@ const AddService = () => {
         <button
           onClick={handleSubmit}
           disabled={isLoading}
-          className={`w-full md:w-auto px-8 py-3 rounded-md font-medium transition-colors ${
+          className={`w-full cursor-pointer md:w-auto px-8 py-3 rounded-md font-medium transition-colors ${
             isLoading
               ? 'bg-gray-400 cursor-not-allowed'
               : 'bg-[#00786f] hover:bg-green-800 active:bg-green-800'

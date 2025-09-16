@@ -4,9 +4,9 @@ import Link from "next/link";
 const ServiceCategoriesCard = ({ data }) => {
   return (
     <div className=" bg-white rounded-xl shadow-md overflow-hidden 
-    flex w-full items-center flex-col md:flex-row">
+    flex w-full border flex-col md:flex-row">
       {/* Left Side - Image */}
-      <div className="relative lg:h-64">
+      <div className="relative lg:h-72">
         <Image
           src={data.image}
           alt="Cleaning Service"
@@ -18,8 +18,8 @@ const ServiceCategoriesCard = ({ data }) => {
       </div>
 
       {/* Right Side - Details */}
-      <div className="p-5 flex flex-col justify-between md:w-2/3">
-        <h2 className="text-xl font-semibold text-gray-800">
+      <div className="px-5 py-5 flex flex-col md:w-2/3">
+        <h2 className="text-2xl font-semibold text-gray-800">
           Cleaning Service
         </h2>
 
@@ -41,8 +41,8 @@ const ServiceCategoriesCard = ({ data }) => {
         </div>
 
         {/* Button */}
-        <div className="mt-4">
-          <Link href={`/list_my_service/list_my_service_details/${data.id}`} className="px-5 py-2 bg-emerald-700 text-white text-sm rounded-lg shadow hover:bg-emerald-800 transition">
+        <div className="mt-12">
+          <Link href={`/list_my_service/list_my_service_details/${data.id}`} className="px-6 py-3 border border-[#115e59] text-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition">
             View Details
           </Link>
         </div>

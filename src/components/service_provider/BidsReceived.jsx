@@ -1,10 +1,12 @@
 import React from "react";
-import TaskInfoSection from "./TaskInfoSection";
-import TaskDetailsSection from "./TaskDetailsSection";
-import PricingSection from "./PricingSection";
-import ProgressBarComponent from "./ProgressBarComponent";
-import CancellationStatusComponent from "./CancellationStatusComponent";
-import DateExtensionRequestSection from "./DateExtensionRequestSection";
+import TaskInfoSection from "../my_tasks/TaskInfoSection";
+import TaskDetailsSection from "../my_tasks/TaskDetailsSection";
+import PricingSection from "../my_tasks/PricingSection";
+import ProgressBarComponent from "../my_tasks/ProgressBarComponent";
+import CancellationStatusComponent from "../my_tasks/CancellationStatusComponent";
+import DateExtensionRequestSection from "../my_tasks/DateExtensionRequestSection";
+
+
 
 // cancellationStatus should be
 
@@ -13,7 +15,7 @@ import DateExtensionRequestSection from "./DateExtensionRequestSection";
 // cancellationStatus = "rejected"
 // cancellationStatus = null
 
-const Progress = ({
+const BidsReceived = ({
   cancellationStatus = null,
   extensionStatus = null
 }) => {
@@ -35,20 +37,20 @@ const Progress = ({
       <PricingSection />
 
       {/* Progress Bar */}
-      <ProgressBarComponent steps={steps} progressWidth="50%" />
+      <ProgressBarComponent steps={steps} progressWidth="5%" />
 
       {/* Cancellation Status Section (conditional) */}
       <div>
         <CancellationStatusComponent cancellationStatus={cancellationStatus} />
         <DateExtensionRequestSection extensionStatus={extensionStatus} />
       </div>
-       <div className="flex justify-start">
-          <button className="px-6 py-2.5 bg-[#115E59] hover:bg-teal-700 text-white rounded-md transition-colors font-medium cursor-pointer">
-            Mark As Complete
-          </button>
-        </div>
     </div>
   );
 };
 
-export default Progress;
+export default BidsReceived;
+
+
+
+
+

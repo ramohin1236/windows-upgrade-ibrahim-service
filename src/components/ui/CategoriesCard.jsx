@@ -24,11 +24,11 @@ const CategoriesCard = ({
 
       {/* Text section */}
       <div className="flex flex-col gap-2 mt-3">
-        <h5 className={`text-[#1F2937] text-2xl font-semibold ${titleStyle}`}>
+        <h5 className={`text-[#1F2937] lg:text-xl font-semibold ${titleStyle}`}>
           {title}
         </h5>
         {subtitle && (
-          <p className={`text-[#6B7280] text-xl ${subtitleStyle}`}>
+          <p className={`text-[#6B7280] text-md ${subtitleStyle}`}>
             {subtitle}
           </p>
         )}
