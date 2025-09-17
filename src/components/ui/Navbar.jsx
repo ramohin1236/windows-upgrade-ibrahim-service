@@ -14,7 +14,7 @@ import { PiSignOutBold } from "react-icons/pi";
 const Navbar = () => {
   const pathname = usePathname();
 // "service_provider", "guest", "task_provider"
-  const [role, setRole] = useState("service_provider");
+  const [role, setRole] = useState("task_provider");
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -50,7 +50,7 @@ const Navbar = () => {
       <Link href="/categories" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
         Categories
       </Link>
-      <Link href="/browseservice" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
+      <Link href="/service-listing" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
         Browse Service
       </Link>
       <Link href="/contact" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
@@ -62,27 +62,30 @@ const Navbar = () => {
   const taskProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
       <Link href="/post_task" className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800">
-        Post a Task
+          Post A Task
+      </Link>
+      <Link href="/categories" className={linkClass("/categories")}>
+        Browse Tasks
       </Link>
       <Link href="/service-listing" className={linkClass("/service-listing")}>
         Browse services
       </Link>
-      <Link href="/my_task" className={linkClass("/my_task")}>
-        List my tasks
+      <Link href="/login" className={linkClass("/login")}>
+        List A Service
       </Link>
     </div>
   );
 
   const serviceProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/add_service" className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800">
-        Add Service
-      </Link>
-      <Link href="/service_tast_status" className={linkClass("/service_tast_status")}>
-        My Tasks
+      <Link href="/service_tast_status" className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800">
+         Browse Tasks
       </Link>
       <Link href="/list_my_service" className={linkClass("/list_my_service")}>
-        List My Service
+         My Service
+      </Link>
+      <Link href="/login" className={linkClass("/login")}>
+          Post A Task
       </Link>
     </div>
   );
