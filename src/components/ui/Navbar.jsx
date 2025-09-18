@@ -199,7 +199,7 @@ const Navbar = () => {
       <div className="max-w-[1240px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 transition duration-300 hover:scale-105">
-          <Image src={taskalleyLogo}
+          <Image className="h-12" src={taskalleyLogo}
           alt="TaskAlley Logo" priority />
         </Link>
 
