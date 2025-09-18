@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
-import taskalleyLogo from "../../../public/taskalley.svg";
+import taskalleyLogo from "../../../public/Group (5).svg";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { RiUserSettingsFill } from "react-icons/ri";
@@ -199,7 +199,8 @@ const Navbar = () => {
       <div className="max-w-[1240px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 transition duration-300 hover:scale-105">
-          <Image src={taskalleyLogo} alt="TaskAlley Logo" priority />
+          <Image src={taskalleyLogo}
+          alt="TaskAlley Logo" priority />
         </Link>
 
         {/* Desktop Menu */}

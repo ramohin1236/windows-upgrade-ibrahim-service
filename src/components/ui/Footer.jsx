@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import FooterBg from '../../../public/Ellipse_footer.svg'
-import taskalleyLogo from "../../../public/taskalley.svg";
+import taskalleyLogo from "../../../public/Group (4).svg";
 import facebook from "../../../public/facebook.svg";
 import twitter from "../../../public/twitter.svg";
 import youtube from "../../../public/youtube.svg";
