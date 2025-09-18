@@ -14,7 +14,7 @@ import { PiSignOutBold } from "react-icons/pi";
 const Navbar = () => {
   const pathname = usePathname();
 // "service_provider", "guest", "task_provider"
-  const [role, setRole] = useState("task_provider");
+  const [role, setRole] = useState("service_provider");
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -44,11 +44,12 @@ const Navbar = () => {
   // Guest Links
   const guestLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/role" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
-        Request a Service
-      </Link>
+      
       <Link href="/categories" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
         Categories
+      </Link>
+      <Link href="/browseservice" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
+       Browse Tasks
       </Link>
       <Link href="/service-listing" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
         Browse Service
@@ -64,7 +65,7 @@ const Navbar = () => {
       <Link href="/post_task" className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800">
           Post A Task
       </Link>
-      <Link href="/categories" className={linkClass("/categories")}>
+      <Link href="/browseservice" className={linkClass("/browseservice")}>
         Browse Tasks
       </Link>
       <Link href="/service-listing" className={linkClass("/service-listing")}>
