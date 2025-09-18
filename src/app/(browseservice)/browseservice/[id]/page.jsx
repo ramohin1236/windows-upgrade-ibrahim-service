@@ -1,15 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import {
-  ChevronLeft,
-  MapPin,
-  Calendar,
-  Star,
-  Send,
-  RotateCcw,
-} from "lucide-react";
+import { ChevronLeft, MapPin, Calendar, Star } from "lucide-react";
 import client from "../../../../../public/client.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServiceDetails = ({ params }) => {
   const [statusTab, setStatusTab] = useState("open");
@@ -83,10 +77,14 @@ const ServiceDetails = ({ params }) => {
     <div className=" bg-gray-50">
       {/* Header */}
       <div className="flex items-center gap-3 p-4 bg-white border-b border-gray-200">
-        <button className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
-          <ChevronLeft className="w-5 h-5 text-gray-600" />
-        </button>
-        <span className="text-sm text-teal-600 font-medium">Back To Map</span>
+        <Link className="flex items-center" href="/browseservice">
+          <button className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
+            <ChevronLeft className="w-5 h-5 text-gray-600" />
+          </button>
+          <span className="text-sm text-teal-600 font-semibold">
+            Back To Map
+          </span>
+        </Link>
       </div>
 
       {/* Status Tabs */}
@@ -242,7 +240,7 @@ const ServiceDetails = ({ params }) => {
           {/* Ask Question Form */}
           <div className="p-4 border-b border-gray-200">
             <div className="flex gap-3">
-               <Image
+              <Image
                 src={client}
                 alt="client"
                 className="w-16 h-16 rounded-full object-cover"
@@ -256,7 +254,6 @@ const ServiceDetails = ({ params }) => {
                   rows="3"
                 />
                 <div className="flex justify-end items-center mt-3">
-             
                   <button
                     onClick={handleQuestionSubmit}
                     className="bg-[#115E59] text-white px-4 py-2 rounded-sm font-medium cursor-pointer transition-colors"
@@ -276,10 +273,10 @@ const ServiceDetails = ({ params }) => {
                 className="flex gap-3 p-4 bg-white border-b border-gray-100"
               >
                 <Image
-                src={client}
-                alt={question.user}
-                className="w-16 h-16 rounded-full object-cover"
-              />
+                  src={client}
+                  alt={question.user}
+                  className="w-16 h-16 rounded-full object-cover"
+                />
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-medium text-gray-900">

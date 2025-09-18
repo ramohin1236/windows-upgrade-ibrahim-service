@@ -1,16 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Home,
-  Search,
+import { Home, Search,
   User,
   Settings,
-  MapPin,
   MessageSquare,
   Bell,
-  CreditCard,
-  Star,
   Calendar,
   Briefcase,
   Users,
@@ -31,9 +26,13 @@ import {
 } from "@/components/ui/breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
+import { CgBrowse } from "react-icons/cg";
+import { TbAirConditioning } from "react-icons/tb";
+import { MdPrivacyTip } from "react-icons/md";
+import { MdRoundaboutRight } from "react-icons/md";
 
 const SitesMap = () => {
-  const currentRole = "task_provider"; // Change to: 'guest', 'service_provider', 'task_provider'
+  const currentRole = 'guest'; // Change to: 'guest', 'service_provider', 'task_provider'
 
   const [expandedSections, setExpandedSections] = useState({});
 
@@ -42,12 +41,12 @@ const SitesMap = () => {
     common: [
       { name: "Home", icon: Home, path: "/" },
       { name: "Categories", icon: Search, path: "/categories" },
-      { name: "Browse Tasks", icon: MapPin, path: "/browseservice" },
-      { name: "Browse Service", icon: HelpCircle, path: "/service-listing" },
+      { name: "Browse Tasks", icon: CgBrowse, path: "/browseservice" },
+      { name: "Browse Service", icon: CgBrowse, path: "/service-listing" },
       { name: "Contact / Help", icon: HelpCircle, path: "/contact" },
-      { name: "About Us", icon: HelpCircle, path: "/about" },
-      { name: "Privacy Policy", icon: HelpCircle, path: "/privacy" },
-      { name: "Terms of conditions", icon: HelpCircle, path: "/terms" },
+      { name: "About Us", icon: MdRoundaboutRight, path: "/about" },
+      { name: "Privacy Policy", icon: MdPrivacyTip, path: "/privacy" },
+      { name: "Terms of conditions", icon: TbAirConditioning, path: "/terms" },
     ],
 
     // Guest specific items
@@ -76,22 +75,6 @@ const SitesMap = () => {
     ],
   };
 
-  const getRoleName = () => {
-    const roleNames = {
-      guest: "Guest User",
-      service_provider: "Service Provider",
-      task_provider: "Task Provider",
-    };
-    return roleNames[currentRole] || "Unknown Role";
-  };
-
-  const toggleSection = (section) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [section]: !prev[section],
-    }));
-  };
-
   const MenuItem = ({ item, isLast = false }) => {
     console.log("item", item);
     const IconComponent = item.icon;
@@ -111,7 +94,7 @@ const SitesMap = () => {
           </div>
           <div>
             <h4 className="font-medium text-gray-900">{item.name}</h4>
-            <p className="text-sm text-gray-500">{item.path}</p>
+            {/* <p className="text-sm text-gray-500">{item.path}</p> */}
           </div>
         </div>
         <ChevronRight className="w-4 h-4 text-gray-400" />

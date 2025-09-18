@@ -23,7 +23,7 @@ const Cta = () => {
   {/* Button */}
   <div className="flex justify-center lg:justify-end w-full lg:w-auto">
     <Link
-      href=""
+      href="/role"
       className="px-6 py-3 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 text-lg font-medium"
     >
       Join as a Provider
