@@ -13,7 +13,7 @@ import { PiSignOutBold } from "react-icons/pi";
 
 const Navbar = () => {
   const pathname = usePathname();
-// "service_provider", "guest", "task_provider"
+  // "service_provider", "guest", "task_provider"
   const [role, setRole] = useState("task_provider");
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -44,17 +44,28 @@ const Navbar = () => {
   // Guest Links
   const guestLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      
-      <Link href="/categories" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
+      <Link
+        href="/categories"
+        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
+      >
         Categories
       </Link>
-      <Link href="/browseservice" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
-       Browse Tasks
+      <Link
+        href="/browseservice"
+        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
+      >
+        Browse Tasks
       </Link>
-      <Link href="/service-listing" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
+      <Link
+        href="/service-listing"
+        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
+      >
         Browse Service
       </Link>
-      <Link href="/contact" className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md">
+      <Link
+        href="/contact"
+        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
+      >
         Contact / Help
       </Link>
     </div>
@@ -62,8 +73,11 @@ const Navbar = () => {
 
   const taskProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/post_task" className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800">
-          Post A Task
+      <Link
+        href="/post_task"
+        className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800"
+      >
+        Post A Task
       </Link>
       <Link href="/browseservice" className={linkClass("/browseservice")}>
         Browse Tasks
@@ -79,14 +93,17 @@ const Navbar = () => {
 
   const serviceProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/service_tast_status" className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800">
-         Browse Tasks
+      <Link
+        href="/service_tast_status"
+        className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800"
+      >
+        Browse Tasks
       </Link>
       <Link href="/list_my_service" className={linkClass("/list_my_service")}>
-         My Service
+        My Service
       </Link>
       <Link href="/login" className={linkClass("/login")}>
-          Post A Task
+        Post A Task
       </Link>
     </div>
   );
@@ -109,10 +126,14 @@ const Navbar = () => {
     </div>
   );
 
-  // ✅ Desktop profile (daisyUI)
+  //  Desktop profile (daisyUI)
   const desktopProfileDropdown = (
     <div className="dropdown dropdown-end hidden lg:block">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div
+        tabIndex={0}
+        role="button"
+        className="btn btn-ghost btn-circle avatar"
+      >
         <div className="w-12 rounded-full overflow-hidden">
           <img
             alt="User Avatar"
@@ -142,14 +163,22 @@ const Navbar = () => {
         <Link className="flex items-center gap-2 text-lg" href="/chat">
           <FaMessage className="text-[#115e59]" /> Messages
         </Link>
-        {
-          role === "service_provider" ? <Link className="flex items-center gap-2 text-lg border-b pb-4" href="/service_profile_info">
-          <RiUserSettingsFill className="text-[#115e59]" /> My Profile
-        </Link> : <Link className="flex items-center gap-2 text-lg border-b pb-4" href="/profile_info">
-          <RiUserSettingsFill className="text-[#115e59]" /> My Profile
-        </Link>
-        }
-       
+        {role === "service_provider" ? (
+          <Link
+            className="flex items-center gap-2 text-lg border-b pb-4"
+            href="/service_profile_info"
+          >
+            <RiUserSettingsFill className="text-[#115e59]" /> My Profile
+          </Link>
+        ) : (
+          <Link
+            className="flex items-center gap-2 text-lg border-b pb-4"
+            href="/profile_info"
+          >
+            <RiUserSettingsFill className="text-[#115e59]" /> My Profile
+          </Link>
+        )}
+
         <Link className="flex items-center gap-2 text-lg" href="/logout">
           <PiSignOutBold className="text-[#115e59]" /> Sign Out
         </Link>
@@ -157,7 +186,7 @@ const Navbar = () => {
     </div>
   );
 
-  // ✅ Mobile profile (custom toggle)
+  //  Mobile profile (custom toggle)
   const mobileProfileDropdown = (
     <div className="lg:hidden mt-6">
       <button
@@ -184,13 +213,21 @@ const Navbar = () => {
           <Link className="flex items-center gap-2 text-lg" href="/chat">
             <FaMessage className="text-[#115e59]" /> Messages
           </Link>
-         {
-          role === "service_provider" ? <Link className="flex items-center gap-2 text-lg border-b pb-4" href="/service_profile_info">
-          <RiUserSettingsFill className="text-[#115e59]" /> My Profile
-        </Link> : <Link className="flex items-center gap-2 text-lg border-b pb-4" href="/profile_info">
-          <RiUserSettingsFill className="text-[#115e59]" /> My Profile
-        </Link>
-        }
+          {role === "service_provider" ? (
+            <Link
+              className="flex items-center gap-2 text-lg border-b pb-4"
+              href="/service_profile_info"
+            >
+              <RiUserSettingsFill className="text-[#115e59]" /> My Profile
+            </Link>
+          ) : (
+            <Link
+              className="flex items-center gap-2 text-lg border-b pb-4"
+              href="/profile_info"
+            >
+              <RiUserSettingsFill className="text-[#115e59]" /> My Profile
+            </Link>
+          )}
           <Link className="flex items-center gap-2 text-lg" href="/logout">
             <PiSignOutBold className="text-[#115e59]" /> Sign Out
           </Link>
@@ -207,9 +244,16 @@ const Navbar = () => {
     >
       <div className="max-w-[1240px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 transition duration-300 hover:scale-105">
-          <Image className="h-10 lg:h-12" src={taskalleyLogo}
-          alt="TaskAlley Logo" priority />
+        <Link
+          href="/"
+          className="flex items-center gap-2 transition duration-300 hover:scale-105"
+        >
+          <Image
+            className="h-10 lg:h-12"
+            src={taskalleyLogo}
+            alt="TaskAlley Logo"
+            priority
+          />
         </Link>
 
         {/* Desktop Menu */}
