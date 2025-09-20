@@ -29,7 +29,7 @@ const page = () => {
             <div className="max-w-xl rounded-2xl p-8">
               {/* Logo */}
               <div className="flex justify-center mb-6">
-                <span className="text-xl font-bold text-teal-600">
+                <span className="text-xl font-bold text-[#115e59]">
                   <Image src={main_logo} alt="main logo"/>
                 </span>
               </div>

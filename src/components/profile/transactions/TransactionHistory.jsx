@@ -130,7 +130,7 @@ const TransactionHistory = () => {
       {/* Header */}
       <div className="flex items-center gap-3 mb-8">
         <div className="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
-          <BarChart3 className="w-5 h-5 text-teal-600" />
+          <BarChart3 className="w-5 h-5 text-[#115e59]" />
         </div>
         <h1 className="text-xl lg:text-2xl font-semibold text-gray-900">
           My Transaction History

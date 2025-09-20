@@ -83,7 +83,7 @@ const ListMyServiceDetails = () => {
 
           <div className="flex px-2 pb-24">
             <div className="flex lg:w-1/2 gap-3">
-              <button className="lg:flex-1 text-center px-4 py-3 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50 cursor-pointer flex items-center gap-3 justify-center">
+              <button className="lg:flex-1 text-center px-4 py-3 border border-[#115e59] text-[#115e59] rounded-md hover:bg-teal-50 cursor-pointer flex items-center gap-3 justify-center">
                 <PiNotePencilFill /> Update Details
               </button>
               <button className="lg:flex-1 text-center px-4 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-50 cursor-pointer flex items-center gap-3 justify-center">

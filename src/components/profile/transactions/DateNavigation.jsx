@@ -38,7 +38,7 @@ const DateNavigation = ({ currentPeriod, onPrevious, onNext, activeTab }) => {
       <button
         onClick={onNext}
         disabled={activeTab === "lifetime"}
-        className="p-2 bg-teal-600 hover:bg-teal-700 disabled:bg-gray-300 text-white rounded-r-md transition-colors"
+        className="p-2 bg-[#115e59] hover:bg-teal-700 disabled:bg-gray-300 text-white rounded-r-md transition-colors"
       >
         <ChevronRight className="w-4 h-4" />
       </button>

@@ -114,14 +114,14 @@ useEffect(() => {
                 rows={4}
                 value={formData.taskDescription}
                 onChange={(e) => handleInputChange("taskDescription", e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 resize-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-800 resize-none"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">
                 Attachments (optional)
               </label>
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:border-teal-400">
+              <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:border-teal-800">
                 <Image className="mx-auto w-8 h-8 text-gray-400 mb-2" />
                 <p className="text-sm text-gray-600">Upload Images</p>
               </div>
@@ -200,7 +200,7 @@ useEffect(() => {
                   placeholder="1,500"
                   value={formData.budget}
                   onChange={(e) => handleInputChange("budget", e.target.value)}
-                  className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                  className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-800"
                 />
               </div>
             </div>

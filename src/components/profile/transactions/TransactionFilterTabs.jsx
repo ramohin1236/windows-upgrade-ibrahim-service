@@ -17,7 +17,7 @@ const TransactionFilterTabs = ({ activeTab, onTabChange }) => {
           onClick={() => onTabChange(tab.id)}
           className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
             activeTab === tab.id
-              ? 'bg-teal-600 text-white'
+              ? 'bg-[#115e59] text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >

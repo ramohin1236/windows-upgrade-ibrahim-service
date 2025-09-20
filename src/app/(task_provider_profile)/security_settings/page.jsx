@@ -121,7 +121,7 @@ const ChangePassword = ({ onBack }) => {
             )
           }
           placeholder={placeholder}
-          className={`w-full px-4 py-3 bg-gray-50 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent pr-12 ${
+          className={`w-full px-4 py-3 bg-gray-50 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-800 focus:border-transparent pr-12 ${
             error ? "border-red-500" : "border-gray-200"
           }`}
         />
@@ -196,7 +196,7 @@ const ChangePassword = ({ onBack }) => {
           className={`w-full py-3 px-4 rounded-md font-medium transition-colors ${
             isLoading
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-teal-600 hover:bg-teal-700 active:bg-teal-800"
+              : "bg-[#115e59] hover:bg-teal-700 active:bg-teal-800"
           } text-white`}
         >
           {isLoading ? (
@@ -224,7 +224,7 @@ const ChangePasswordDemo = () => {
           <p className="mb-4 text-gray-600">Password form closed</p>
           <button
             onClick={() => setShowForm(true)}
-            className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors"
+            className="bg-[#115e59] text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors"
           >
             Show Form Again
           </button>

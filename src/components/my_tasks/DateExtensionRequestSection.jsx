@@ -22,16 +22,16 @@ const DateExtensionRequestSection = ({ extensionStatus }) => {
           statusBgColor: "bg-green-700",
           button: {
             text: "Cancel The Request",
-            color: "bg-teal-600 hover:bg-teal-700",
+            color: "bg-[#115e59] hover:bg-teal-700",
           },
           showMarkComplete: true,
         };
       case "accepted":
         return {
           statusText: "Approved By Service Provider",
-          statusColor: "text-green-600",
+          statusColor: "text-[#115e59]",
           statusIcon: <Check className="w-4 h-4 text-white" />,
-          statusBgColor: "bg-green-600",
+          statusBgColor: "bg-[#115e59]",
           button: null,
           showMarkComplete: true,
         };

@@ -119,7 +119,7 @@ const Contact = () => {
 
                   <button
                 href="/register"
-                className="px-14 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 cursor-pointer mt-4"
+                className="px-14 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-[#115e59] transition transform duration-300 hover:scale-105 cursor-pointer mt-4"
               >
                 Submit 
               </button>

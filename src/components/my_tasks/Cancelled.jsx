@@ -99,7 +99,7 @@ const Cancelled = () => {
 
           {/* Green Progress Line (from first to second step) */}
           <div
-            className="absolute top-4 left-8 h-0.5 bg-teal-600 z-10 transition-all duration-500"
+            className="absolute top-4 left-8 h-0.5 bg-[#115e59] z-10 transition-all duration-500"
             style={{ width: "calc(50% - 16px)" }}
           ></div>
 
@@ -124,7 +124,7 @@ const Cancelled = () => {
                     step.cancelled
                       ? "bg-red-500"
                       : step.completed
-                      ? "bg-teal-600"
+                      ? "bg-[#115e59]"
                       : "bg-gray-400"
                   }
                 `}

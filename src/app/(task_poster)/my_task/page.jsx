@@ -240,7 +240,7 @@ const MyTasks = () => {
                 onClick={() => setActiveTab(cat.name)}
                 className={`px-4 md:px-6 py-2 rounded-md text-sm font-medium transition cursor-pointer ${
                   activeTab === cat.name
-                    ? "bg-teal-700 text-white"
+                    ? "bg-[#115e59] text-white"
                     : "bg-[#e6f4f1]  hover:bg-brand_color"
                 }`}
               >

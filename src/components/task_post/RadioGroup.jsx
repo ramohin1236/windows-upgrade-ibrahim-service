@@ -23,7 +23,7 @@ const RadioGroup = ({
             value={option.value}
             checked={value === option.value}
             onChange={(e) => onChange(e.target.value)}
-            className="w-4 h-4 text-teal-600"
+            className="w-4 h-4 text-[#115e59]"
           />
           <span className="text-sm font-medium text-gray-900">{option.label}</span>
         </label>

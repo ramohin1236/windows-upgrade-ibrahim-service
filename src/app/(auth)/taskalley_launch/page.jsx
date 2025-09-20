@@ -377,7 +377,7 @@ const TaskAlleyLaunch = () => {
               />
               <button
                 type="submit"
-                className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md font-medium transition"
+                className="bg-[#115e59] hover:bg-teal-800 text-white px-6 py-3 rounded-md font-medium transition"
               >
                 Submit
               </button>

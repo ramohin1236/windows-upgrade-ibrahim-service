@@ -80,7 +80,7 @@ const page = () => {
         <div className="bg-[#e6f4f1] border border-[#c0d9d3] rounded-lg p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-teal-600 font-medium mb-2">Total Earnings</p>
+              <p className="text-sm text-[#115e59] font-medium mb-2">Total Earnings</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">₦ 1285.66</h2>
             </div>
             <div className="bg-teal-100 p-3 rounded-lg">
@@ -93,7 +93,7 @@ const page = () => {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <div className="flex items-center gap-2 mb-6">
             <div className="bg-teal-100 p-2 rounded-lg">
-              <DollarSign className="w-4 h-4 text-teal-600" />
+              <DollarSign className="w-4 h-4 text-[#115e59]" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900">Earnings Breakdown</h3>
           </div>
@@ -106,7 +106,7 @@ const page = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                   activeTab === tab
-                    ? 'bg-[#266e5d] text-white'
+                    ? 'bg-[#115e59] text-white'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -120,7 +120,7 @@ const page = () => {
             <div className="flex items-center justify-center gap-4 mb-8">
               <button
                 onClick={() => navigateDate(-1)}
-                className="p-2 bg-[#266e5d] text-white rounded-lg hover:bg-teal-700 transition-colors"
+                className="p-2 bg-[#266e5d] text-white rounded-lg hover:bg-[#115e59] transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
@@ -133,7 +133,7 @@ const page = () => {
               
               <button
                 onClick={() => navigateDate(1)}
-                className="p-2 bg-[#266e5d] text-white rounded-lg hover:bg-teal-700 transition-colors"
+                className="p-2 bg-[#266e5d] text-white rounded-lg hover:bg-[#115e59] transition-colors"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -148,16 +148,6 @@ const page = () => {
             <p className="text-gray-500 text-sm font-medium">No Transaction found</p>
           </div>
         </div>
-
-        {/* Additional Actions */}
-        {/* <div className="mt-6 flex flex-col sm:flex-row gap-4">
-          <button className="flex-1 px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors">
-            Download Report
-          </button>
-          <button className="flex-1 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-lg transition-colors">
-            View Details
-          </button>
-        </div> */}
       </div>
     </div>
   )

@@ -18,7 +18,7 @@ const CancellationStatusComponent = ({ cancellationStatus }) => {
           statusColor: "text-blue-600",
           button: {
             text: "Cancel The Request",
-            color: "bg-teal-600 hover:bg-teal-700",
+            color: "bg-[#115e59] hover:bg-teal-700",
           },
           showMarkComplete: true,
         };
@@ -28,7 +28,7 @@ const CancellationStatusComponent = ({ cancellationStatus }) => {
           statusColor: "text-green-600",
           button: {
             text: "Request For Refund",
-            color: "bg-teal-600 hover:bg-teal-700",
+            color: "bg-[#115e59] hover:bg-teal-700",
           },
           showMarkComplete: false,
         };
@@ -165,7 +165,7 @@ const CancellationStatusComponent = ({ cancellationStatus }) => {
                 Reason for Rejection
               </label>
               <textarea
-                className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-[#115e59] focus:outline-none"
                 rows="4"
                 placeholder="Please explain why you are rejecting this cancellation request."
               />

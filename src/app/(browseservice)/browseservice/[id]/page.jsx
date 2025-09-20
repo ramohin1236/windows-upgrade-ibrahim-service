@@ -81,7 +81,7 @@ const ServiceDetails = ({ params }) => {
           <button className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
             <ChevronLeft className="w-5 h-5 text-gray-600" />
           </button>
-          <span className="text-sm text-teal-600 font-semibold">
+          <span className="text-sm text-[#115e59] font-semibold">
             Back To Map
           </span>
         </Link>
@@ -309,7 +309,7 @@ const ServiceDetails = ({ params }) => {
 
           {/* View More Button for Questions */}
           <div className="p-4 bg-white">
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-4 rounded-lg font-medium transition-colors">
+            <button className="w-full bg-[#115e59] hover:bg-teal-800 text-white py-3 px-4 rounded-lg font-medium transition-colors">
               View More
             </button>
           </div>

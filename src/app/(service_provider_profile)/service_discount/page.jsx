@@ -202,7 +202,7 @@ const ReferServiceDiscounts = ({ onBack }) => {
           {/* Referral Code Section */}
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-5 h-5 text-teal-600">
+              <div className="w-5 h-5 text-[#115e59]">
                 <svg viewBox="0 0 20 20" fill="currentColor">
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
                 </svg>
@@ -233,7 +233,7 @@ const ReferServiceDiscounts = ({ onBack }) => {
               <div className="flex gap-2">
                 <button
                   onClick={handleCopyCode}
-                  className="flex items-center cursor-pointer gap-2 px-4 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-md transition-colors text-sm font-medium"
+                  className="flex items-center cursor-pointer gap-2 px-4 py-3 bg-[#115e59] hover:bg-teal-800 text-white rounded-md transition-colors text-sm font-medium"
                 >
                   {copied ? (
                     <>
@@ -267,13 +267,13 @@ const ReferServiceDiscounts = ({ onBack }) => {
             <div className="space-y-3 text-sm text-gray-700">
               <div className="flex gap-3">
                 <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-teal-600 font-semibold text-xs">1</span>
+                  <span className="text-[#115e59] font-semibold text-xs">1</span>
                 </div>
                 <p>Share your referral code with friends and family</p>
               </div>
               <div className="flex gap-3">
                 <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-teal-600 font-semibold text-xs">2</span>
+                  <span className="text-[#115e59] font-semibold text-xs">2</span>
                 </div>
                 <p>
                   They sign up using your code and complete their first task
@@ -281,7 +281,7 @@ const ReferServiceDiscounts = ({ onBack }) => {
               </div>
               <div className="flex gap-3">
                 <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-teal-600 font-semibold text-xs">3</span>
+                  <span className="text-[#115e59] font-semibold text-xs">3</span>
                 </div>
                 <p>Both you and your friend get reward credits</p>
               </div>

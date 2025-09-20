@@ -45,7 +45,7 @@ const ServiceTaskStatusDetails = () => {
               {" "}
               <Link
                 href="/resolution"
-                className="px-6 py-2.5 bg-[#E6F4F1] text-teal-800 border border-teal-800 rounded-md  transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center mt-12"
+                className="px-6 py-2.5 bg-[#E6F4F1] text-[#115e59] border border-[#115e59] rounded-md  transition transform duration-300 hover:scale-105 cursor-pointer flex gap-2 items-center justify-center mt-12"
               >
                 <Handshake className="text-sm font-semibold" />
                 Resolution Center

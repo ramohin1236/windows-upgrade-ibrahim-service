@@ -37,7 +37,7 @@ const UpdateInformation = () => {
                     type="text"
                     name="name"
                     placeholder="Enter your name"
-                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-800 focus:outline-none"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -48,7 +48,7 @@ const UpdateInformation = () => {
                     type="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-800 focus:outline-none"
                   />
                 </div>
               </div>
@@ -63,7 +63,7 @@ const UpdateInformation = () => {
                     type="number"
                     name="phone"
                     placeholder="Enter your phone number"
-                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-800 focus:outline-none"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -74,7 +74,7 @@ const UpdateInformation = () => {
                     type="text"
                     name="location"
                     placeholder="Enter your location"
-                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                    className="border border-gray-300 rounded-lg px-4 py-4 focus:ring-2 focus:ring-teal-800 focus:outline-none"
                   />
                 </div>
               </div>
@@ -83,7 +83,7 @@ const UpdateInformation = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="w-full md:w-auto px-8 py-3 bg-teal-700 text-white font-semibold rounded-lg shadow-md hover:bg-teal-800 transition duration-300 ease-in-out"
+                  className="w-full md:w-auto px-8 py-3 bg-[#115e59] text-white font-semibold rounded-lg shadow-md hover:bg-teal-800 transition duration-300 ease-in-out"
                 >
                   Save
                 </button>

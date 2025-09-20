@@ -38,7 +38,7 @@ const Navbar = () => {
 
   const linkClass = (path) =>
     pathname === path
-      ? "text-teal-700 font-medium"
+      ? "text-[#115e59] font-medium"
       : "text-gray-800 hover:text-teal-700";
 
   // Guest Links
@@ -62,7 +62,7 @@ const Navbar = () => {
 
   const taskProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/post_task" className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800">
+      <Link href="/post_task" className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800">
           Post A Task
       </Link>
       <Link href="/browseservice" className={linkClass("/browseservice")}>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
   const serviceProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/service_tast_status" className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800">
+      <Link href="/service_tast_status" className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800">
          Browse Tasks
       </Link>
       <Link href="/list_my_service" className={linkClass("/list_my_service")}>

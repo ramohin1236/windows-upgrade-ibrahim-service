@@ -136,9 +136,9 @@ const Faq = () => {
             >
               {faq.question}
               {openIndex === index ? (
-                <FaChevronUp className="text-teal-600 transition-transform duration-300" />
+                <FaChevronUp className="text-[#115e59] transition-transform duration-300" />
               ) : (
-                <FaChevronDown className="text-teal-600 transition-transform duration-300" />
+                <FaChevronDown className="text-[#115e59] transition-transform duration-300" />
               )}
             </button>
             <div
