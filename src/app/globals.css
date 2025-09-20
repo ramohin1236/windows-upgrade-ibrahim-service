@@ -128,6 +128,14 @@ body {
 .text-color{
   color: #115e59;
 }
+.border-color{
+  color: #115e59;
+}
+.hover-white:hover { color: #fff !important; } 
+
+.bg-color {
+  background-color: #115e59; 
+}
 
 .gradiant-bg{
 background: #85ACAA;

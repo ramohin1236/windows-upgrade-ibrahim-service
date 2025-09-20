@@ -73,8 +73,9 @@ const PopularCategory = () => {
           </div>
           <div className="flex">
             <Link
+            // px-5 py-3 bg-teal-800 text-white rounded-md hover:bg-teal-900 transition transform duration-300 hover:scale-105 text-base md:text-lg
               href="/categories"
-              className="px-4 py-3 md:px-6 md:py-4 text-md md:text-xl font-semibold bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 flex items-center justify-center gap-3"
+              className="px-4 py-3 md:px-6 md:py-4 text-md md:text-xl font-md bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition transform duration-300 hover:scale-105 flex items-center justify-center gap-3"
             >
               View More
               <Image

@@ -8,11 +8,11 @@ import image3 from "../../../public/image-3.svg";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-[1240px] mx-auto px-4">
+    <section className="max-w-[1240px] mx-auto px-4 pt-8">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:mt-24 gap-10 lg:gap-20">
         {/* Left Side */}
         <div className="flex flex-col gap-6 text-center lg:text-left w-full lg:w-1/2">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-snug">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-snug">
             One Platform. Every <br className="hidden lg:block" /> Service. Zero
             Hassle.
           </h1>
@@ -24,13 +24,13 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
               href="/construction"
-              className="px-5 py-3 bg-teal-800 text-white rounded-md hover:bg-teal-900 transition transform duration-300 hover:scale-105 text-base md:text-lg"
+              className="flex items-center justify-center px-5 py-3 bg-color text-white rounded-md hover:bg-teal-900 transition transform duration-300 hover:scale-105 text-base md:text-lg"
             >
               Browse Services
             </Link>
             <Link
               href="/construction"
-              className="px-5 py-3 border-2 border-teal-800 rounded-md hover:bg-teal-800 hover:text-white transition transform duration-300 text-base md:text-lg"
+              className="px-5 py-3 border-2 text-color border-teal-800 rounded-md hover:bg-teal-800 hover-white transition transform duration-300 text-base md:text-lg"
             >
               Post a task
             </Link>
