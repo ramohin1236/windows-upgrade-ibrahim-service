@@ -13,7 +13,7 @@ import Link from "next/link";
 const TaskDetails = () => {
   const status = ["Bids", "Progress", "Completed", "Cancelled"];
 
-  const [currentStatus, setCurrentStatus] = useState("Bids");
+  const [currentStatus, setCurrentStatus] = useState("Progress");
 
   return (
     <div className="project_container mx-auto px-3 py-6 md:p-6">
@@ -38,7 +38,7 @@ const TaskDetails = () => {
              
             </div>
           )}
-          {currentStatus === "Completed" && (
+          {currentStatus === "Progress" && (
             <div>
               {" "}
               <Link
