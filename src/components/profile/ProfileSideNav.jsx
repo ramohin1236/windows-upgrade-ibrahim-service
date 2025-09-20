@@ -4,7 +4,6 @@ import Link from "next/link";
 import client from "../../../public/client.png";
 import { CgProfile } from "react-icons/cg";
 import { IoIosNotifications } from "react-icons/io";
-import { FaDollarSign } from "react-icons/fa6";
 import { IoIosSettings } from "react-icons/io";
 import { TbDiscount } from "react-icons/tb";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
@@ -29,7 +28,7 @@ const sidebarLinks = [
 const ProfileSideNav = ({open}) => {
   return (
     <div
-      className={`fixed md:relative top-0 left-0 min-h-full rounded-l-lg  bg-[#E6F4F1] shadow-lg z-40 transform transition-transform duration-300
+      className={`fixed md:relative top-0 left-0 min-h-full rounded-l-lg  bg-[#E6F4F1] shadow-lg z-40 transform transition-transform duration-300 w-80
                ${
                  open ? "translate-x-0" : "-translate-x-full"
                } md:translate-x-0`}
@@ -47,13 +46,18 @@ const ProfileSideNav = ({open}) => {
       </div>
 
       {/* Navigation */}
-      <nav className="flex flex-col gap-2 p-4">
+     <nav className="flex flex-col gap-2 p-4">
         {sidebarLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
-            className="group px-3 py-4 flex items-center gap-3 rounded-lg border border-[#b8d3cd] text-[#115E59] text-xl font-medium hover:bg-[#115E59] hover:text-white transition"
-            // onClick={() => setOpen(false)}
+            className="group px-3 py-4 flex items-center gap-3 rounded-lg border border-[#b8d3cd] text-[#115E59] text-xl font-medium hover:bg-[#115E59] hover:text-white transition w-64"
+            onClick={() => {
+             
+              if (onClose) {
+                onClose();
+              }
+            }}
           >
             <span className="group-hover:text-white">{link.icon}</span>
             {link.name}

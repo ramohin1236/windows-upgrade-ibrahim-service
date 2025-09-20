@@ -53,7 +53,7 @@ const ServiceProvideSideNav = ({ open, onClose }) => {
             href={link.href}
             className="group px-3 py-4 flex items-center gap-3 rounded-lg border border-[#b8d3cd] text-[#115E59] text-xl font-medium hover:bg-[#115E59] hover:text-white transition w-64"
             onClick={() => {
-              // Close sidebar when menu item is clicked (mobile only)
+             
               if (onClose) {
                 onClose();
               }
