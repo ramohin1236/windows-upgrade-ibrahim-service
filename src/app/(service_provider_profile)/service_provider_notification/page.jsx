@@ -52,8 +52,8 @@ import { ArrowLeft } from 'lucide-react';
 
 const ServiceProviderNotificaiton = () => {
   return (
-     <div className="p-4 md:p-6">
-      <div className="flex items-center gap-2 mb-6">
+     <div className="md:p-6">
+      <div className="flex items-center gap-2">
         <ArrowLeft className="w-5 h-5 text-gray-600 cursor-pointer" />
         <h2 className="font-medium text-gray-700">Notifications</h2>
       </div>

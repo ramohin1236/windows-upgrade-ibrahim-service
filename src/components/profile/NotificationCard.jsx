@@ -3,7 +3,7 @@ import React from 'react'
 
 const NotificationCard = ({ name, task, time, image }) => {
   return (
-     <div className="flex items-center gap-4 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-200">
+     <div className="flex flex-col md:flex-row items-center gap-4 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-200">
       {/* Avatar */}
       <div className="flex-shrink-0">
         <Image
@@ -17,7 +17,7 @@ const NotificationCard = ({ name, task, time, image }) => {
 
       {/* Content */}
       <div className="flex flex-col">
-        <p className="text-gray-700 text-sm sm:text-base">
+        <p className="text-gray-700 text-sm sm:text-base text-center md:text-left">
           <span className="font-semibold text-emerald-900 text-xl">{name}</span>{" "}
           has submitted an offer on your task:{" "} 
           <span className="font-semibold text-emerald-900">"{task}"</span>.
