@@ -184,9 +184,13 @@ const Navbar = () => {
           <Link className="flex items-center gap-2 text-lg" href="/chat">
             <FaMessage className="text-[#115e59]" /> Messages
           </Link>
-          <Link className="flex items-center gap-2 text-lg" href="/profile_info">
-            <RiUserSettingsFill className="text-[#115e59]" /> My Profile
-          </Link>
+         {
+          role === "service_provider" ? <Link className="flex items-center gap-2 text-lg border-b pb-4" href="/service_profile_info">
+          <RiUserSettingsFill className="text-[#115e59]" /> My Profile
+        </Link> : <Link className="flex items-center gap-2 text-lg border-b pb-4" href="/profile_info">
+          <RiUserSettingsFill className="text-[#115e59]" /> My Profile
+        </Link>
+        }
           <Link className="flex items-center gap-2 text-lg" href="/logout">
             <PiSignOutBold className="text-[#115e59]" /> Sign Out
           </Link>
