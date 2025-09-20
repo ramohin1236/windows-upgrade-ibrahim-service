@@ -31,9 +31,9 @@ const data = [
 
 const HowWorks = () => {
   return (
-    <section className="max-w-[1240px] mx-auto px-4 mb-20 md:mb-0">
+    <section className="max-w-[1240px] mx-auto px-4 mb-20 md:mb-20 lg:mb-0 ">
       <div className="flex flex-col gap-16">
-        <div className="mt-16 md:mt-44 flex flex-col gap-5 md:flex-row justify-between md:items-center">
+        <div className="mt-16 md:mt-20 flex flex-col gap-5 md:flex-row justify-between md:items-center">
           {/* top header */}
           <div>
             <div className="flex items-center gap-4 ">
