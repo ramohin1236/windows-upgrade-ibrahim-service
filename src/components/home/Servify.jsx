@@ -11,7 +11,7 @@ const Servify = () => {
         <div className='max-w-[1240px] mx-auto px-4 flex justify-between items-center gap-10 flex-col md:flex-row'>
             {/* left side */}
             <div className='flex flex-col gap-6'>
-                <h3 className='text-3xl font-semibold md:leading-normal'>Join <span className='text-[#115E59]'>Servify</span> & Simplify Your Service Experience Today!</h3>
+                <h3 className='text-3xl font-semibold md:leading-normal'>Join <span className='text-[#115E59]'>Taskalley</span> & Simplify Your Service Experience Today!</h3>
                 <p className='text-[#6B7280] md:text-xl'>Find trusted professionals or grow your business by offering services online — all in one seamless platform. Accessible anytime from your desktop or mobile browser.</p>
                 <div className='flex  gap-8 mt-5'>
                     <Link href=''><Image src={servifyimg} alt='servifyimg'/></Link>

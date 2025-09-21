@@ -43,7 +43,7 @@ const HowWorks = () => {
                 height={24}
               />
               <p className="font-semibold text-md md:text-xl text-color pb-3">
-                Servify
+                Taskalley
               </p>
             </div>
             <h3 className="font-semibold text-2xl md:text-4xl flex flex-col gap-6">

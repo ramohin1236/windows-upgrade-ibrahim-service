@@ -13,7 +13,7 @@ const Cta = () => {
     </h3>
     <p className="text-gray-700 text-base sm:text-lg md:text-xl">
       <span className="font-bold text-black">
-        Join as a Service Provider on Servify —
+        Join as a Service Provider on Taskalley —
       </span>{" "}
       showcase your skills, reach more clients, and manage bookings with ease —
       all in one platform designed to help your business thrive.

@@ -84,12 +84,6 @@ const ProfileSideNav = ({ open, onClose }) => {
         ))}
       </nav>
 
-      {/* Footer */}
-      <div className="mt-auto p-4 border-t border-[#b8d3cd]">
-        <div className="text-xs text-gray-600 text-center">
-          <p>Version 1.0.0</p>
-        </div>
-      </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const About = () => {
             {/* left side */}
             <div className="flex flex-col pt-10 lg:pt-0">
               <h3 className="text-2xl lg:text-4xl font-semibold mb-5">
-                About Servify{" "}
+                About Taskalley{" "}
               </h3>
               <div>
                 <Breadcrumb>
@@ -107,11 +107,11 @@ const About = () => {
 
         {/* Appointments and Cancellations */}
         <div className="flex flex-col gap-2 flex-1">
-          <p className="text-[#115E59] text-base font-semibold"> Why Choose Servify?</p>
+          <p className="text-[#115E59] text-base font-semibold"> Why Choose Taskalley?</p>
           <h5 className="text-4xl font-semibold">Simplifying Services, Empowering People</h5>
 
           <p className="text-base text-[#6B7280]">
-            At Servify, we’re on a mission to make finding and offering everyday services easy, reliable, and secure. Whether you're looking for help with cleaning, plumbing, repairs, or skilled handyman work — Servify connects you with trusted professionals in just a few clicks.
+            At Taskalley, we’re on a mission to make finding and offering everyday services easy, reliable, and secure. Whether you're looking for help with cleaning, plumbing, repairs, or skilled handyman work — Taskalley connects you with trusted professionals in just a few clicks.
           </p>
           <p className="text-base text-[#6B7280]">
           We believe that access to quality service should be simple. That’s why we’ve built a platform that removes the hassle from booking and delivering essential services — putting control and convenience in the hands of both customers and service providers.

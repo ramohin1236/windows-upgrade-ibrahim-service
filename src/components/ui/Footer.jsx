@@ -19,7 +19,7 @@ const Footer = () => {
               <Image src={taskalleyLogo} alt="logo"  />
             </Link>
             <a href="" className='text-white'>Phone: +012 (345) 678 99</a>
-            <a href="" className='text-white'>Email: support@servify.com</a>
+            <a href="" className='text-white'>Email: support@taskalley.com</a>
           </div>
 
           {/* second row */}
