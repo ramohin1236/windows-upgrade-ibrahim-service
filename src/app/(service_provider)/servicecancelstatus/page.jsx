@@ -248,7 +248,6 @@ const ServiceCancelStatus = () => {
               </button>
             ))}
           </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 3 gap-6">
             {activeCategory?.services.map((service,index) => (

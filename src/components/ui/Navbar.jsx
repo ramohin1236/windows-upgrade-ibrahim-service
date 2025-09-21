@@ -14,7 +14,7 @@ import { PiSignOutBold } from "react-icons/pi";
 const Navbar = () => {
   const pathname = usePathname();
   // "service_provider", "guest", "task_provider"
-  const [role, setRole] = useState("guest");
+  const [role, setRole] = useState("task_provider");
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -288,7 +288,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-3xl text-[#115e59] p-1 hover:bg-[#115e59] hover:bg-opacity-10 rounded-md transition-colors"
+          className="lg:hidden text-2xl text-[#115e59] hover:bg-[#115e59] hover:text-white p-2 cursor-pointer border border-[#115e59] hover:bg-opacity-10 rounded-md transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <MdClose /> : <MdMenu />}

@@ -14,11 +14,11 @@ const BrowseServiceLayout = ({ children }) => {
           <div className="project_container p-4">
             <Filter />
           </div>
-          <div className="project_container flex flex-col md:flex-row gap-8">
+          <div className="project_container flex flex-col md:flex-row gap-8 pr-2">
             <div>
               <AllServicePage />
             </div>
-            <div className="w-full">{children}</div>
+            <div className="w-full pl-2">{children}</div>
           </div>
         </div>
         <Footer />

@@ -97,19 +97,16 @@ const Categories = () => {
           containerStyle="bg-gray-100"
         />
       </div>
-
       {/* cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.map((item, index) => (
-          <Link
-          key={item.id}
-          href="/browseservice"
-          ><CategoriesCard
-            
-            icon={item.icon}
-            title={item.cateName}
-            subtitle={item.providers}
-          /></Link>
+          <Link key={item.id} href="/browseservice">
+            <CategoriesCard
+              icon={item.icon}
+              title={item.cateName}
+              subtitle={item.providers}
+            />
+          </Link>
         ))}
       </div>
     </section>

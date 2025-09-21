@@ -92,7 +92,7 @@ const taskData = [
 const AllServicePage = () => {
   return (
     <div>
-      <div className="w-full pl-4 md:w-[500px] flex flex-col gap-4 ">
+      <div className="w-full pl-4 md:w-[350px] lg:w-[500px] flex flex-col gap-4 ">
         {taskData.slice(0, 3).map((data, index) => (
           <li key={index} style={{ listStyle: "none" }}>
             <Link
