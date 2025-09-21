@@ -14,7 +14,7 @@ import { PiSignOutBold } from "react-icons/pi";
 const Navbar = () => {
   const pathname = usePathname();
   // "service_provider", "guest", "task_provider"
-  const [role, setRole] = useState("task_provider");
+  const [role, setRole] = useState("service_provider");
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -80,7 +80,7 @@ const Navbar = () => {
       <Link href="/service-listing" className={getLinkClass("/service-listing")}>
         Browse Services
       </Link>
-      <Link href="/list-service" className={getLinkClass("/list-service")}>
+      <Link href="/login" className={getLinkClass("/list-service")}>
         List A Service
       </Link>
     </div>
