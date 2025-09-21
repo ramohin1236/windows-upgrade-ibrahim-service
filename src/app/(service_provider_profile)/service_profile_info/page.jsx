@@ -95,7 +95,7 @@ const ServiceProfileInfo = () => {
                 {/* Update Button - Desktop */}
                 <div className="mt-10">
                   <Link
-                    href="/update_info"
+                    href="/service_profile_update"
                     className="inline-flex items-center px-8 py-3 border-2 border-[#115e59] rounded-xl hover:bg-[#115e59] hover:text-white transition-all duration-300 text-[#115e59] font-medium text-lg hover:shadow-lg transform hover:scale-105 active:scale-95"
                   >
                     Update Profile
@@ -149,7 +149,7 @@ const ServiceProfileInfo = () => {
               {/* Update Button - Mobile */}
               <div className="pt-4">
                 <Link
-                  href="/update_info"
+                  href="/service_profile_update"
                   className="w-full flex items-center justify-center px-6 py-4 border-2 border-[#115e59] rounded-xl hover:bg-[#115e59] hover:text-white transition-all duration-300 text-[#115e59] font-medium text-lg hover:shadow-lg active:scale-95"
                 >
                   Update Profile

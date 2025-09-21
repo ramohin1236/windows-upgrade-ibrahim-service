@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../globals.css";
 import { Menu, X } from "lucide-react";
 import ProfileSideNav from "@/components/profile/ProfileSideNav";
+import Footer from "@/components/ui/Footer";
 
 const ProfileLayout = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -36,9 +37,8 @@ const ProfileLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className="">
-        <div className="md:max-w-10/12 mx-auto flex justify-center items-center">
+        <div className="mb-12 md:max-w-10/12 mx-auto flex justify-center items-center">
           <div className="flex shadow-lg rounded-xl overflow-hidden min-h-[900px] w-full p-4">
-            
             {/* Toggle Button - Now visible for mobile AND tablet */}
             <button
               onClick={toggleSidebar}
@@ -52,7 +52,11 @@ const ProfileLayout = ({ children }) => {
               `}
               aria-label={open ? "Close menu" : "Open menu"}
             >
-              <div className={`transition-transform duration-300 ease-in-out ${open ? 'rotate-180' : 'rotate-0'}`}>
+              <div
+                className={`transition-transform duration-300 ease-in-out ${
+                  open ? "rotate-180" : "rotate-0"
+                }`}
+              >
                 {open ? (
                   <X className="h-5 w-5 text-gray-700" />
                 ) : (
@@ -62,17 +66,20 @@ const ProfileLayout = ({ children }) => {
             </button>
 
             {/* Sidebar - Hidden on mobile and tablet, visible on desktop */}
-            <div className={`
+            <div
+              className={`
               lg:block
-              ${open 
-                ? `fixed inset-y-0 left-0 z-40 
+              ${
+                open
+                  ? `fixed inset-y-0 left-0 z-40 
                    transform transition-all duration-300 ease-out
                    translate-x-0 opacity-100`
-                : 'lg:relative lg:translate-x-0 lg:opacity-100 fixed inset-y-0 left-0 z-40 transform -translate-x-full opacity-0 lg:pointer-events-auto pointer-events-none'
+                  : "lg:relative lg:translate-x-0 lg:opacity-100 fixed inset-y-0 left-0 z-40 transform -translate-x-full opacity-0 lg:pointer-events-auto pointer-events-none"
               }
-            `}>
+            `}
+            >
               <ProfileSideNav
-                open={open} 
+                open={open}
                 onClose={() => setOpen(false)}
                 className="h-full"
               />
@@ -89,11 +96,12 @@ const ProfileLayout = ({ children }) => {
 
             {/* Content */}
             <main className="flex-1 bg-white shadow-inner rounded-r-lg">
-              <div className="pt-16 lg:pt-0 h-full">
-                {children}
-              </div>
+              <div className="pt-16 lg:pt-0 h-full">{children}</div>
             </main>
           </div>
+        </div>
+        <div>
+          <Footer />
         </div>
 
         {/* Enhanced styles */}
@@ -135,4 +143,3 @@ const ProfileLayout = ({ children }) => {
 };
 
 export default ProfileLayout;
-

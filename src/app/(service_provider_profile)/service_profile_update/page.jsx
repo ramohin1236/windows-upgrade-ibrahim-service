@@ -5,7 +5,7 @@ import React, { useState, useRef } from "react";
 import client from "../../../../public/client.png";
 import Link from "next/link";
 
-const UpdateInformation = () => {
+const ServiceProfileInfoUpdate = () => {
   const [profileImage, setProfileImage] = useState(client);
   const [isUploading, setIsUploading] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
@@ -90,7 +90,7 @@ const UpdateInformation = () => {
       <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6 lg:mb-8">
-          <Link href="/profile_info">
+          <Link href="/service_profile_info">
             <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:p-0 lg:hover:bg-transparent">
               <ArrowLeft className="w-5 h-5 text-gray-600 cursor-pointer hover:text-gray-800 transition-colors" />
             </button>
@@ -329,8 +329,4 @@ const UpdateInformation = () => {
   );
 };
 
-export default UpdateInformation;
-
-
-
-
+export default ServiceProfileInfoUpdate;

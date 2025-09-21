@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../globals.css";
 import { Menu, X } from "lucide-react";
 import ServiceProvideSideNav from "@/components/service_provider/ServiceProvideSideNav";
+import Footer from "@/components/ui/Footer";
 
 const ServiceProviderProfileLayout = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -36,7 +37,7 @@ const ServiceProviderProfileLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className="">
-        <div className="md:max-w-10/12 mx-auto flex justify-center items-center">
+        <div className="mb-12 md:max-w-10/12 mx-auto flex justify-center items-center">
           <div className="flex shadow-lg rounded-xl overflow-hidden min-h-[900px] w-full p-4">
             
             {/* Toggle Button - Now visible for mobile AND tablet */}
@@ -95,6 +96,9 @@ const ServiceProviderProfileLayout = ({ children }) => {
             </main>
           </div>
         </div>
+                <div>
+                    <Footer/>
+                </div>
 
         {/* Enhanced styles */}
         <style jsx>{`

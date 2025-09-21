@@ -7,6 +7,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { IoIosSettings } from "react-icons/io";
 import { TbDiscount } from "react-icons/tb";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
 
 const sidebarLinks = [
   { name: "Profile Info", href: "/service_profile_info", icon: <CgProfile /> },
@@ -23,6 +24,7 @@ const sidebarLinks = [
     icon: <IoIosSettings />,
   },
   { name: "Refer & Discounts", href: "/service_discount", icon: <TbDiscount /> },
+  { name: "Home", href: "/", icon: <FaHome /> },
 ];
 
 const ServiceProvideSideNav = ({ open, onClose }) => {
