@@ -14,7 +14,7 @@ import { PiSignOutBold } from "react-icons/pi";
 const Navbar = () => {
   const pathname = usePathname();
   // "service_provider", "guest", "task_provider"
-  const [role, setRole] = useState("task_provider");
+  const [role, setRole] = useState("service_provider");
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -36,36 +36,34 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const linkClass = (path) =>
-    pathname === path
-      ? "text-[#115e59] font-medium"
-      : "text-gray-800 hover:text-teal-700";
+  // Enhanced link class function with active state handling
+  const getLinkClass = (path, isButton = false) => {
+    const isActive = pathname === path;
+    
+    if (isButton) {
+      return isActive
+        ? "px-4 py-2 bg-[#0d4a42] text-white rounded-md shadow-md"
+        : "px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-[#0d4a42] transition-colors";
+    }
+    
+    return isActive
+      ? "text-[#115e59] font-semibold px-4 py-2 border-b-2 border-[#115e59]"
+      : "text-gray-800 hover:text-[#115e59] px-4 py-2 hover:border-b-2 hover:border-[#115e59] transition-all";
+  };
 
   // Guest Links
   const guestLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link
-        href="/categories"
-        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
-      >
+      <Link href="/categories" className={getLinkClass("/categories")}>
         Categories
       </Link>
-      <Link
-        href="/browseservice"
-        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
-      >
+      <Link href="/browseservice" className={getLinkClass("/browseservice")}>
         Browse Tasks
       </Link>
-      <Link
-        href="/service-listing"
-        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
-      >
+      <Link href="/service-listing" className={getLinkClass("/service-listing")}>
         Browse Service
       </Link>
-      <Link
-        href="/contact"
-        className="hover:bg-[#247570] hover:text-white px-4 py-2 rounded-md"
-      >
+      <Link href="/contact" className={getLinkClass("/contact")}>
         Contact / Help
       </Link>
     </div>
@@ -73,19 +71,16 @@ const Navbar = () => {
 
   const taskProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link
-        href="/post_task"
-        className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800"
-      >
+      <Link href="/post_task" className={getLinkClass("/post_task", true)}>
         Post A Task
       </Link>
-      <Link href="/browseservice" className={linkClass("/browseservice")}>
+      <Link href="/browseservice" className={getLinkClass("/browseservice")}>
         Browse Tasks
       </Link>
-      <Link href="/service-listing" className={linkClass("/service-listing")}>
-        Browse services
+      <Link href="/service-listing" className={getLinkClass("/service-listing")}>
+        Browse Services
       </Link>
-      <Link href="/login" className={linkClass("/login")}>
+      <Link href="/list-service" className={getLinkClass("/list-service")}>
         List A Service
       </Link>
     </div>
@@ -93,38 +88,50 @@ const Navbar = () => {
 
   const serviceProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link
-        href="/service_tast_status"
-        className="px-4 py-2 bg-[#115e59] text-white rounded-md hover:bg-teal-800"
-      >
+      <Link href="/service_task_status" className={getLinkClass("/service_task_status", true)}>
         Browse Tasks
       </Link>
-      <Link href="/list_my_service" className={linkClass("/list_my_service")}>
+      <Link href="/list_my_service" className={getLinkClass("/list_my_service")}>
         My Service
       </Link>
-      <Link href="/login" className={linkClass("/login")}>
+      <Link href="/post_task" className={getLinkClass("/post_task")}>
         Post A Task
       </Link>
     </div>
   );
 
-  // Auth buttons
+  // Auth buttons with active states
   const guestAuthButtons = (
     <div className="flex flex-col lg:items-center lg:flex-row gap-3">
       <Link
         href="/login"
-        className="px-6 py-2 border-2 border-[#115e59] rounded-md hover:bg-[#115e59] hover:text-white transition"
+        className={`px-6 py-2 border-2 border-[#115e59] rounded-md transition ${
+          pathname === "/login"
+            ? "bg-[#115e59] text-white"
+            : "text-[#115e59] hover:bg-[#115e59] hover:text-white"
+        }`}
       >
         Log In
       </Link>
       <Link
         href="/register"
-        className="px-6 py-2.5 bg-[#115e59] text-white rounded-md hover:bg-teal-800 transition hover:scale-105"
+        className={`px-6 py-2.5 rounded-md transition hover:scale-105 ${
+          pathname === "/register"
+            ? "bg-[#0d4a42] text-white shadow-md"
+            : "bg-[#115e59] text-white hover:bg-[#0d4a42]"
+        }`}
       >
         Register
       </Link>
     </div>
   );
+
+  // Profile dropdown link class
+  const getProfileLinkClass = (path) => {
+    return pathname === path
+      ? "flex items-center gap-2 text-lg text-[#115e59] font-semibold px-3 py-2 border-b-2 border-[#115e59]"
+      : "flex items-center gap-2 text-lg hover:text-[#115e59] px-3 py-2 hover:border-b-2 hover:border-[#115e59] transition-all";
+  };
 
   //  Desktop profile (daisyUI)
   const desktopProfileDropdown = (
@@ -143,7 +150,7 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 px-4 pr-10 py-4 shadow flex flex-col gap-5"
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 px-4 pr-10 py-4 shadow flex flex-col gap-3"
       >
         <div className="flex items-center gap-3 pr-12 pb-6 border-b">
           <div className="w-16 h-16 overflow-hidden rounded-xl">
@@ -154,33 +161,36 @@ const Navbar = () => {
           </div>
           <div>
             <p className="text-xl font-bold">Mr.Kashem</p>
-            <p>email@gmail.com</p>
+            <p className="text-gray-600">email@gmail.com</p>
           </div>
         </div>
-        <Link className="flex items-center gap-2 text-lg" href="/my_task">
+        
+        <Link className={getProfileLinkClass("/my_task")} href="/my_task">
           <FaCalendarAlt className="text-[#115e59]" /> My tasks
         </Link>
-        <Link className="flex items-center gap-2 text-lg" href="/chat">
+        
+        <Link className={getProfileLinkClass("/chat")} href="/chat">
           <FaMessage className="text-[#115e59]" /> Messages
         </Link>
+        
         {role === "service_provider" ? (
           <Link
-            className="flex items-center gap-2 text-lg border-b pb-4"
+            className={`${getProfileLinkClass("/service_profile_info")} border-b pb-4 mb-2`}
             href="/service_profile_info"
           >
             <RiUserSettingsFill className="text-[#115e59]" /> My Profile
           </Link>
         ) : (
           <Link
-            className="flex items-center gap-2 text-lg border-b pb-4"
+            className={`${getProfileLinkClass("/profile_info")} border-b pb-4 mb-2`}
             href="/profile_info"
           >
             <RiUserSettingsFill className="text-[#115e59]" /> My Profile
           </Link>
         )}
 
-        <Link className="flex items-center gap-2 text-lg" href="/logout">
-          <PiSignOutBold className="text-[#115e59]" /> Sign Out
+        <Link className="flex items-center gap-2 text-lg hover:bg-red-50 hover:text-red-600 px-3 py-2 rounded-md transition-colors" href="/logout">
+          <PiSignOutBold className="text-red-500" /> Sign Out
         </Link>
       </ul>
     </div>
@@ -190,7 +200,7 @@ const Navbar = () => {
   const mobileProfileDropdown = (
     <div className="lg:hidden mt-6">
       <button
-        className="flex items-center gap-3 w-full"
+        className="flex items-center gap-3 w-full p-2 hover:bg-gray-50 rounded-md transition-colors"
         onClick={() => setProfileOpen(!profileOpen)}
       >
         <div className="w-10 h-10 rounded-full overflow-hidden">
@@ -200,36 +210,42 @@ const Navbar = () => {
           />
         </div>
         <span className="font-medium">My Account</span>
+        <div className={`ml-auto transform transition-transform ${profileOpen ? 'rotate-180' : ''}`}>
+          ▼
+        </div>
       </button>
       <div
         className={`transition-all duration-500 overflow-hidden ${
           profileOpen ? "max-h-[400px] mt-4" : "max-h-0"
         }`}
       >
-        <div className="flex flex-col gap-4">
-          <Link className="flex items-center gap-2 text-lg" href="/my_task">
+        <div className="flex flex-col gap-2">
+          <Link className={getProfileLinkClass("/my_task")} href="/my_task">
             <FaCalendarAlt className="text-[#115e59]" /> My tasks
           </Link>
-          <Link className="flex items-center gap-2 text-lg" href="/chat">
+          
+          <Link className={getProfileLinkClass("/chat")} href="/chat">
             <FaMessage className="text-[#115e59]" /> Messages
           </Link>
+          
           {role === "service_provider" ? (
             <Link
-              className="flex items-center gap-2 text-lg border-b pb-4"
+              className={`${getProfileLinkClass("/service_profile_info")} border-b pb-4 mb-2`}
               href="/service_profile_info"
             >
               <RiUserSettingsFill className="text-[#115e59]" /> My Profile
             </Link>
           ) : (
             <Link
-              className="flex items-center gap-2 text-lg border-b pb-4"
+              className={`${getProfileLinkClass("/profile_info")} border-b pb-4 mb-2`}
               href="/profile_info"
             >
               <RiUserSettingsFill className="text-[#115e59]" /> My Profile
             </Link>
           )}
-          <Link className="flex items-center gap-2 text-lg" href="/logout">
-            <PiSignOutBold className="text-[#115e59]" /> Sign Out
+          
+          <Link className="flex items-center gap-2 text-lg hover:bg-red-50 hover:text-red-600 px-3 py-2 rounded-md transition-colors" href="/logout">
+            <PiSignOutBold className="text-red-500" /> Sign Out
           </Link>
         </div>
       </div>
@@ -246,7 +262,9 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 transition duration-300 hover:scale-105"
+          className={`flex items-center gap-2 transition duration-300 hover:scale-105 ${
+            pathname === "/" ? "opacity-100" : "opacity-90 hover:opacity-100"
+          }`}
         >
           <Image
             className="h-10 lg:h-12"
@@ -257,7 +275,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-2">
           {role === "guest" && guestLinks}
           {role === "task_provider" && taskProviderLinks}
           {role === "service_provider" && serviceProviderLinks}
@@ -270,7 +288,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-3xl text-teal-700"
+          className="lg:hidden text-3xl text-[#115e59] p-1 hover:bg-[#115e59] hover:bg-opacity-10 rounded-md transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <MdClose /> : <MdMenu />}
@@ -279,14 +297,14 @@ const Navbar = () => {
 
       {/*  Mobile Dropdown  */}
       <div
-        className={`lg:hidden bg-white shadow-md px-6 overflow-hidden transition-all duration-500 ${
+        className={`lg:hidden bg-white shadow-md px-6 overflow-hidden transition-all duration-500 border-t border-gray-100 ${
           isOpen ? "max-h-[700px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
         }`}
       >
         {role === "guest" && (
           <>
             {guestLinks}
-            <div className="pt-4">{guestAuthButtons}</div>
+            <div className="pt-4 border-t border-gray-100 mt-4">{guestAuthButtons}</div>
           </>
         )}
         {role === "task_provider" && taskProviderLinks}
