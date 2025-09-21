@@ -88,13 +88,13 @@ const Navbar = () => {
 
   const serviceProviderLinks = (
     <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <Link href="/service_task_status" className={getLinkClass("/service_task_status", true)}>
+      <Link href="/browseservice" className={getLinkClass("/service_task_status", true)}>
         Browse Tasks
       </Link>
       <Link href="/list_my_service" className={getLinkClass("/list_my_service")}>
         My Service
       </Link>
-      <Link href="/post_task" className={getLinkClass("/post_task")}>
+      <Link href="/login" className={getLinkClass("/post_task")}>
         Post A Task
       </Link>
     </div>
